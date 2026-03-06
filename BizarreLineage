@@ -1217,7 +1217,7 @@ local Player = Players.LocalPlayer
 local PlayerGui = Player.PlayerGui
 
 local Stands = ReplicatedStorage.assets.models.stands
-local Arrows = ReplicatedStorage.assets.items
+local Arrows = ReplicatedStorage.assets.models.items
 
 --// INTERFACE \\--
 local BizarreLineage = CoreGui.BizarreLineage
