@@ -3,7 +3,7 @@ local CoreGui = game:GetService("CoreGui")
 local G2L = {};
 
 -- StarterGui.BizarreLineage
-G2L["1"] = Instance.new("ScreenGui", CoreGui);
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["Enabled"] = false;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
@@ -1200,7 +1200,6 @@ Closure = function()
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local UserInputService = game:GetService("UserInputService")
-local CoreGui = game:GetService("CoreGui")
 
 
 --// VARIABLES --\\
@@ -1295,7 +1294,6 @@ Closure = function()
 local Players = game:GetService("Players")
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local TweenService = game:GetService("TweenService")
-local CoreGui = game:GetService("CoreGui")
 
 --// VARIABLES \\--
 local Player = Players.LocalPlayer
@@ -1390,7 +1388,6 @@ Closure = function()
 local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
-local CoreGui = game:GetService("CoreGui")
 
 --// VARIABLES \\--
 local Player = Players.LocalPlayer
@@ -1406,7 +1403,7 @@ local Button = ArrowCollect.Button
 
 local Arrows = {}
 local Activate = false
-local ClaimDB = false
+local IsClaiming = false
 local Time = 0
 
 local function ArrowList()
@@ -1421,6 +1418,8 @@ local function ArrowList()
 end
 
 local function ClaimArrow(NearestArrow)
+	if IsClaiming then return end
+	IsClaiming = true
 	local ProximityPrompt = NearestArrow:FindFirstChild("ProximityPrompt") :: ProximityPrompt
 	if ProximityPrompt then
 		ProximityPrompt.HoldDuration = 0
@@ -1428,22 +1427,14 @@ local function ClaimArrow(NearestArrow)
 		ProximityPrompt:InputHoldBegin(Enum.UserInputType.MouseButton1)
 		task.wait(ProximityPrompt.HoldDuration)
 		ProximityPrompt:InputHoldEnd(Enum.UserInputType.MouseButton1)
+		IsClaiming = false
 	end
 end
 
-RunService.RenderStepped:Connect(function(DT)
+RunService.Heartbeat:Connect(function(DT)
 	Time = Time + DT
 	if Time < 1 then return end
 	Time = 0
-	
-	local Character = Player.Character
-	if not Character then return end
-
-	local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart") :: Part
-	if not HumanoidRootPart then return end
-	
-	local Humanoid = Character:FindFirstChild("Humanoid") :: Humanoid
-	if not Humanoid then return end
 	
 	local NearestArrow = nil
 	local ArrowShortestDistance = math.huge
@@ -1466,7 +1457,12 @@ RunService.RenderStepped:Connect(function(DT)
 end)
 
 workspace.ChildAdded:Connect(function(child)
-	ArrowList(child)
+	if child:IsA("Model") then
+		local StandArrow = child:FindFirstChild("Stand Arrow")
+		if StandArrow then
+			table.insert(Arrows, StandArrow)
+		end
+	end
 end)
 
 workspace.ChildRemoved:Connect(function(child)
@@ -1510,7 +1506,6 @@ local Players = game:GetService("Players")
 local TweenService = game:GetService("TweenService")
 local RunService = game:GetService("RunService")
 local Workspace = game:GetService("Workspace")
-local CoreGui = game:GetService("CoreGui")
 
 --// VARIABLES \\--
 local Player = Players.LocalPlayer
