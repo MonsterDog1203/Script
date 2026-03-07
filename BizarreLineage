@@ -1,4 +1,4 @@
-local CoreGui = game:GetService("CoreGui")
+local CoreGui = game:GetService("CoreGui");
 local G2L = {};
 
 -- StarterGui.BizarreLineage
@@ -2148,7 +2148,7 @@ local RunService = game:GetService("RunService")
 local Player = Players.LocalPlayer
 local Character = Player.Character
 local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart") :: Part
-local PlayerGui = CoreGui.PlayerGui
+local PlayerGui = Player.PlayerGui
 local BizarreLineage = CoreGui.BizarreLineage
 local AutoRaid = BizarreLineage.Holder.Under.Content.AutoRaid
 local Button = AutoRaid.Button :: TextButton
