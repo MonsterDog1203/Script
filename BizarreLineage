@@ -1331,7 +1331,7 @@ G2L["a3"]["BackgroundTransparency"] = 1;
 G2L["a3"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["a3"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["a3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a3"]["Text"] = [[v1.1]];
+G2L["a3"]["Text"] = [[v1.3]];
 G2L["a3"]["Name"] = [[Version]];
 G2L["a3"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -2164,28 +2164,33 @@ RunService.Heartbeat:Connect(function(DT)
 	Time += DT
 	if Time < 1 then return end
 	Time = 0
-	
+
 	if Activate then
-		for _, Raid in pairs(Effects:GetChildren()) do
-			if Raid.Name ~= "thering" and Raid:IsA("Part") then
-				if HumanoidRootPart.Position ~= RaidPosition then
-					if not HumanoidRootPart.Anchored then
-						HumanoidRootPart.Anchored = true
-					end
-					HumanoidRootPart.CFrame = CFrame.new(RaidPosition + Vector3.new(0,0,0))
+
+		local Ring = Effects:FindFirstChild("thering")
+
+		if not Ring then
+			if HumanoidRootPart.Position ~= RaidPosition then
+				if not HumanoidRootPart.Anchored then
+					HumanoidRootPart.Anchored = true
 				end
-			else
+
+				HumanoidRootPart.CFrame = CFrame.new(RaidPosition)
 				local args = {
 					[1] = workspace:WaitForChild("Npcs"):WaitForChild("Chumbo"),
 					[2] = "Raid."
 				}
 
 				game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("dialogue"):FireServer(unpack(args))
-				if HumanoidRootPart.Position ~= RaidPosition then
-					HumanoidRootPart.CFrame = CFrame.new(RaidPosition + Vector3.new(0,0,0))
-				end
 			end
+
+		else
+			if HumanoidRootPart.Position ~= RaidPosition then
+				HumanoidRootPart.CFrame = CFrame.new(RaidPosition)
+			end
+
 		end
+
 	else
 		HumanoidRootPart.Anchored = false
 	end
