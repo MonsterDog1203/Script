@@ -1,8 +1,9 @@
 local CoreGui = game:GetService("CoreGui")
+
 local G2L = {};
 
 -- StarterGui.BizarreLineage
-G2L["1"] = Instance.new("ScreenGui", CoreGui);
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
 G2L["1"]["Name"] = [[BizarreLineage]];
@@ -991,12 +992,12 @@ G2L["79"]["TextSize"] = 18;
 G2L["79"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["79"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["79"]["BackgroundTransparency"] = 1;
-G2L["79"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["79"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["79"]["Size"] = UDim2.new(1, 0, 1, 0);
 G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["79"]["Text"] = [[Main]];
 G2L["79"]["Name"] = [[Text]];
-G2L["79"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
+G2L["79"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.Text.UITextSizeConstraint
@@ -1074,12 +1075,12 @@ G2L["83"]["TextSize"] = 18;
 G2L["83"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
 G2L["83"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["83"]["BackgroundTransparency"] = 1;
-G2L["83"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["83"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["83"]["Size"] = UDim2.new(1, 0, 1, 0);
 G2L["83"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["83"]["Text"] = [[Delete]];
 G2L["83"]["Name"] = [[Text]];
-G2L["83"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
+G2L["83"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.Text.UITextSizeConstraint
@@ -1952,17 +1953,27 @@ RunService.Heartbeat:Connect(function(DT)
 	
 	if Activate then
 		local MyStandName = "."..Player.Name.."'s Stand"
+		local AltStandName = "Stand_Weapon"
 		local Found = false
 		
 		for _, Stand in pairs(Effects:GetChildren()) do
-			
 			if Stand.Name == MyStandName then
 				Found = true
 				break
 			end
 		end
+
+		if not Found and Player.Character then
+			for _, Stand in pairs(Player.Character:GetChildren()) do
+				if Stand.Name == AltStandName then
+					Found = true
+					break
+				end
+			end
+		end
+
 		if not Found then
-			game:GetService("Players").LocalPlayer.Character.client_character_controller.SummonStand:FireServer()
+			Player.Character.client_character_controller.SummonStand:FireServer()
 		end
 	end
 end)
