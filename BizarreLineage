@@ -2149,7 +2149,7 @@ local Player = Players.LocalPlayer
 local Character = Player.Character
 local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart") :: Part
 local PlayerGui = CoreGui.PlayerGui
-local BizarreLineage = PlayerGui.BizarreLineage
+local BizarreLineage = CoreGui.BizarreLineage
 local AutoRaid = BizarreLineage.Holder.Under.Content.AutoRaid
 local Button = AutoRaid.Button :: TextButton
 
