@@ -1,5 +1,4 @@
 local CoreGui = game:GetService("CoreGui")
-
 local G2L = {};
 
 -- StarterGui.BizarreLineage
@@ -2272,6 +2271,7 @@ local List2 = Selection2.List.ScrollingFrame
 local DataStore = require(script.Parent.DataStore)
 
 local Config = DataStore:Load()
+Config.StandSpinner = Config.StandSpinner or {}
 
 local Activate = Config.StandSpinner.Activate or false
 local Debounce = false
@@ -2281,10 +2281,10 @@ local StandNames = {}
 
 if Config.StandSpinner.ButtonPosition then
 	Button.Frame.Position = UDim2.new(
-		Config.ButtonPos[1],
-		Config.ButtonPos[2],
-		Config.ButtonPos[3],
-		Config.ButtonPos[4]
+		Config.StandSpinner.ButtonPosition[1],
+		Config.StandSpinner.ButtonPosition[2],
+		Config.StandSpinner.ButtonPosition[3],
+		Config.StandSpinner.ButtonPosition[4]
 	)
 end
 
@@ -2501,9 +2501,9 @@ local function GetArrowAmounts()
 	local LuckyArrowAmount = 0
 
 	for _, item in pairs(InventoryData) do
-		if item.Name == "Stand Arrow" then
-			StandArrowAmount = item.Amount
-		elseif item.Name == "Lucky Arrow" then
+				if item.Name == "Stand Arrow" then
+					StandArrowAmount = item.Amount
+				elseif item.Name == "Lucky Arrow" then
 					LuckyArrowAmount = item.Amount
 				end
 			end
@@ -2565,6 +2565,7 @@ G2L_MODULES[G2L["8"]] = {
 		local DataStore = require(script.Parent.DataStore)
 
 		local Config = DataStore:Load()
+		Config.ArrowCollect = Config.ArrowCollect or {}
 
 		--// INTERFACE \\--
 		local BizarreLineage = CoreGui.BizarreLineage
@@ -2580,10 +2581,10 @@ G2L_MODULES[G2L["8"]] = {
 
 		if Config.ArrowCollect.ButtonPosition then
 			Button.Frame.Position = UDim2.new(
-				Config.ButtonPos[1],
-				Config.ButtonPos[2],
-				Config.ButtonPos[3],
-				Config.ButtonPos[4]
+				Config.ArrowCollect.ButtonPosition[1],
+				Config.ArrowCollect.ButtonPosition[2],
+				Config.ArrowCollect.ButtonPosition[3],
+				Config.ArrowCollect.ButtonPosition[4]
 			)
 		end
 
@@ -2713,6 +2714,7 @@ G2L_MODULES[G2L["9"]] = {
 		local DataStore = require(script.Parent.DataStore)
 
 		local Config = DataStore:Load()
+		Config.ArrowESP = Config.ArrowESP or {}
 
 		--// INTERFACE \\--
 		local BizarreLineage = CoreGui.BizarreLineage
@@ -2728,10 +2730,10 @@ G2L_MODULES[G2L["9"]] = {
 
 		if Config.ArrowESP.ButtonPosition then
 			Button.Frame.Position = UDim2.new(
-				Config.ButtonPos[1],
-				Config.ButtonPos[2],
-				Config.ButtonPos[3],
-				Config.ButtonPos[4]
+				Config.ArrowESP.ButtonPosition[1],
+				Config.ArrowESP.ButtonPosition[2],
+				Config.ArrowESP.ButtonPosition[3],
+				Config.ArrowESP.ButtonPosition[4]
 			)
 		end
 
@@ -2920,6 +2922,7 @@ G2L_MODULES[G2L["b"]] = {
 		local DataStore = require(script.Parent.DataStore)
 
 		local Config = DataStore:Load()
+		Config.SummonStand = Config.SummonStand or {}
 
 		local Activate = Config.SummonStand.Activate or false
 		local Debounce = false
@@ -2927,10 +2930,10 @@ G2L_MODULES[G2L["b"]] = {
 
 		if Config.SummonStand.ButtonPosition then
 			Button.Frame.Position = UDim2.new(
-				Config.ButtonPos[1],
-				Config.ButtonPos[2],
-				Config.ButtonPos[3],
-				Config.ButtonPos[4]
+				Config.SummonStand.ButtonPosition[1],
+				Config.SummonStand.ButtonPosition[2],
+				Config.SummonStand.ButtonPosition[3],
+				Config.SummonStand.ButtonPosition[4]
 			)
 		end
 
@@ -3016,6 +3019,7 @@ G2L_MODULES[G2L["c"]] = {
 		local DataStore = require(script.Parent.DataStore)
 
 		local Config = DataStore:Load()
+		Config.AutoRaid = Config.AutoRaid or {}
 
 		local Effects = workspace.Effects
 		local RaidPosition = Vector3.new(1070, 884, 213)
@@ -3026,10 +3030,10 @@ G2L_MODULES[G2L["c"]] = {
 
 		if Config.AutoRaid.ButtonPosition then
 			Button.Frame.Position = UDim2.new(
-				Config.ButtonPos[1],
-				Config.ButtonPos[2],
-				Config.ButtonPos[3],
-				Config.ButtonPos[4]
+				Config.AutoRaid.ButtonPosition[1],
+				Config.AutoRaid.ButtonPosition[2],
+				Config.AutoRaid.ButtonPosition[3],
+				Config.AutoRaid.ButtonPosition[4]
 			)
 		end
 
@@ -3126,6 +3130,7 @@ G2L_MODULES[G2L["d"]] = {
 		local DataStore = require(script.Parent.DataStore)
 
 		local Config = DataStore:Load()
+		Config.KillNearest = Config.KillNearest or {}
 
 		local Selection2 = KillNearest.Selection2
 		local Section2List = Selection2.List
@@ -3144,10 +3149,10 @@ G2L_MODULES[G2L["d"]] = {
 
 		if Config.KillNearest.ButtonPosition then
 			Button.Frame.Position = UDim2.new(
-				Config.ButtonPos[1],
-				Config.ButtonPos[2],
-				Config.ButtonPos[3],
-				Config.ButtonPos[4]
+				Config.KillNearest.ButtonPosition[1],
+				Config.KillNearest.ButtonPosition[2],
+				Config.KillNearest.ButtonPosition[3],
+				Config.KillNearest.ButtonPosition[4]
 			)
 		end
 
