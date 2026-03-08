@@ -1999,7 +1999,7 @@ G2L["f1"]["BackgroundTransparency"] = 1;
 G2L["f1"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["f1"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["f1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f1"]["Text"] = [[v1.1]];
+G2L["f1"]["Text"] = [[v1.5]];
 G2L["f1"]["Name"] = [[Version]];
 G2L["f1"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -3037,17 +3037,18 @@ G2L_MODULES[G2L["d"]] = {
 				if NearestTarget then
 					local TargetPosition = NearestTarget.PrimaryPart.Position
 					if Method == "Below" then
-						local Pos = TargetPosition + Vector3.new(0,-5,0)
+						local Pos = TargetPosition + Vector3.new(0,-7.5,0)
 						HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
 
 					elseif Method == "Above" then
-						local Pos = TargetPosition + Vector3.new(0,5,0)
+						local Pos = TargetPosition + Vector3.new(0,7.5,0)
 						HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
 
 					elseif Method == "Behind" then
-						local Pos = TargetPosition + Vector3.new(0,0,5)
+						local Pos = TargetPosition + Vector3.new(0,0,7.5)
 						HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
 					end
+
 
 					local args = {
 						true,
