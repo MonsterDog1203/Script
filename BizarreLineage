@@ -2055,7 +2055,7 @@ G2L["f9"]["BackgroundTransparency"] = 1;
 G2L["f9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["f9"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f9"]["Text"] = [[v2.1]];
+G2L["f9"]["Text"] = [[v1.1]];
 G2L["f9"]["Name"] = [[Version]];
 G2L["f9"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -2660,6 +2660,8 @@ G2L_MODULES[G2L["9"]] = {
 
 		local DataStore = require(script.Parent.DataStore)
 
+		local Config = DataStore:Load()
+
 		--// INTERFACE \\--
 		local BizarreLineage = CoreGui.BizarreLineage
 
@@ -2667,15 +2669,10 @@ G2L_MODULES[G2L["9"]] = {
 		local Button = ArrowESP.Button
 
 		local Arrows = {}
-		local Activate = false
+		local Activate = Config.Activate or false
 		local Debounce = false
 		local acc = 0
 		local updaterate = 1/15
-
-		local savedActivate = DataStore.LoadData("ArrowESP_Activate")
-		if savedActivate ~= nil then
-			Activate = savedActivate
-		end
 
 		local function ArrowList(State)
 			for i, arrow in pairs(Workspace:GetChildren()) do
@@ -2767,7 +2764,8 @@ G2L_MODULES[G2L["9"]] = {
 			if Debounce then return end
 			Debounce = true
 			Activate = not Activate
-			DataStore.SaveData("ArrowESP_Activate", Activate)
+
+			DataStore:Save(Config)
 			if Activate then
 				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = UDim2.new(0.8, 0, 0.5, 0)}) tween:Play()
 				ArrowList(true)
@@ -2788,25 +2786,34 @@ G2L_MODULES[G2L["9"]] = {
 };
 G2L_MODULES[G2L["a"]] = {
 	Closure = function()
-		local script = G2L["a"];local Analytics = game:GetService("RbxAnalyticsService")
-		local ClientId = Analytics:GetClientId()
-
-		local ClientDataStore = {}
+		local script = G2L["a"];local HttpService = game:GetService("HttpService")
 
 		local DataStore = {}
 
-		function DataStore.SaveData(key, value)
-			if not ClientDataStore[ClientId] then
-				ClientDataStore[ClientId] = {}
+		local FileName = "ArrowESP_Config.json"
+
+		function DataStore:Load()
+			if isfile(FileName) then
+				local success, result = pcall(function()
+					return HttpService:JSONDecode(readfile(FileName))
+				end)
+
+				if success then
+					return result
+				end
 			end
-			ClientDataStore[ClientId][key] = value
+
+			return {}
 		end
 
-		function DataStore.LoadData(key)
-			if ClientDataStore[ClientId] then
-				return ClientDataStore[ClientId][key]
+		function DataStore:Save(data)
+			local success, encoded = pcall(function()
+				return HttpService:JSONEncode(data)
+			end)
+
+			if success then
+				writefile(FileName, encoded)
 			end
-			return nil
 		end
 
 		return DataStore
