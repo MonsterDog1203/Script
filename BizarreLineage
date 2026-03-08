@@ -2055,7 +2055,7 @@ G2L["f9"]["BackgroundTransparency"] = 1;
 G2L["f9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["f9"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f9"]["Text"] = [[v1.1]];
+G2L["f9"]["Text"] = [[v3.1]];
 G2L["f9"]["Name"] = [[Version]];
 G2L["f9"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -2764,7 +2764,7 @@ G2L_MODULES[G2L["9"]] = {
 			if Debounce then return end
 			Debounce = true
 			Activate = not Activate
-
+			Config.Activate = Activate
 			DataStore:Save(Config)
 			if Activate then
 				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = UDim2.new(0.8, 0, 0.5, 0)}) tween:Play()
