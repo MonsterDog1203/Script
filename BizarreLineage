@@ -2056,7 +2056,7 @@ G2L["f9"]["BackgroundTransparency"] = 1;
 G2L["f9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["f9"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f9"]["Text"] = [[v1.1]];
+G2L["f9"]["Text"] = [[v1.7]];
 G2L["f9"]["Name"] = [[Version]];
 G2L["f9"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -3222,6 +3222,39 @@ G2L_MODULES[G2L["d"]] = {
 			end
 		end
 
+		local function RestoreUI()
+			if Method ~= "" then
+				Selection1.Select.Text = Method
+				Selection1.Select.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+				for _, Button in pairs(List1:GetChildren()) do
+					if Button:IsA("TextButton") and Button.Name == Method then
+						local Text = Button:FindFirstChildWhichIsA("TextLabel")
+						if Text then
+							Text.TextColor3 = Color3.fromRGB(130, 255, 46)
+						end
+					end
+				end
+			else
+				Selection1.Select.Text = "Method?"
+				Selection1.Select.TextColor3 = Color3.fromRGB(84, 84, 84)
+			end
+
+			if #Skills > 0 then
+				Selection2:WaitForChild("Selected").Text = table.concat(Skills, ", ")
+				Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
+
+				for _, Button in pairs(List2:GetChildren()) do
+					if Button:IsA("TextButton") and table.find(Skills, Button.Name) then
+						Button.TextLabel.TextColor3 = Color3.fromRGB(130, 255, 46)
+					end
+				end
+			else
+				Selection2:WaitForChild("Selected").Text = "Skills?"
+				Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(84, 84, 84)
+			end
+		end
+
 		local function SkillsSelection()
 			for _, Button in pairs(List2:GetChildren()) do
 				if Button:IsA("TextButton") then
@@ -3257,6 +3290,7 @@ G2L_MODULES[G2L["d"]] = {
 
 		SkillsSelection()
 		MethodFunction()
+		RestoreUI()
 
 		RunService.Heartbeat:Connect(function(DT)
 			local CanRun
