@@ -1,4 +1,5 @@
 local CoreGui = game:GetService("CoreGui")
+
 local G2L = {};
 
 -- StarterGui.BizarreLineage
@@ -3087,7 +3088,7 @@ G2L_MODULES[G2L["c"]] = {
 				end
 			elseif Activate and game.PlaceId ~= 14890802310 then
 				local RaidComplete = PlayerGui:FindFirstChild("raidcomplete") :: ScreenGui
-				if RaidComplete then return end
+				if RaidComplete.Enabled then return end
 				game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("retryraid"):FireServer()
 			else
 				if HumanoidRootPart.Massless == true then
@@ -3423,6 +3424,11 @@ local function C_2()
 	local script = G2L["2"];
 	local Players = game:GetService("Players")
 	local player = Players.LocalPlayer
+	local PlayerGui = player:WaitForChild("PlayerGui")
+	local MainMenu = PlayerGui["Main Menu"] :: ScreenGui
+
+	game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("spawn"):FireServer()
+	MainMenu.Enabled = false
 
 	local function OnCharacterAdded(character)
 		local Main = require(script.Parent.Holder.Under.Main)
