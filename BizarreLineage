@@ -2056,7 +2056,7 @@ G2L["f9"]["BackgroundTransparency"] = 1;
 G2L["f9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["f9"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f9"]["Text"] = [[v1.1]];
+G2L["f9"]["Text"] = [[v1.9]];
 G2L["f9"]["Name"] = [[Version]];
 G2L["f9"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -3422,12 +3422,18 @@ G2L_MODULES[G2L["d"]] = {
 local function C_2()
 	local script = G2L["2"];
 	local Players = game:GetService("Players")
-	local Player = Players.LocalPlayer
+	local player = Players.LocalPlayer
 
-	Player.CharacterAdded:Wait()
+	local function OnCharacterAdded(character)
+		local Main = require(script.Parent.Holder.Under.Main)
+		Main.Initialize(character)
+	end
 
-	local Main = require(script.Parent.Holder.Under.Main)
-	Main.Initialize()
+	if player.Character then
+		OnCharacterAdded(player.Character)
+	end
+
+	player.CharacterAdded:Connect(OnCharacterAdded)
 end;
 task.spawn(C_2);
 
