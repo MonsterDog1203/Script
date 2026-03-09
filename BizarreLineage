@@ -1,4 +1,5 @@
 local CoreGui = game:GetService("CoreGui")
+
 local G2L = {};
 
 -- StarterGui.BizarreLineage
@@ -2694,9 +2695,9 @@ G2L_MODULES[G2L["8"]] = {
 			end)
 		end)
 
-		local StandSpinner = {}
+		local ArrowCollect = {}
 
-		return StandSpinner
+		return ArrowCollect
 	end;
 };
 G2L_MODULES[G2L["9"]] = {
