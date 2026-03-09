@@ -2056,7 +2056,7 @@ G2L["f9"]["BackgroundTransparency"] = 1;
 G2L["f9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["f9"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f9"]["Text"] = [[v2.0]];
+G2L["f9"]["Text"] = [[v1.1]];
 G2L["f9"]["Name"] = [[Version]];
 G2L["f9"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -3170,8 +3170,8 @@ G2L_MODULES[G2L["d"]] = {
 
 		local Activate = Config.KillNearest.Activate or false
 		local Debounce = false
-		local Method = ""
-		local Skills = {}
+		local Method = Config.KillNearest.Method or ""
+		local Skills = Config.KillNearest.Skills or {}
 
 		if Config.KillNearest.ButtonPosition then
 			Button.Frame.Position = UDim2.new(
@@ -3207,6 +3207,14 @@ G2L_MODULES[G2L["d"]] = {
 								Text.TextColor3 = Color3.fromRGB(130, 255, 46)
 								Selection1.Select.TextColor3 = Color3.fromRGB(255, 255, 255)
 							end
+
+							local LatestConfig = DataStore:Load()
+							LatestConfig.KillNearest = LatestConfig.KillNearest or {}
+							LatestConfig.KillNearest.Method = Method
+
+							DataStore:Save(LatestConfig)
+							Config = LatestConfig
+
 							print(Method)
 						end)
 					end
@@ -3236,6 +3244,12 @@ G2L_MODULES[G2L["d"]] = {
 						else
 							Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
 						end
+						local LatestConfig = DataStore:Load()
+						LatestConfig.KillNearest = LatestConfig.KillNearest or {}
+						LatestConfig.KillNearest.Skills = Skills
+
+						DataStore:Save(LatestConfig)
+						Config = LatestConfig
 					end)
 				end
 			end
