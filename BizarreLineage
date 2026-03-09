@@ -2464,7 +2464,10 @@ Button.MouseButton1Click:Connect(function()
 	Debounce = true
 	Activate = not Activate
 	
-	Config.StandSpinner.Activate = Activate
+	local LatestConfig = DataStore:Load()
+	LatestConfig.StandSpinner = LatestConfig.StandSpinner or {}
+
+	LatestConfig.StandSpinner.Activate = Activate
 	
 	if #ArrowNames > 0 and #StandNames > 0 then
 		if Activate then
@@ -2488,7 +2491,8 @@ Button.MouseButton1Click:Connect(function()
 		StandSpinner.Button.Frame.BackgroundColor3 = DefaultColor
 	end
 	
-	DataStore:Save(Config)
+	DataStore:Save(LatestConfig)
+	Config = LatestConfig
 	
 	task.delay(0.5, function()
 		Debounce = false
@@ -2496,12 +2500,12 @@ Button.MouseButton1Click:Connect(function()
 end)
 
 local function GetArrowAmounts()
-	local InventoryData = HttpService:JSONDecode(Inventory.Value)
+			local InventoryData = HttpService:JSONDecode(Inventory.Value)
 
-	local StandArrowAmount = 0
-	local LuckyArrowAmount = 0
+			local StandArrowAmount = 0
+			local LuckyArrowAmount = 0
 
-	for _, item in pairs(InventoryData) do
+			for _, item in pairs(InventoryData) do
 				if item.Name == "Stand Arrow" then
 					StandArrowAmount = item.Amount
 				elseif item.Name == "Lucky Arrow" then
@@ -2674,21 +2678,25 @@ G2L_MODULES[G2L["8"]] = {
 			Debounce = true
 			Activate = not Activate
 
-			Config.ArrowCollect.Activate = Activate
+			local LatestConfig = DataStore:Load()
+			LatestConfig.ArrowCollect = LatestConfig.ArrowCollect or {}
+
+			LatestConfig.ArrowCollect.Activate = Activate
 
 			if Activate then
 				local pos = UDim2.new(0.8, 0, 0.5, 0)
-
-				Config.ArrowCollect.ButtonPosition = {0.8,0,0.5,0}
-				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+				LatestConfig.ArrowCollect.ButtonPosition = {0.8, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
 			else
 				local pos = UDim2.new(0.2, 0, 0.5, 0)
-
-				Config.ArrowCollect.ButtonPosition = {0.2,0,0.5,0}
-				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+				LatestConfig.ArrowCollect.ButtonPosition = {0.2, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
 			end
 
-			DataStore:Save(Config)
+			DataStore:Save(LatestConfig)
+			Config = LatestConfig
 
 			task.delay(0.5, function()
 				Debounce = false
@@ -2829,23 +2837,27 @@ G2L_MODULES[G2L["9"]] = {
 			Debounce = true
 			Activate = not Activate
 
-			Config.ArrowESP.Activate = Activate
+			local LatestConfig = DataStore:Load()
+			LatestConfig.ArrowESP = LatestConfig.ArrowESP or {}
+
+			LatestConfig.ArrowESP.Activate = Activate
 
 			if Activate then
 				local pos = UDim2.new(0.8, 0, 0.5, 0)
-
-				Config.ArrowESP.ButtonPosition = {0.8,0,0.5,0}
-				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+				LatestConfig.ArrowESP.ButtonPosition = {0.8, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
 				ArrowList(true)
 			else
 				local pos = UDim2.new(0.2, 0, 0.5, 0)
-
-				Config.ArrowESP.ButtonPosition = {0.2,0,0.5,0}
-				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+				LatestConfig.ArrowESP.ButtonPosition = {0.2, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
 				ArrowList(false)
 			end
 
-			DataStore:Save(Config)
+			DataStore:Save(LatestConfig)
+			Config = LatestConfig
 
 			task.delay(0.5, function()
 				Debounce = false
@@ -2975,21 +2987,25 @@ G2L_MODULES[G2L["b"]] = {
 			Debounce = true
 			Activate = not Activate
 
-			Config.SummonStand.Activate = Activate
+			local LatestConfig = DataStore:Load()
+			LatestConfig.SummonStand = LatestConfig.SummonStand or {}
+
+			LatestConfig.SummonStand.Activate = Activate
 
 			if Activate then
 				local pos = UDim2.new(0.8, 0, 0.5, 0)
-
-				Config.SummonStand.ButtonPosition = {0.8,0,0.5,0}
-				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+				LatestConfig.SummonStand.ButtonPosition = {0.8, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
 			else
 				local pos = UDim2.new(0.2, 0, 0.5, 0)
-
-				Config.SummonStand.ButtonPosition = {0.2,0,0.5,0}
-				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+				LatestConfig.SummonStand.ButtonPosition = {0.2, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
 			end
 
-			DataStore:Save(Config)
+			DataStore:Save(LatestConfig)
+			Config = LatestConfig
 
 			task.delay(0.5, function()
 				Debounce = false
@@ -3016,6 +3032,7 @@ G2L_MODULES[G2L["c"]] = {
 		local BizarreLineage = CoreGui.BizarreLineage
 		local AutoRaid = BizarreLineage.Holder.Under.Content.AutoRaid
 		local Button = AutoRaid.Button :: TextButton
+		--game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("retryraid"):FireServer()
 
 		local DataStore = require(script.Parent.DataStore)
 
@@ -3023,6 +3040,7 @@ G2L_MODULES[G2L["c"]] = {
 		Config.AutoRaid = Config.AutoRaid or {}
 
 		local Effects = workspace.Effects
+		local Npcs = workspace.Npcs
 		local RaidPosition = Vector3.new(1070, 884, 213)
 
 		local Activate = Config.AutoRaid.Activate or false
@@ -3043,7 +3061,7 @@ G2L_MODULES[G2L["c"]] = {
 			if Time < 1 then return end
 			Time = 0
 
-			if Activate then
+			if Activate and game.PlaceId == 14890802310 then
 
 				local Ring = Effects:FindFirstChild("thering")
 
@@ -3085,21 +3103,25 @@ G2L_MODULES[G2L["c"]] = {
 			Activate = not Activate
 			AutoRaid.Activate = Activate
 
-			Config.AutoRaid.Activate = Activate
+			local LatestConfig = DataStore:Load()
+			LatestConfig.AutoRaid = LatestConfig.AutoRaid or {}
+
+			LatestConfig.AutoRaid.Activate = Activate
 
 			if Activate then
 				local pos = UDim2.new(0.8, 0, 0.5, 0)
-
-				Config.AutoRaid.ButtonPosition = {0.8,0,0.5,0}
-				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+				LatestConfig.AutoRaid.ButtonPosition = {0.8, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
 			else
 				local pos = UDim2.new(0.2, 0, 0.5, 0)
-
-				Config.AutoRaid.ButtonPosition = {0.2,0,0.5,0}
-				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+				LatestConfig.AutoRaid.ButtonPosition = {0.2, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
 			end
 
-			DataStore:Save(Config)
+			DataStore:Save(LatestConfig)
+			Config = LatestConfig
 
 			task.delay(0.5, function()
 				Debounce = false
@@ -3227,32 +3249,32 @@ G2L_MODULES[G2L["d"]] = {
 					return
 				end
 
-		--[[for _, Skill in ipairs(Skills) do
-			if Skill == "E" then
-				local args = {[1] = "E", [2] = true}
-				game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-			end
-			if Skill == "R" then
-				local args = {[1] = "R", [2] = true}
-				game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-			end
-			if Skill == "Z" then
-				local args = {[1] = "Z", [2] = true}
-				game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-			end
-			if Skill == "X" then
-				local args = {[1] = "X", [2] = true}
-				game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-			end
-			if Skill == "B" then
-				local args = {[1] = "B", [2] = true}
-				game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-			end
-			if Skill == "V" then
-				local args = {[1] = "V", [2] = true}
-				game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-			end
-		end--]]
+				for _, Skill in ipairs(Skills) do
+					if Skill == "E" then
+						local args = {[1] = "E", [2] = true}
+						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
+					end
+					if Skill == "R" then
+						local args = {[1] = "R", [2] = true}
+						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
+					end
+					if Skill == "Z" then
+						local args = {[1] = "Z", [2] = true}
+						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
+					end
+					if Skill == "X" then
+						local args = {[1] = "X", [2] = true}
+						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
+					end
+					if Skill == "B" then
+						local args = {[1] = "B", [2] = true}
+						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
+					end
+					if Skill == "V" then
+						local args = {[1] = "V", [2] = true}
+						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
+					end
+				end
 
 				local NearestTarget = nil
 				local TargetShortestDistance = math.huge
@@ -3294,7 +3316,7 @@ G2L_MODULES[G2L["d"]] = {
 						HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
 					end
 
-					--local args = {true, false} game:GetService("Players").LocalPlayer.Character:WaitForChild("client_character_controller"):WaitForChild("M1"):FireServer(unpack(args))
+					local args = {true, false} game:GetService("Players").LocalPlayer.Character:WaitForChild("client_character_controller"):WaitForChild("M1"):FireServer(unpack(args))
 				end
 			else
 				HumanoidRootPart.Massless = false
@@ -3316,21 +3338,25 @@ G2L_MODULES[G2L["d"]] = {
 			Debounce = true
 			Activate = not Activate
 
-			Config.KillNearest.Activate = Activate
+			local LatestConfig = DataStore:Load()
+			LatestConfig.KillNearest = LatestConfig.KillNearest or {}
+
+			LatestConfig.KillNearest.Activate = Activate
 
 			if Activate then
 				local pos = UDim2.new(0.8, 0, 0.5, 0)
-
-				Config.KillNearest.ButtonPosition = {0.8,0,0.5,0}
-				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+				LatestConfig.KillNearest.ButtonPosition = {0.8, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
 			else
 				local pos = UDim2.new(0.2, 0, 0.5, 0)
-
-				Config.KillNearest.ButtonPosition = {0.2,0,0.5,0}
-				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+				LatestConfig.KillNearest.ButtonPosition = {0.2, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
 			end
 
-			DataStore:Save(Config)
+			DataStore:Save(LatestConfig)
+			Config = LatestConfig
 
 			task.delay(0.5, function()
 				Debounce = false
