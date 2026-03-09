@@ -2056,7 +2056,7 @@ G2L["f9"]["BackgroundTransparency"] = 1;
 G2L["f9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["f9"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f9"]["Text"] = [[v1.1]];
+G2L["f9"]["Text"] = [[v1.2]];
 G2L["f9"]["Name"] = [[Version]];
 G2L["f9"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -3032,7 +3032,6 @@ G2L_MODULES[G2L["c"]] = {
 		local BizarreLineage = CoreGui.BizarreLineage
 		local AutoRaid = BizarreLineage.Holder.Under.Content.AutoRaid
 		local Button = AutoRaid.Button :: TextButton
-		--game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("retryraid"):FireServer()
 
 		local DataStore = require(script.Parent.DataStore)
 
@@ -3086,7 +3085,10 @@ G2L_MODULES[G2L["c"]] = {
 					end
 
 				end
-
+			elseif Activate and game.PlaceId ~= 14890802310 then
+				if PlayerGui:FindFirstChild("raidcomplete").Enabled then
+					game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("retryraid"):FireServer()
+				end
 			else
 				if HumanoidRootPart.Massless == true then
 					HumanoidRootPart.Massless = false
@@ -3242,8 +3244,15 @@ G2L_MODULES[G2L["d"]] = {
 		MethodFunction()
 
 		RunService.Heartbeat:Connect(function(DT)
+			local CanRun
 
-			if Activate and not AutoRaid.Activate then
+			if game.PlaceId == 14890802310 then
+				CanRun = Activate and not AutoRaid.Activate
+			else
+				CanRun = Activate
+			end
+
+			if CanRun then
 				if Method == "" then
 					HumanoidRootPart.Massless = false
 					return
@@ -3280,7 +3289,7 @@ G2L_MODULES[G2L["d"]] = {
 				local TargetShortestDistance = math.huge
 
 				for _, Target in pairs(Live:GetChildren()) do
-					if Target:IsA("Model") and Target ~= Player.Character then
+					if Target:IsA("Model") and Target ~= Player.Character and Target.Name ~= "Server" then
 
 						local IsPlayer = Players:GetPlayerFromCharacter(Target)
 
