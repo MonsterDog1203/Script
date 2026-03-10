@@ -2057,7 +2057,7 @@ G2L["f9"]["BackgroundTransparency"] = 1;
 G2L["f9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["f9"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f9"]["Text"] = [[v12.1]];
+G2L["f9"]["Text"] = [[v1.1]];
 G2L["f9"]["Name"] = [[Version]];
 G2L["f9"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -2108,399 +2108,398 @@ G2L["fe"]["CornerRadius"] = UDim.new(0.2, 0);
 local G2L_REQUIRE = require;
 local G2L_MODULES = {};
 local function require(Module:ModuleScript)
-	local ModuleState = G2L_MODULES[Module];
-	if ModuleState then
-		if not ModuleState.Required then
-			ModuleState.Required = true;
-			ModuleState.Value = ModuleState.Closure();
-		end
-		return ModuleState.Value;
-	end;
-	return G2L_REQUIRE(Module);
+    local ModuleState = G2L_MODULES[Module];
+    if ModuleState then
+        if not ModuleState.Required then
+            ModuleState.Required = true;
+            ModuleState.Value = ModuleState.Closure();
+        end
+        return ModuleState.Value;
+    end;
+    return G2L_REQUIRE(Module);
 end
 
 G2L_MODULES[G2L["6"]] = {
-	Closure = function()
-		local script = G2L["6"];--// SERVICES --\\
-		local Players = game:GetService("Players")
-		local TweenService = game:GetService("TweenService")
-		local UserInputService = game:GetService("UserInputService")
-		local RunService = game:GetService("RunService")
+Closure = function()
+    local script = G2L["6"];--// SERVICES --\\
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
 
-		--// VARIABLES --\\
-		local Player = Players.LocalPlayer
-		local PlayerGui = Player.PlayerGui
+--// VARIABLES --\\
+local Player = Players.LocalPlayer
+local PlayerGui = Player.PlayerGui
 
-		local Dragging = false
-		local DragStart
-		local StartPos
-		local CurrentTween
+local Dragging = false
+local DragStart
+local StartPos
+local CurrentTween
 
-		--// INTERFACE --\\
-		local BizarreLineage = CoreGui.BizarreLineage
-		local Holder = BizarreLineage.Holder
-		local Title = Holder.Top.Title
-		local ContentFrame = Holder.Under.Content
-		local Scrolling = Holder.Under.Section.Scrolling
-		local DeleteButton = Holder.Under.Section.Scrolling.DeleteScript
-		local MainButton = Holder.Under.Section.Scrolling.MainButton
+--// INTERFACE --\\
+local BizarreLineage = CoreGui.BizarreLineage
+local Holder = BizarreLineage.Holder
+local Title = Holder.Top.Title
+local ContentFrame = Holder.Under.Content
+local Scrolling = Holder.Under.Section.Scrolling
+local DeleteButton = Holder.Under.Section.Scrolling.DeleteScript
+local MainButton = Holder.Under.Section.Scrolling.MainButton
 
-		local Main = {}
+local Main = {}
 
-		BizarreLineage.Enabled = true
-		Title.Text = Player.Name.. " | Bizarre Lineage"
+BizarreLineage.Enabled = true
+Title.Text = Player.Name.. " | Bizarre Lineage"
 
-		local function SectionList()
-			for _, Buttons in pairs(Scrolling:GetChildren()) do
-				if Buttons:IsA("TextButton") then
-					local Frame = Buttons:FindFirstChild("Frame")
-					Frame.MouseEnter:Connect(function()
-						local tween = TweenService:Create(Frame, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
-					end)
+local function SectionList()
+	for _, Buttons in pairs(Scrolling:GetChildren()) do
+		if Buttons:IsA("TextButton") then
+			local Frame = Buttons:FindFirstChild("Frame")
+			Frame.MouseEnter:Connect(function()
+				local tween = TweenService:Create(Frame, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
+			end)
 
-					Frame.MouseLeave:Connect(function()
-						local tween = TweenService:Create(Frame, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}) tween:Play()
-					end)
-				end
-			end
+			Frame.MouseLeave:Connect(function()
+				local tween = TweenService:Create(Frame, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}) tween:Play()
+			end)
 		end
+	end
+end
 
-		SectionList()
+SectionList()
 
-		--// DRAGGING --\\
-		local function Update(Input)
-			local Delta = Input.Position - DragStart
+--// DRAGGING --\\
+local function Update(Input)
+	local Delta = Input.Position - DragStart
+	
+	local TargetPos = UDim2.new(StartPos.X.Scale, StartPos.X.Offset + Delta.X, StartPos.Y.Scale, StartPos.Y.Offset + Delta.Y)
+	
+	if CurrentTween then
+		CurrentTween:Cancel()
+	end
+	
+	CurrentTween = TweenService:Create(Holder, TweenInfo.new(0.15), {Position = TargetPos})
+	CurrentTween:Play()
+end
 
-			local TargetPos = UDim2.new(StartPos.X.Scale, StartPos.X.Offset + Delta.X, StartPos.Y.Scale, StartPos.Y.Offset + Delta.Y)
-
-			if CurrentTween then
-				CurrentTween:Cancel()
+Holder.InputBegan:Connect(function(Input)
+	if Input.UserInputType == Enum.UserInputType.MouseButton1 then
+		Dragging = true
+		DragStart = Input.Position
+		StartPos = Holder.Position
+		
+		Input.Changed:Connect(function()
+			if Input.UserInputState == Enum.UserInputState.End then
+				Dragging = false
 			end
+		end)
+	end	
+end)
 
-			CurrentTween = TweenService:Create(Holder, TweenInfo.new(0.15), {Position = TargetPos})
-			CurrentTween:Play()
+Holder.InputChanged:Connect(function(Input)
+	if Input.UserInputType == Enum.UserInputType.MouseMovement then
+		if Dragging then
+			Update(Input)
 		end
-
-		Holder.InputBegan:Connect(function(Input)
-			if Input.UserInputType == Enum.UserInputType.MouseButton1 then
-				Dragging = true
-				DragStart = Input.Position
-				StartPos = Holder.Position
-
-				Input.Changed:Connect(function()
-					if Input.UserInputState == Enum.UserInputState.End then
-						Dragging = false
-					end
-				end)
-			end	
-		end)
-
-		Holder.InputChanged:Connect(function(Input)
-			if Input.UserInputType == Enum.UserInputType.MouseMovement then
-				if Dragging then
-					Update(Input)
-				end
-			end
-		end)
+	end
+end)
 
 
-		UserInputService.InputChanged:Connect(function(Input)
-			if Dragging and Input.UserInputType == Enum.UserInputType.MouseMovement then
-				Update(Input)
-			end
-		end)
+UserInputService.InputChanged:Connect(function(Input)
+	if Dragging and Input.UserInputType == Enum.UserInputType.MouseMovement then
+		Update(Input)
+	end
+end)
 
-		UserInputService.InputBegan:Connect(function(Input)
-			if Input.KeyCode == Enum.KeyCode.LeftAlt then
-				BizarreLineage.Enabled = not BizarreLineage.Enabled
-			end
-		end)
-
-
-		MainButton.MouseButton1Click:Connect(function()
-			if not ContentFrame.Visible then
-				ContentFrame.Visible = true
-			end
-		end)
-
-		DeleteButton.MouseButton1Click:Connect(function()
-			BizarreLineage:Destroy()
-		end)
+UserInputService.InputBegan:Connect(function(Input)
+	if Input.KeyCode == Enum.KeyCode.LeftAlt then
+		BizarreLineage.Enabled = not BizarreLineage.Enabled
+	end
+end)
 
 
-		Main.Initialize = function()
-			BizarreLineage.Enabled = true
-			warn("Initialized Bizarre Lineage script")
+MainButton.MouseButton1Click:Connect(function()
+	if not ContentFrame.Visible then
+		ContentFrame.Visible = true
+	end
+end)
 
-			for i, module in pairs(script:GetChildren()) do
-				if module:IsA("ModuleScript") then
-					require(module)
-				end
-			end
+DeleteButton.MouseButton1Click:Connect(function()
+	BizarreLineage:Destroy()
+end)
+
+Main.Initialize = function()
+	BizarreLineage.Enabled = true
+	warn("Initialized Bizarre Lineage script")
+	
+	for i, module in pairs(script:GetChildren()) do
+		if module:IsA("ModuleScript") then
+			require(module)
 		end
+	end
+end
 
-		return Main
-	end;
+return Main
+end;
 };
 G2L_MODULES[G2L["7"]] = {
-	Closure = function()
-		local script = G2L["7"];--// SERVICES \\--
-		local Players = game:GetService("Players")
-		local ReplicatedStorage = game:GetService("ReplicatedStorage")
-		local TweenService = game:GetService("TweenService")
-		local RunService = game:GetService("RunService")
-		local HttpService = game:GetService("HttpService")
+Closure = function()
+    local script = G2L["7"];--// SERVICES \\--
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local HttpService = game:GetService("HttpService")
 
-		--// VARIABLES \\--
-		local Player = Players.LocalPlayer
-		local PlayerGui = Player.PlayerGui
+--// VARIABLES \\--
+local Player = Players.LocalPlayer
+local PlayerGui = Player.PlayerGui
 
-		local Stands = ReplicatedStorage.assets.models.stands
-		local Arrows = ReplicatedStorage.assets.models.items
-		local Stand = Player.PlayerData.SlotData.Stand
-		local Inventory = Player.PlayerData.SlotData.Inventory
+local Stands = ReplicatedStorage.assets.models.stands
+local Arrows = ReplicatedStorage.assets.models.items
+local Stand = Player.PlayerData.SlotData.Stand
+local Inventory = Player.PlayerData.SlotData.Inventory
 
-		--// INTERFACE \\--
-		local BizarreLineage = CoreGui.BizarreLineage
+--// INTERFACE \\--
+local BizarreLineage = CoreGui.BizarreLineage
 
-		local StandSpinner = BizarreLineage.Holder.Under.Content.StandSpinner
-		local Button = StandSpinner.Button
-		local Selection1 = StandSpinner.Selection1
-		local List1 = Selection1.List.ScrollingFrame
-		local Selection2 = StandSpinner.Selection2
-		local List2 = Selection2.List.ScrollingFrame
+local StandSpinner = BizarreLineage.Holder.Under.Content.StandSpinner
+local Button = StandSpinner.Button
+local Selection1 = StandSpinner.Selection1
+local List1 = Selection1.List.ScrollingFrame
+local Selection2 = StandSpinner.Selection2
+local List2 = Selection2.List.ScrollingFrame
 
-		local DataStore = require(script.Parent.DataStore)
+local DataStore = require(script.Parent.DataStore)
 
-		local Config = DataStore:Load()
-		Config.StandSpinner = Config.StandSpinner or {}
+local Config = DataStore:Load()
+Config.StandSpinner = Config.StandSpinner or {}
 
-		local Activate = Config.StandSpinner.Activate or false
-		local Debounce = false
-		local Time = 0
-		local ArrowNames = {}
-		local StandNames = {}
+local Activate = Config.StandSpinner.Activate or false
+local Debounce = false
+local Time = 0
+local ArrowNames = {}
+local StandNames = {}
 
-		if Config.StandSpinner.ButtonPosition then
-			Button.Frame.Position = UDim2.new(
-				Config.StandSpinner.ButtonPosition[1],
-				Config.StandSpinner.ButtonPosition[2],
-				Config.StandSpinner.ButtonPosition[3],
-				Config.StandSpinner.ButtonPosition[4]
-			)
+if Config.StandSpinner.ButtonPosition then
+	Button.Frame.Position = UDim2.new(
+		Config.StandSpinner.ButtonPosition[1],
+		Config.StandSpinner.ButtonPosition[2],
+		Config.StandSpinner.ButtonPosition[3],
+		Config.StandSpinner.ButtonPosition[4]
+	)
+end
+
+local function UpdateStandSpinner()
+	for i, stand in pairs(Stands:GetChildren()) do
+		if stand:IsA("Model") or stand.Name == "Anubis" then
 		end
+	end
+end
 
-		local function UpdateStandSpinner()
-			for i, stand in pairs(Stands:GetChildren()) do
-				if stand:IsA("Model") or stand.Name == "Anubis" then
-				end
-			end
-		end
-
-		local function SelectionList()
-			for i, Selection in pairs(StandSpinner:GetChildren()) do
-				if Selection:IsA("TextButton") and Selection.Name == "Selection1" or Selection.Name == "Selection2" then
-					local UIStroke = Selection:FindFirstChild("UIStroke")
-
-					UIStroke.MouseEnter:Connect(function()
-						local tween = TweenService:Create(UIStroke, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
-					end)
-
-					UIStroke.MouseLeave:Connect(function()
-						local tween = TweenService:Create(UIStroke, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
-					end)
-				end
-			end
-		end
-
-		local function ArrowList()
-			for i, arrow in pairs(Arrows:GetChildren()) do
-				if arrow.Name == "Stand Arrow" or arrow.Name == "Lucky Arrow" then
-					local List = Instance.new("TextButton")
-					List.AnchorPoint = Vector2.new(0.5, 0.5)
-					List.BackgroundTransparency = 0
-					List.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-					List.Position = UDim2.new(0.5, 0, 0.5, 0)
-					List.Size = UDim2.new(1, 0, 0.025, 0)
-					List.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
-					List.Name = arrow.Name
-					List.Text = ""
-					List.Parent = List1
-
-					local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-					UITextSizeConstraint.MaxTextSize = 26
-					UITextSizeConstraint.MinTextSize = 1
-					UITextSizeConstraint.Parent = List
-
-					local Text = Instance.new("TextLabel")
-					Text.AnchorPoint = Vector2.new(0.5, 0.5)
-					Text.BackgroundTransparency = 1
-					Text.Position = UDim2.new(0.5, 0, 0.5, 0)
-					Text.Size = UDim2.new(0.8, 0, 0.8, 0)
-					Text.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
-					Text.TextScaled = false
-					Text.TextSize = 14
-					Text.Text = arrow.Name
-					Text.Parent = List
-					Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-
-					local UITextSizeConstraint2 = Instance.new("UITextSizeConstraint")
-					UITextSizeConstraint2.MaxTextSize = 18
-					UITextSizeConstraint2.MinTextSize = 1
-					UITextSizeConstraint2.Parent = Text	
-
-					List.MouseEnter:Connect(function()
-						local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
-					end)
-
-					List.MouseLeave:Connect(function()
-						local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
-					end)
-
-					List.MouseButton1Click:Connect(function()
-						local CurrentArrowName = arrow.Name
-						local Found = table.find(ArrowNames, CurrentArrowName)
-						if Found then
-							table.remove(ArrowNames, Found)
-							Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-						else
-							table.insert(ArrowNames, CurrentArrowName)
-							Text.TextColor3 = Color3.fromRGB(130, 255, 46)
-						end
-
-						local ArrowName = table.concat(ArrowNames, ", ")
-
-						Selection1:WaitForChild("Selected").Text = ArrowName ~= "" and ArrowName or "Arrow?"
-						if #ArrowNames == 0 then
-							Selection1:WaitForChild("Selected").TextColor3 = Color3.fromRGB(84, 84, 84)
-						else
-							Selection1:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
-						end
-						ArrowName = arrow.Name
-						Selection1.List.Visible = false
-					end)
-				end
-			end
-		end
-
-		local function StandList()
-			for i, stand in pairs(Stands:GetChildren()) do
-				if (stand:IsA("Model") or stand.Name == "Anubis") and not (stand.Name == "C-Moon" or stand.Name == "Cream" or stand.Name == "D4C" or stand.Name == "Made in Heaven" or stand.Name == "Silver Chariot" or stand.Name == "Star Platinum, The World" or stand.Name == "The World Over Heaven" or stand.Name == "Wonder of U") then
-					local List = Instance.new("TextButton")
-					List.AnchorPoint = Vector2.new(0.5, 0.5)
-					List.BackgroundTransparency = 0
-					List.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-					List.Position = UDim2.new(0.5, 0, 0.5, 0)
-					List.Size = UDim2.new(1, 0, 0.025, 0)
-					List.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
-					List.Name = stand.Name
-					List.Text = ""
-					List.Parent = List2
-
-					local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-					UITextSizeConstraint.MaxTextSize = 26
-					UITextSizeConstraint.MinTextSize = 1
-					UITextSizeConstraint.Parent = List
-
-					local Text = Instance.new("TextLabel")
-					Text.AnchorPoint = Vector2.new(0.5, 0.5)
-					Text.BackgroundTransparency = 1
-					Text.Position = UDim2.new(0.5, 0, 0.5, 0)
-					Text.Size = UDim2.new(0.8, 0, 0.8, 0)
-					Text.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
-					Text.TextScaled = false
-					Text.TextSize = 14
-					Text.Text = stand.Name
-					Text.Parent = List
-					Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-
-					local UITextSizeConstraint2 = Instance.new("UITextSizeConstraint")
-					UITextSizeConstraint2.MaxTextSize = 18
-					UITextSizeConstraint2.MinTextSize = 1
-					UITextSizeConstraint2.Parent = Text	
-
-					List.MouseEnter:Connect(function()
-						local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
-					end)
-
-					List.MouseLeave:Connect(function()
-						local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
-					end)
-
-					List.MouseButton1Click:Connect(function()
-						local CurrentStandName = stand.Name
-						local Found = table.find(StandNames, CurrentStandName)
-						if Found then
-							table.remove(StandNames, Found)
-							Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-						else
-							table.insert(StandNames, CurrentStandName)
-							Text.TextColor3 = Color3.fromRGB(130, 255, 46)
-						end
-
-						local StandName = table.concat(StandNames, ", ")
-						Selection2:WaitForChild("Selected").Text = StandName ~= "" and StandName or "Target?"
-						if #StandNames == 0 then
-							Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(84, 84, 84)
-						else
-							Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
-						end
-						StandName = stand.Name
-						Selection2.List.Visible = false
-					end)
-				end
-			end
-		end
-
-		Selection2.MouseButton1Click:Connect(function()
-			Selection2.List.Visible = not Selection2.List.Visible
-		end)
-
-		Selection1.MouseButton1Click:Connect(function()
-			Selection1.List.Visible = not Selection1.List.Visible
-		end)
-
-		Button.MouseButton1Click:Connect(function()
-			if Debounce then return end
-			Debounce = true
-			Activate = not Activate
-
-			local LatestConfig = DataStore:Load()
-			LatestConfig.StandSpinner = LatestConfig.StandSpinner or {}
-
-			LatestConfig.StandSpinner.Activate = Activate
-
-			if #ArrowNames > 0 and #StandNames > 0 then
-				if Activate then
-					local pos = UDim2.new(0.8, 0, 0.5, 0)
-
-					Config.StandSpinner.ButtonPosition = {0.8,0,0.5,0}
-					local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
-				else
-					local pos = UDim2.new(0.2, 0, 0.5, 0)
-
-					Config.StandSpinner.ButtonPosition = {0.2,0,0.5,0}
-					local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
-				end
-
-			else
-				local DefaultColor = StandSpinner.Button.Frame.BackgroundColor3
-
-				StandSpinner.Button.Frame.BackgroundColor3 = Color3.fromRGB(188, 24, 26)
-				task.wait(0.5)
-
-				StandSpinner.Button.Frame.BackgroundColor3 = DefaultColor
-			end
-
-			DataStore:Save(LatestConfig)
-			Config = LatestConfig
-
-			task.delay(0.5, function()
-				Debounce = false
+local function SelectionList()
+	for i, Selection in pairs(StandSpinner:GetChildren()) do
+		if Selection:IsA("TextButton") and Selection.Name == "Selection1" or Selection.Name == "Selection2" then
+			local UIStroke = Selection:FindFirstChild("UIStroke")
+			
+			UIStroke.MouseEnter:Connect(function()
+				local tween = TweenService:Create(UIStroke, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
 			end)
-		end)
 
-		local function GetArrowAmounts()
+			UIStroke.MouseLeave:Connect(function()
+				local tween = TweenService:Create(UIStroke, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
+			end)
+		end
+	end
+end
+
+local function ArrowList()
+	for i, arrow in pairs(Arrows:GetChildren()) do
+		if arrow.Name == "Stand Arrow" or arrow.Name == "Lucky Arrow" then
+			local List = Instance.new("TextButton")
+			List.AnchorPoint = Vector2.new(0.5, 0.5)
+			List.BackgroundTransparency = 0
+			List.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+			List.Position = UDim2.new(0.5, 0, 0.5, 0)
+			List.Size = UDim2.new(1, 0, 0.025, 0)
+			List.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
+			List.Name = arrow.Name
+			List.Text = ""
+			List.Parent = List1
+
+			local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+			UITextSizeConstraint.MaxTextSize = 26
+			UITextSizeConstraint.MinTextSize = 1
+			UITextSizeConstraint.Parent = List
+
+			local Text = Instance.new("TextLabel")
+			Text.AnchorPoint = Vector2.new(0.5, 0.5)
+			Text.BackgroundTransparency = 1
+			Text.Position = UDim2.new(0.5, 0, 0.5, 0)
+			Text.Size = UDim2.new(0.8, 0, 0.8, 0)
+			Text.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
+			Text.TextScaled = false
+			Text.TextSize = 14
+			Text.Text = arrow.Name
+			Text.Parent = List
+			Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+			local UITextSizeConstraint2 = Instance.new("UITextSizeConstraint")
+			UITextSizeConstraint2.MaxTextSize = 18
+			UITextSizeConstraint2.MinTextSize = 1
+			UITextSizeConstraint2.Parent = Text	
+
+			List.MouseEnter:Connect(function()
+				local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
+			end)
+
+			List.MouseLeave:Connect(function()
+				local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
+			end)
+			
+			List.MouseButton1Click:Connect(function()
+				local CurrentArrowName = arrow.Name
+				local Found = table.find(ArrowNames, CurrentArrowName)
+				if Found then
+					table.remove(ArrowNames, Found)
+					Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+				else
+					table.insert(ArrowNames, CurrentArrowName)
+					Text.TextColor3 = Color3.fromRGB(130, 255, 46)
+				end
+
+				local ArrowName = table.concat(ArrowNames, ", ")
+				
+				Selection1:WaitForChild("Selected").Text = ArrowName ~= "" and ArrowName or "Arrow?"
+				if #ArrowNames == 0 then
+					Selection1:WaitForChild("Selected").TextColor3 = Color3.fromRGB(84, 84, 84)
+				else
+					Selection1:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
+				end
+				ArrowName = arrow.Name
+				Selection1.List.Visible = false
+			end)
+		end
+	end
+end
+
+local function StandList()
+	for i, stand in pairs(Stands:GetChildren()) do
+		if (stand:IsA("Model") or stand.Name == "Anubis") and not (stand.Name == "C-Moon" or stand.Name == "Cream" or stand.Name == "D4C" or stand.Name == "Made in Heaven" or stand.Name == "Silver Chariot" or stand.Name == "Star Platinum, The World" or stand.Name == "The World Over Heaven" or stand.Name == "Wonder of U") then
+			local List = Instance.new("TextButton")
+			List.AnchorPoint = Vector2.new(0.5, 0.5)
+			List.BackgroundTransparency = 0
+			List.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+			List.Position = UDim2.new(0.5, 0, 0.5, 0)
+			List.Size = UDim2.new(1, 0, 0.025, 0)
+			List.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
+			List.Name = stand.Name
+			List.Text = ""
+			List.Parent = List2
+			
+			local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+			UITextSizeConstraint.MaxTextSize = 26
+			UITextSizeConstraint.MinTextSize = 1
+			UITextSizeConstraint.Parent = List
+			
+			local Text = Instance.new("TextLabel")
+			Text.AnchorPoint = Vector2.new(0.5, 0.5)
+			Text.BackgroundTransparency = 1
+			Text.Position = UDim2.new(0.5, 0, 0.5, 0)
+			Text.Size = UDim2.new(0.8, 0, 0.8, 0)
+			Text.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
+			Text.TextScaled = false
+			Text.TextSize = 14
+			Text.Text = stand.Name
+			Text.Parent = List
+			Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+			
+			local UITextSizeConstraint2 = Instance.new("UITextSizeConstraint")
+			UITextSizeConstraint2.MaxTextSize = 18
+			UITextSizeConstraint2.MinTextSize = 1
+			UITextSizeConstraint2.Parent = Text	
+			
+			List.MouseEnter:Connect(function()
+				local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
+			end)
+
+			List.MouseLeave:Connect(function()
+				local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
+			end)
+			
+			List.MouseButton1Click:Connect(function()
+				local CurrentStandName = stand.Name
+				local Found = table.find(StandNames, CurrentStandName)
+				if Found then
+					table.remove(StandNames, Found)
+					Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+				else
+					table.insert(StandNames, CurrentStandName)
+					Text.TextColor3 = Color3.fromRGB(130, 255, 46)
+				end
+				
+				local StandName = table.concat(StandNames, ", ")
+				Selection2:WaitForChild("Selected").Text = StandName ~= "" and StandName or "Target?"
+				if #StandNames == 0 then
+					Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(84, 84, 84)
+				else
+					Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
+				end
+				StandName = stand.Name
+				Selection2.List.Visible = false
+			end)
+		end
+	end
+end
+
+Selection2.MouseButton1Click:Connect(function()
+	Selection2.List.Visible = not Selection2.List.Visible
+end)
+
+Selection1.MouseButton1Click:Connect(function()
+	Selection1.List.Visible = not Selection1.List.Visible
+end)
+
+Button.MouseButton1Click:Connect(function()
+	if Debounce then return end
+	Debounce = true
+	Activate = not Activate
+	
+	local LatestConfig = DataStore:Load()
+	LatestConfig.StandSpinner = LatestConfig.StandSpinner or {}
+
+	LatestConfig.StandSpinner.Activate = Activate
+	
+	if #ArrowNames > 0 and #StandNames > 0 then
+		if Activate then
+			local pos = UDim2.new(0.8, 0, 0.5, 0)
+
+			Config.StandSpinner.ButtonPosition = {0.8,0,0.5,0}
+			local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+		else
+			local pos = UDim2.new(0.2, 0, 0.5, 0)
+
+			Config.StandSpinner.ButtonPosition = {0.2,0,0.5,0}
+			local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
+		end
+
+	else
+		local DefaultColor = StandSpinner.Button.Frame.BackgroundColor3
+		
+		StandSpinner.Button.Frame.BackgroundColor3 = Color3.fromRGB(188, 24, 26)
+		task.wait(0.5)
+		
+		StandSpinner.Button.Frame.BackgroundColor3 = DefaultColor
+	end
+	
+	DataStore:Save(LatestConfig)
+	Config = LatestConfig
+	
+	task.delay(0.5, function()
+		Debounce = false
+	end)
+end)
+
+local function GetArrowAmounts()
 			local InventoryData = HttpService:JSONDecode(Inventory.Value)
 
 			local StandArrowAmount = 0
@@ -3046,6 +3045,7 @@ G2L_MODULES[G2L["c"]] = {
 
 		local Activate = Config.AutoRaid.Activate or false
 		local Debounce = false
+		local HasSeenNPC = false
 		local Time = 0
 
 		if Config.AutoRaid.ButtonPosition then
@@ -3088,13 +3088,24 @@ G2L_MODULES[G2L["c"]] = {
 
 				end
 			elseif Activate and game.PlaceId ~= 14890802310 then
+				local FoundNPC = false
+
 				for _, npc in pairs(Live:GetChildren()) do
 					if npc:IsA("Model") and npc ~= Character and npc.Name ~= "Server" then
 						local IsPlayer = Players:GetPlayerFromCharacter(npc)
+
 						if not IsPlayer then
-							game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("retryraid"):FireServer()
+							FoundNPC = true
+							HasSeenNPC = true
+							break
 						end
 					end
+				end
+
+				if HasSeenNPC and not FoundNPC then
+					game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("retryraid"):FireServer()
+
+					HasSeenNPC = false
 				end
 			else
 				if HumanoidRootPart.Massless == true then
@@ -3432,18 +3443,29 @@ local function C_2()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 	local player = Players.LocalPlayer
+	local Main = require(script.Parent.Holder.Under.Main)
 
-	game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("spawn"):FireServer()
+	local uiInitialized = false
+
+	task.wait(5)
+
+	local PlayerGui = player:WaitForChild("PlayerGui")
+	local MainMenu = PlayerGui:FindFirstChild("Main Menu")
+
+	if MainMenu then
+		MainMenu.Enabled = false
+		ReplicatedStorage:WaitForChild("requests"):WaitForChild("character"):WaitForChild("spawn"):FireServer()
+	end
 
 	local function OnCharacterAdded(character)
-		local PlayerGui = player:WaitForChild("PlayerGui")
-		local MainMenu = PlayerGui:FindFirstChild("Main Menu")
-		if MainMenu.Enabled == true then
-			MainMenu.Enabled = false
+		if not uiInitialized then
+			uiInitialized = true
+			Main.Initialize()
 		end
 
-		local Main = require(script.Parent.Holder.Under.Main)
-		Main.Initialize(character)
+		if Main.OnCharacterAdded then
+			Main.OnCharacterAdded(character)
+		end
 	end
 
 	if player.Character then
