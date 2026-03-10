@@ -3170,6 +3170,7 @@ G2L_MODULES[G2L["d"]] = {
 
 		local Activate = Config.KillNearest.Activate or false
 		local Debounce = false
+		local CurrentTarget = nil
 		local Method = Config.KillNearest.Method or ""
 		local Skills = Config.KillNearest.Skills or {}
 
@@ -3301,44 +3302,42 @@ G2L_MODULES[G2L["d"]] = {
 				CanRun = Activate
 			end
 
-			if CanRun then
-				if Method == "" then
-					return
-				end
+			if not CanRun then
+				return
+			end
 
-				for _, Skill in ipairs(Skills) do
-					if Skill == "E" then
-						local args = {[1] = "E", [2] = true}
-						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-					end
-					if Skill == "R" then
-						local args = {[1] = "R", [2] = true}
-						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-					end
-					if Skill == "Z" then
-						local args = {[1] = "Z", [2] = true}
-						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-					end
-					if Skill == "X" then
-						local args = {[1] = "X", [2] = true}
-						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-					end
-					if Skill == "B" then
-						local args = {[1] = "B", [2] = true}
-						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-					end
-					if Skill == "V" then
-						local args = {[1] = "V", [2] = true}
-						game:GetService("Players").LocalPlayer.Character.client_character_controller.Skill:FireServer(unpack(args))
-					end
-				end
+			if Method == "" then
+				return
+			end
 
+			for _, Skill in ipairs(Skills) do
+				if Skill == "E" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("E", true)
+				elseif Skill == "R" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("R", true)
+				elseif Skill == "Z" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("Z", true)
+				elseif Skill == "X" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("X", true)
+				elseif Skill == "B" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("B", true)
+				elseif Skill == "V" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("V", true)
+				end
+			end
+
+			if CurrentTarget then
+				if not CurrentTarget.Parent or not CurrentTarget:IsDescendantOf(Live) or not CurrentTarget.PrimaryPart then
+					CurrentTarget = nil
+				end
+			end
+
+			if not CurrentTarget then
 				local NearestTarget = nil
 				local TargetShortestDistance = math.huge
 
 				for _, Target in pairs(Live:GetChildren()) do
 					if Target:IsA("Model") and Target ~= Player.Character and Target.Name ~= "Server" then
-
 						local IsPlayer = Players:GetPlayerFromCharacter(Target)
 
 						if not IsPlayer and Target.PrimaryPart then
@@ -3352,28 +3351,29 @@ G2L_MODULES[G2L["d"]] = {
 					end
 				end
 
-				if NearestTarget == nil then
-					return
-				end
-
-				if NearestTarget then
-					local TargetPosition = NearestTarget.PrimaryPart.Position
-					if Method == "Below" then
-						local Pos = TargetPosition + Vector3.new(0,-7.5,0)
-						HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
-
-					elseif Method == "Above" then
-						local Pos = TargetPosition + Vector3.new(0,7.5,0)
-						HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
-
-					elseif Method == "Behind" then
-						local Pos = TargetPosition + Vector3.new(0,0,7.5)
-						HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
-					end
-
-					local args = {true, false} game:GetService("Players").LocalPlayer.Character:WaitForChild("client_character_controller"):WaitForChild("M1"):FireServer(unpack(args))
-				end
+				CurrentTarget = NearestTarget
 			end
+
+			if not CurrentTarget or not CurrentTarget.PrimaryPart then
+				return
+			end
+
+			local TargetPosition = CurrentTarget.PrimaryPart.Position
+
+			if Method == "Below" then
+				local Pos = TargetPosition + Vector3.new(0, -7.5, 0)
+				HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
+
+			elseif Method == "Above" then
+				local Pos = TargetPosition + Vector3.new(0, 7.5, 0)
+				HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
+
+			elseif Method == "Behind" then
+				local Pos = TargetPosition + Vector3.new(0, 0, 7.5)
+				HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
+			end
+
+			game.Players.LocalPlayer.Character:WaitForChild("client_character_controller"):WaitForChild("M1"):FireServer(true, false)
 		end)
 
 		Selection1.MouseButton1Click:Connect(function()
