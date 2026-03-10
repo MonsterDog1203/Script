@@ -1,5 +1,4 @@
-local CoreGui = game:GetService("CoreGui")
-
+local CoreGui = game.GetService("CoreGui")
 local G2L = {};
 
 -- StarterGui.BizarreLineage
@@ -3293,6 +3292,8 @@ G2L_MODULES[G2L["c"]] = {
 
 			LatestConfig.AutoRaid.Activate = Activate
 
+
+
 			if Activate then
 				local pos = UDim2.new(0.8, 0, 0.5, 0)
 				LatestConfig.AutoRaid.ButtonPosition = {0.8, 0, 0.5, 0}
@@ -3621,6 +3622,7 @@ G2L_MODULES[G2L["e"]] = {
 		local PlayerGui = Player.PlayerGui
 
 		local DataStore = require(script.Parent.DataStore)
+		local AutoRaid = require(script.Parent.AutoRaid)
 
 		local Config = DataStore:Load()
 		Config.AutoMeditation = Config.AutoMeditation or {}
@@ -3654,10 +3656,19 @@ G2L_MODULES[G2L["e"]] = {
 			AutoMeditation.Activate = Activate
 			local LatestConfig = DataStore:Load()
 			LatestConfig.AutoMeditation = LatestConfig.AutoMeditation or {}
+			local DefaultColor = AutoMeditationFrame.Button.Frame.BackgroundColor3
 
 			LatestConfig.AutoMeditation.Activate = Activate
 
 			if Activate then
+				if AutoRaid.Activate then
+					AutoMeditationFrame.Button.Frame.BackgroundColor3 = Color3.fromRGB(188, 24, 26)
+					task.wait(0.5)
+
+					AutoMeditationFrame.Button.Frame.BackgroundColor3 = DefaultColor
+					return
+				end
+
 				local pos = UDim2.new(0.8, 0, 0.5, 0)
 				LatestConfig.AutoMeditation.ButtonPosition = {0.8, 0, 0.5, 0}
 				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
