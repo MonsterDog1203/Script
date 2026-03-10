@@ -2057,7 +2057,7 @@ G2L["f9"]["BackgroundTransparency"] = 1;
 G2L["f9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["f9"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f9"]["Text"] = [[v1.1]];
+G2L["f9"]["Text"] = [[v20.1]];
 G2L["f9"]["Name"] = [[Version]];
 G2L["f9"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -3442,30 +3442,33 @@ local function C_2()
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-	local player = Players.LocalPlayer
-	local Main = require(script.Parent.Holder.Under.Main)
-
-	local uiInitialized = false
-
 	task.wait(5)
+
+	local player = Players.LocalPlayer
 
 	local PlayerGui = player:WaitForChild("PlayerGui")
 	local MainMenu = PlayerGui:FindFirstChild("Main Menu")
 
+	local queueteleport = queue_on_teleport or syn and syn.queue_on_teleport
+
+	local TeleportCheck = false
+	local KeepScript = true
+
+	Players.LocalPlayer.OnTeleport:Connect(function()
+		if KeepScript and not TeleportCheck and queueteleport then
+			TeleportCheck = true
+			queueteleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/MonsterDog1203/Script/refs/heads/main/BizarreLineage"))()')
+		end
+	end)
+
 	if MainMenu then
 		MainMenu.Enabled = false
-		ReplicatedStorage:WaitForChild("requests"):WaitForChild("character"):WaitForChild("spawn"):FireServer()
+		game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("spawn"):FireServer()
 	end
 
 	local function OnCharacterAdded(character)
-		if not uiInitialized then
-			uiInitialized = true
-			Main.Initialize()
-		end
-
-		if Main.OnCharacterAdded then
-			Main.OnCharacterAdded(character)
-		end
+		local Main = require(script.Parent.Holder.Under.Main)
+		Main.Initialize(character)
 	end
 
 	if player.Character then
