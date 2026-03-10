@@ -3039,6 +3039,7 @@ G2L_MODULES[G2L["c"]] = {
 		local Config = DataStore:Load()
 		Config.AutoRaid = Config.AutoRaid or {}
 
+		local Live = workspace.Live
 		local Effects = workspace.Effects
 		local Npcs = workspace.Npcs
 		local RaidPosition = Vector3.new(1070, 884, 213)
@@ -3087,9 +3088,7 @@ G2L_MODULES[G2L["c"]] = {
 
 				end
 			elseif Activate and game.PlaceId ~= 14890802310 then
-				local RaidComplete = PlayerGui:FindFirstChild("raidcomplete") :: ScreenGui
-				if RaidComplete then return end
-				game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("retryraid"):FireServer()
+				--game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("retryraid"):FireServer()
 			else
 				if HumanoidRootPart.Massless == true then
 					HumanoidRootPart.Massless = false
@@ -3426,18 +3425,14 @@ local function C_2()
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
 	local player = Players.LocalPlayer
-	if not player then
-		return
-	end
 
 	local PlayerGui = player:WaitForChild("PlayerGui")
 	local MainMenu = PlayerGui:FindFirstChild("Main Menu")
 
 	if MainMenu then
 		MainMenu.Enabled = false
+		game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("spawn"):FireServer()
 	end
-
-	game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("spawn"):FireServer()
 
 	local function OnCharacterAdded(character)
 		local Main = require(script.Parent.Holder.Under.Main)
