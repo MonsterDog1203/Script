@@ -5,6 +5,7 @@ local G2L = {};
 -- StarterGui.BizarreLineage
 G2L["1"] = Instance.new("ScreenGui", CoreGui);
 G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["Enabled"] = false;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
 G2L["1"]["Name"] = [[BizarreLineage]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -3492,27 +3493,11 @@ G2L_MODULES[G2L["d"]] = {
 				return
 			end
 
-			for _, Skill in ipairs(Skills) do
-				if Skill == "E" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("E", true)
-				elseif Skill == "R" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("R", true)
-				elseif Skill == "Z" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("Z", true)
-				elseif Skill == "X" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("X", true)
-				elseif Skill == "B" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("B", true)
-				elseif Skill == "V" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("V", true)
-				end
-			end
-
 			if CurrentTarget then
 				if not CurrentTarget.Parent
 					or not CurrentTarget:IsDescendantOf(Live)
 					or not CurrentTarget.PrimaryPart
-					or (AutoMeditation.Activate and not CurrentTarget.Name:find("%." .. Player.Name .. "entity clone")) then
+					or (AutoMeditation.Activate and not CurrentTarget.Name:find("%." .. Player.Name .. " entity clone")) then
 					CurrentTarget = nil
 				end
 			end
@@ -3526,7 +3511,7 @@ G2L_MODULES[G2L["d"]] = {
 						local IsPlayer = Players:GetPlayerFromCharacter(Target)
 
 						if not IsPlayer and Target.PrimaryPart then
-							local IsClone = Target.Name:find("%." .. Player.Name .. "entity clone")
+							local IsClone = Target.Name:find("%." .. Player.Name .. " entity clone")
 
 							if (not AutoMeditation.Activate) or (AutoMeditation.Activate and IsClone) then
 								local Distance = (Target.PrimaryPart.Position - HumanoidRootPart.Position).Magnitude
@@ -3558,6 +3543,22 @@ G2L_MODULES[G2L["d"]] = {
 			elseif Method == "Behind" then
 				local Pos = TargetPosition + Vector3.new(0, 0, 7.5)
 				HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
+			end
+
+			for _, Skill in ipairs(Skills) do
+				if Skill == "E" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("E", true)
+				elseif Skill == "R" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("R", true)
+				elseif Skill == "Z" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("Z", true)
+				elseif Skill == "X" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("X", true)
+				elseif Skill == "B" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("B", true)
+				elseif Skill == "V" then
+					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("V", true)
+				end
 			end
 
 			game.Players.LocalPlayer.Character:WaitForChild("client_character_controller"):WaitForChild("M1"):FireServer(true, false)
@@ -3613,6 +3614,7 @@ G2L_MODULES[G2L["e"]] = {
 		local TweenService = game:GetService("TweenService")
 		local RunService = game:GetService("RunService")
 		local Workspace = game:GetService("Workspace")
+		local CoreGui = game:GetService("CoreGui")
 
 		--// VARIABLES \\--
 		local Player = Players.LocalPlayer
@@ -3621,15 +3623,13 @@ G2L_MODULES[G2L["e"]] = {
 		local DataStore = require(script.Parent.DataStore)
 
 		local Config = DataStore:Load()
-		Config.ArrowESP = Config.ArrowESP or {}
+		Config.AutoMeditation = Config.AutoMeditation or {}
 
 		--// INTERFACE \\--
 		local BizarreLineage = CoreGui.BizarreLineage
+		local AutoMeditationFrame = BizarreLineage.Holder.Under.Content.AutoMeditation
+		local Button = AutoMeditationFrame.Button
 
-		local AutoMeditation = BizarreLineage.Holder.Under.Content.AutoMeditation
-		local Button = AutoMeditation.Button
-
-		local Arrows = {}
 		local Activate = Config.AutoMeditation.Activate or false
 		local Debounce = false
 		local Live = workspace.Live
@@ -3645,14 +3645,12 @@ G2L_MODULES[G2L["e"]] = {
 		end
 
 		local AutoMeditation = {}
-
-		AutoMeditation.Activate = false
+		AutoMeditation.Activate = Activate
 
 		Button.MouseButton1Click:Connect(function()
 			if Debounce then return end
 			Debounce = true
 			Activate = not Activate
-
 			AutoMeditation.Activate = Activate
 			local LatestConfig = DataStore:Load()
 			LatestConfig.AutoMeditation = LatestConfig.AutoMeditation or {}
