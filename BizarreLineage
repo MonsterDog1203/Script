@@ -5,7 +5,6 @@ local G2L = {};
 -- StarterGui.BizarreLineage
 G2L["1"] = Instance.new("ScreenGui", CoreGui);
 G2L["1"]["IgnoreGuiInset"] = true;
-G2L["1"]["Enabled"] = false;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
 G2L["1"]["Name"] = [[BizarreLineage]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -84,2024 +83,2189 @@ G2L["d"] = Instance.new("ModuleScript", G2L["6"]);
 G2L["d"]["Name"] = [[KillNearest]];
 
 
+-- StarterGui.BizarreLineage.Holder.Under.Main.AutoMeditation
+G2L["e"] = Instance.new("ModuleScript", G2L["6"]);
+G2L["e"]["Name"] = [[AutoMeditation]];
+
+
 -- StarterGui.BizarreLineage.Holder.Under.Holding
-G2L["e"] = Instance.new("BoolValue", G2L["5"]);
-G2L["e"]["Name"] = [[Holding]];
+G2L["f"] = Instance.new("BoolValue", G2L["5"]);
+G2L["f"]["Name"] = [[Holding]];
 
 
 -- StarterGui.BizarreLineage.Holder.Under.UIAspectRatioConstraint
-G2L["f"] = Instance.new("UIAspectRatioConstraint", G2L["5"]);
-G2L["f"]["AspectRatio"] = 1.50831;
+G2L["10"] = Instance.new("UIAspectRatioConstraint", G2L["5"]);
+G2L["10"]["AspectRatio"] = 1.50831;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content
-G2L["10"] = Instance.new("ScrollingFrame", G2L["5"]);
-G2L["10"]["Active"] = true;
-G2L["10"]["BorderSizePixel"] = 0;
-G2L["10"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["10"]["Name"] = [[Content]];
-G2L["10"]["VerticalScrollBarPosition"] = Enum.VerticalScrollBarPosition.Left;
-G2L["10"]["Size"] = UDim2.new(0.75046, 0, 0.87775, 0);
-G2L["10"]["Position"] = UDim2.new(0.249, 0, 0.122, 0);
-G2L["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10"]["ScrollBarThickness"] = 2;
+G2L["11"] = Instance.new("ScrollingFrame", G2L["5"]);
+G2L["11"]["Active"] = true;
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["CanvasPosition"] = Vector2.new(0, 100);
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["Name"] = [[Content]];
+G2L["11"]["VerticalScrollBarPosition"] = Enum.VerticalScrollBarPosition.Left;
+G2L["11"]["Size"] = UDim2.new(0.75046, 0, 0.87775, 0);
+G2L["11"]["Position"] = UDim2.new(0.249, 0, 0.122, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["ScrollBarThickness"] = 2;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect
-G2L["11"] = Instance.new("Frame", G2L["10"]);
-G2L["11"]["ZIndex"] = 2;
-G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["11"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["11"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
-G2L["11"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
-G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["11"]["Name"] = [[ArrowCollect]];
+G2L["12"] = Instance.new("Frame", G2L["11"]);
+G2L["12"]["ZIndex"] = 2;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["12"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
+G2L["12"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Name"] = [[ArrowCollect]];
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Text
-G2L["12"] = Instance.new("TextLabel", G2L["11"]);
-G2L["12"]["TextWrapped"] = true;
-G2L["12"]["BorderSizePixel"] = 0;
-G2L["12"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["12"]["TextScaled"] = true;
-G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["TextSize"] = 18;
-G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["12"]["BackgroundTransparency"] = 1;
-G2L["12"]["AnchorPoint"] = Vector2.new(0, 0.5);
-G2L["12"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
-G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["12"]["Text"] = [[Arrow Collect]];
-G2L["12"]["Name"] = [[Text]];
-G2L["12"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
+G2L["13"] = Instance.new("TextLabel", G2L["12"]);
+G2L["13"]["TextWrapped"] = true;
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["13"]["TextScaled"] = true;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["TextSize"] = 18;
+G2L["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["13"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["13"]["BackgroundTransparency"] = 1;
+G2L["13"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["13"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
+G2L["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["13"]["Text"] = [[Arrow Collect]];
+G2L["13"]["Name"] = [[Text]];
+G2L["13"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Text.UITextSizeConstraint
-G2L["13"] = Instance.new("UITextSizeConstraint", G2L["12"]);
-G2L["13"]["MaxTextSize"] = 18;
+G2L["14"] = Instance.new("UITextSizeConstraint", G2L["13"]);
+G2L["14"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button
-G2L["14"] = Instance.new("TextButton", G2L["11"]);
-G2L["14"]["TextWrapped"] = true;
-G2L["14"]["BorderSizePixel"] = 0;
-G2L["14"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["14"]["TextSize"] = 20;
-G2L["14"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["14"]["TextScaled"] = true;
-G2L["14"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["14"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["14"]["ZIndex"] = 2;
-G2L["14"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["14"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
-G2L["14"]["Name"] = [[Button]];
-G2L["14"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["14"]["Text"] = [[]];
-G2L["14"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
+G2L["15"] = Instance.new("TextButton", G2L["12"]);
+G2L["15"]["TextWrapped"] = true;
+G2L["15"]["BorderSizePixel"] = 0;
+G2L["15"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["15"]["TextSize"] = 20;
+G2L["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["15"]["TextScaled"] = true;
+G2L["15"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["15"]["ZIndex"] = 2;
+G2L["15"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["15"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
+G2L["15"]["Name"] = [[Button]];
+G2L["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["15"]["Text"] = [[]];
+G2L["15"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button.UICorner
-G2L["15"] = Instance.new("UICorner", G2L["14"]);
-G2L["15"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["16"] = Instance.new("UICorner", G2L["15"]);
+G2L["16"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button.Frame
-G2L["16"] = Instance.new("Frame", G2L["14"]);
-G2L["16"]["BorderSizePixel"] = 0;
-G2L["16"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["16"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["16"]["Size"] = UDim2.new(0.5, 0, 1, 0);
-G2L["16"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
-G2L["16"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"] = Instance.new("Frame", G2L["15"]);
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["17"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["17"]["Size"] = UDim2.new(0.5, 0, 1, 0);
+G2L["17"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button.Frame.UICorner
-G2L["17"] = Instance.new("UICorner", G2L["16"]);
-G2L["17"]["CornerRadius"] = UDim.new(0.6, 0);
+G2L["18"] = Instance.new("UICorner", G2L["17"]);
+G2L["18"]["CornerRadius"] = UDim.new(0.6, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button.Frame.UIAspectRatioConstraint
-G2L["18"] = Instance.new("UIAspectRatioConstraint", G2L["16"]);
-G2L["18"]["AspectRatio"] = 1.0243;
+G2L["19"] = Instance.new("UIAspectRatioConstraint", G2L["17"]);
+G2L["19"]["AspectRatio"] = 1.0243;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button.Frame.UIStroke
-G2L["19"] = Instance.new("UIStroke", G2L["16"]);
-G2L["19"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["1a"] = Instance.new("UIStroke", G2L["17"]);
+G2L["1a"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button.UITextSizeConstraint
-G2L["1a"] = Instance.new("UITextSizeConstraint", G2L["14"]);
-G2L["1a"]["MaxTextSize"] = 20;
+G2L["1b"] = Instance.new("UITextSizeConstraint", G2L["15"]);
+G2L["1b"]["MaxTextSize"] = 20;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button.UIAspectRatioConstraint
-G2L["1b"] = Instance.new("UIAspectRatioConstraint", G2L["14"]);
-G2L["1b"]["AspectRatio"] = 2.0486;
+G2L["1c"] = Instance.new("UIAspectRatioConstraint", G2L["15"]);
+G2L["1c"]["AspectRatio"] = 2.0486;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button.UIStroke
-G2L["1c"] = Instance.new("Frame", G2L["14"]);
-G2L["1c"]["ZIndex"] = 0;
-G2L["1c"]["BorderSizePixel"] = 0;
-G2L["1c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["1c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["1c"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["1c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["1c"]["Name"] = [[UIStroke]];
-G2L["1c"]["LayoutOrder"] = -1;
-G2L["1c"]["BackgroundTransparency"] = 1;
+G2L["1d"] = Instance.new("Frame", G2L["15"]);
+G2L["1d"]["ZIndex"] = 0;
+G2L["1d"]["BorderSizePixel"] = 0;
+G2L["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["1d"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["1d"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1d"]["Name"] = [[UIStroke]];
+G2L["1d"]["LayoutOrder"] = -1;
+G2L["1d"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button.UIStroke.UICorner
-G2L["1d"] = Instance.new("UICorner", G2L["1c"]);
-G2L["1d"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["1e"] = Instance.new("UICorner", G2L["1d"]);
+G2L["1e"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.Button.UIStroke.UIStroke
-G2L["1e"] = Instance.new("UIStroke", G2L["1c"]);
-G2L["1e"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["1f"] = Instance.new("UIStroke", G2L["1d"]);
+G2L["1f"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.UICorner
-G2L["1f"] = Instance.new("UICorner", G2L["11"]);
-G2L["1f"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["20"] = Instance.new("UICorner", G2L["12"]);
+G2L["20"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.UIGradient
-G2L["20"] = Instance.new("UIGradient", G2L["11"]);
-G2L["20"]["Rotation"] = -90;
-G2L["20"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+G2L["21"] = Instance.new("UIGradient", G2L["12"]);
+G2L["21"]["Rotation"] = -90;
+G2L["21"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowCollect.UIStroke
-G2L["21"] = Instance.new("UIStroke", G2L["11"]);
-G2L["21"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["22"] = Instance.new("UIStroke", G2L["12"]);
+G2L["22"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SubTitle
-G2L["22"] = Instance.new("TextLabel", G2L["10"]);
-G2L["22"]["TextWrapped"] = true;
-G2L["22"]["BorderSizePixel"] = 0;
-G2L["22"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["22"]["TextScaled"] = true;
-G2L["22"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22"]["TextSize"] = 14;
-G2L["22"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["22"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["22"]["BackgroundTransparency"] = 1;
-G2L["22"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["22"]["Size"] = UDim2.new(0.9, 0, 0.04225, 0);
-G2L["22"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["22"]["Text"] = [[Main]];
-G2L["22"]["LayoutOrder"] = -1;
-G2L["22"]["Name"] = [[SubTitle]];
-G2L["22"]["Position"] = UDim2.new(0.5, 0, 0.05417, 0);
+G2L["23"] = Instance.new("TextLabel", G2L["11"]);
+G2L["23"]["TextWrapped"] = true;
+G2L["23"]["BorderSizePixel"] = 0;
+G2L["23"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["23"]["TextScaled"] = true;
+G2L["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["TextSize"] = 14;
+G2L["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["23"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["23"]["BackgroundTransparency"] = 1;
+G2L["23"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["23"]["Size"] = UDim2.new(0.9, 0, 0.04225, 0);
+G2L["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["23"]["Text"] = [[Main]];
+G2L["23"]["LayoutOrder"] = -1;
+G2L["23"]["Name"] = [[SubTitle]];
+G2L["23"]["Position"] = UDim2.new(0.5, 0, 0.05417, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SubTitle.UITextSizeConstraint
-G2L["23"] = Instance.new("UITextSizeConstraint", G2L["22"]);
-G2L["23"]["MaxTextSize"] = 14;
+G2L["24"] = Instance.new("UITextSizeConstraint", G2L["23"]);
+G2L["24"]["MaxTextSize"] = 14;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.UIAspectRatioConstraint
-G2L["24"] = Instance.new("UIAspectRatioConstraint", G2L["10"]);
-G2L["24"]["AspectRatio"] = 1.28957;
+G2L["25"] = Instance.new("UIAspectRatioConstraint", G2L["11"]);
+G2L["25"]["AspectRatio"] = 1.28957;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.UIListLayout
-G2L["25"] = Instance.new("UIListLayout", G2L["10"]);
-G2L["25"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["25"]["Padding"] = UDim.new(0.01, 0);
-G2L["25"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["26"] = Instance.new("UIListLayout", G2L["11"]);
+G2L["26"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["26"]["Padding"] = UDim.new(0.01, 0);
+G2L["26"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.UICorner
-G2L["26"] = Instance.new("UICorner", G2L["10"]);
+G2L["27"] = Instance.new("UICorner", G2L["11"]);
 
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.UIGradient
-G2L["27"] = Instance.new("UIGradient", G2L["10"]);
-G2L["27"]["Rotation"] = -90;
-G2L["27"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+G2L["28"] = Instance.new("UIGradient", G2L["11"]);
+G2L["28"]["Rotation"] = -90;
+G2L["28"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner
-G2L["28"] = Instance.new("Frame", G2L["10"]);
-G2L["28"]["ZIndex"] = 99;
-G2L["28"]["BorderSizePixel"] = 0;
-G2L["28"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["28"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["28"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
-G2L["28"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
-G2L["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["28"]["Name"] = [[StandSpinner]];
-G2L["28"]["LayoutOrder"] = 2;
+G2L["29"] = Instance.new("Frame", G2L["11"]);
+G2L["29"]["ZIndex"] = 99;
+G2L["29"]["BorderSizePixel"] = 0;
+G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["29"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["29"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
+G2L["29"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
+G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["29"]["Name"] = [[StandSpinner]];
+G2L["29"]["LayoutOrder"] = 2;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Text
-G2L["29"] = Instance.new("TextLabel", G2L["28"]);
-G2L["29"]["TextWrapped"] = true;
-G2L["29"]["BorderSizePixel"] = 0;
-G2L["29"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["29"]["TextScaled"] = true;
-G2L["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["29"]["TextSize"] = 18;
-G2L["29"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["29"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["29"]["BackgroundTransparency"] = 1;
-G2L["29"]["AnchorPoint"] = Vector2.new(0, 0.5);
-G2L["29"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
-G2L["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["29"]["Text"] = [[Stand Spinner]];
-G2L["29"]["Name"] = [[Text]];
-G2L["29"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
+G2L["2a"] = Instance.new("TextLabel", G2L["29"]);
+G2L["2a"]["TextWrapped"] = true;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2a"]["TextScaled"] = true;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["TextSize"] = 18;
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["BackgroundTransparency"] = 1;
+G2L["2a"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["2a"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Text"] = [[Stand Spinner]];
+G2L["2a"]["Name"] = [[Text]];
+G2L["2a"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Text.UITextSizeConstraint
-G2L["2a"] = Instance.new("UITextSizeConstraint", G2L["29"]);
-G2L["2a"]["MaxTextSize"] = 18;
+G2L["2b"] = Instance.new("UITextSizeConstraint", G2L["2a"]);
+G2L["2b"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button
-G2L["2b"] = Instance.new("TextButton", G2L["28"]);
-G2L["2b"]["TextWrapped"] = true;
-G2L["2b"]["BorderSizePixel"] = 0;
-G2L["2b"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["2b"]["TextSize"] = 20;
-G2L["2b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["2b"]["TextScaled"] = true;
-G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["2b"]["ZIndex"] = 2;
-G2L["2b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["2b"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
-G2L["2b"]["Name"] = [[Button]];
-G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2b"]["Text"] = [[]];
-G2L["2b"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
+G2L["2c"] = Instance.new("TextButton", G2L["29"]);
+G2L["2c"]["TextWrapped"] = true;
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["2c"]["TextSize"] = 20;
+G2L["2c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2c"]["TextScaled"] = true;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["2c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2c"]["ZIndex"] = 2;
+G2L["2c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2c"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
+G2L["2c"]["Name"] = [[Button]];
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Text"] = [[]];
+G2L["2c"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button.UICorner
-G2L["2c"] = Instance.new("UICorner", G2L["2b"]);
-G2L["2c"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["2d"] = Instance.new("UICorner", G2L["2c"]);
+G2L["2d"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button.Frame
-G2L["2d"] = Instance.new("Frame", G2L["2b"]);
-G2L["2d"]["BorderSizePixel"] = 0;
-G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["2d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["2d"]["Size"] = UDim2.new(0.5, 0, 1, 0);
-G2L["2d"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
-G2L["2d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2e"] = Instance.new("Frame", G2L["2c"]);
+G2L["2e"]["BorderSizePixel"] = 0;
+G2L["2e"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["2e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2e"]["Size"] = UDim2.new(0.5, 0, 1, 0);
+G2L["2e"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
+G2L["2e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button.Frame.UICorner
-G2L["2e"] = Instance.new("UICorner", G2L["2d"]);
-G2L["2e"]["CornerRadius"] = UDim.new(0.6, 0);
+G2L["2f"] = Instance.new("UICorner", G2L["2e"]);
+G2L["2f"]["CornerRadius"] = UDim.new(0.6, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button.Frame.UIAspectRatioConstraint
-G2L["2f"] = Instance.new("UIAspectRatioConstraint", G2L["2d"]);
-G2L["2f"]["AspectRatio"] = 1.0243;
+G2L["30"] = Instance.new("UIAspectRatioConstraint", G2L["2e"]);
+G2L["30"]["AspectRatio"] = 1.0243;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button.Frame.UIStroke
-G2L["30"] = Instance.new("UIStroke", G2L["2d"]);
-G2L["30"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["31"] = Instance.new("UIStroke", G2L["2e"]);
+G2L["31"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button.UITextSizeConstraint
-G2L["31"] = Instance.new("UITextSizeConstraint", G2L["2b"]);
-G2L["31"]["MaxTextSize"] = 20;
+G2L["32"] = Instance.new("UITextSizeConstraint", G2L["2c"]);
+G2L["32"]["MaxTextSize"] = 20;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button.UIAspectRatioConstraint
-G2L["32"] = Instance.new("UIAspectRatioConstraint", G2L["2b"]);
-G2L["32"]["AspectRatio"] = 2.0486;
+G2L["33"] = Instance.new("UIAspectRatioConstraint", G2L["2c"]);
+G2L["33"]["AspectRatio"] = 2.0486;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button.UIStroke
-G2L["33"] = Instance.new("Frame", G2L["2b"]);
-G2L["33"]["ZIndex"] = 0;
-G2L["33"]["BorderSizePixel"] = 0;
-G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["33"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["33"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["33"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["33"]["Name"] = [[UIStroke]];
-G2L["33"]["LayoutOrder"] = -1;
-G2L["33"]["BackgroundTransparency"] = 1;
+G2L["34"] = Instance.new("Frame", G2L["2c"]);
+G2L["34"]["ZIndex"] = 0;
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["34"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["34"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["34"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["34"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["34"]["Name"] = [[UIStroke]];
+G2L["34"]["LayoutOrder"] = -1;
+G2L["34"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button.UIStroke.UICorner
-G2L["34"] = Instance.new("UICorner", G2L["33"]);
-G2L["34"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["35"] = Instance.new("UICorner", G2L["34"]);
+G2L["35"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Button.UIStroke.UIStroke
-G2L["35"] = Instance.new("UIStroke", G2L["33"]);
-G2L["35"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["36"] = Instance.new("UIStroke", G2L["34"]);
+G2L["36"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.UICorner
-G2L["36"] = Instance.new("UICorner", G2L["28"]);
-G2L["36"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["37"] = Instance.new("UICorner", G2L["29"]);
+G2L["37"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.UIGradient
-G2L["37"] = Instance.new("UIGradient", G2L["28"]);
-G2L["37"]["Rotation"] = -90;
-G2L["37"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+G2L["38"] = Instance.new("UIGradient", G2L["29"]);
+G2L["38"]["Rotation"] = -90;
+G2L["38"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.UIStroke
-G2L["38"] = Instance.new("UIStroke", G2L["28"]);
-G2L["38"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["39"] = Instance.new("UIStroke", G2L["29"]);
+G2L["39"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2
-G2L["39"] = Instance.new("TextButton", G2L["28"]);
-G2L["39"]["TextWrapped"] = true;
-G2L["39"]["BorderSizePixel"] = 0;
-G2L["39"]["TextSize"] = 14;
-G2L["39"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["39"]["TextScaled"] = true;
-G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["39"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["39"]["Size"] = UDim2.new(0.225, 0, 0.6, 0);
-G2L["39"]["BackgroundTransparency"] = 1;
-G2L["39"]["Name"] = [[Selection2]];
-G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["39"]["Text"] = [[]];
-G2L["39"]["Position"] = UDim2.new(0.685, 0, 0.5, 0);
+G2L["3a"] = Instance.new("TextButton", G2L["29"]);
+G2L["3a"]["TextWrapped"] = true;
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextSize"] = 14;
+G2L["3a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["TextScaled"] = true;
+G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["3a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3a"]["Size"] = UDim2.new(0.225, 0, 0.6, 0);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Name"] = [[Selection2]];
+G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3a"]["Text"] = [[]];
+G2L["3a"]["Position"] = UDim2.new(0.685, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.UIStroke
-G2L["3a"] = Instance.new("Frame", G2L["39"]);
-G2L["3a"]["ZIndex"] = 0;
-G2L["3a"]["BorderSizePixel"] = 0;
-G2L["3a"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["3a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["3a"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["3a"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3a"]["Name"] = [[UIStroke]];
+G2L["3b"] = Instance.new("Frame", G2L["3a"]);
+G2L["3b"]["ZIndex"] = 0;
+G2L["3b"]["BorderSizePixel"] = 0;
+G2L["3b"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["3b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3b"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["3b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["3b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3b"]["Name"] = [[UIStroke]];
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.UIStroke.UICorner
-G2L["3b"] = Instance.new("UICorner", G2L["3a"]);
-G2L["3b"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["3c"] = Instance.new("UICorner", G2L["3b"]);
+G2L["3c"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.UIStroke.UIStroke
-G2L["3c"] = Instance.new("UIStroke", G2L["3a"]);
-G2L["3c"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["3d"] = Instance.new("UIStroke", G2L["3b"]);
+G2L["3d"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.UITextSizeConstraint
-G2L["3d"] = Instance.new("UITextSizeConstraint", G2L["39"]);
-G2L["3d"]["MaxTextSize"] = 18;
+G2L["3e"] = Instance.new("UITextSizeConstraint", G2L["3a"]);
+G2L["3e"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.List
-G2L["3e"] = Instance.new("Frame", G2L["39"]);
-G2L["3e"]["Visible"] = false;
-G2L["3e"]["ZIndex"] = 999;
-G2L["3e"]["BorderSizePixel"] = 0;
-G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["3e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["3e"]["Size"] = UDim2.new(1, 0, 5, 0);
-G2L["3e"]["Position"] = UDim2.new(0.5, 0, 3.6, 0);
-G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Name"] = [[List]];
-G2L["3e"]["LayoutOrder"] = 999;
+G2L["3f"] = Instance.new("Frame", G2L["3a"]);
+G2L["3f"]["Visible"] = false;
+G2L["3f"]["ZIndex"] = 999;
+G2L["3f"]["BorderSizePixel"] = 0;
+G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["3f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3f"]["Size"] = UDim2.new(1, 0, 5, 0);
+G2L["3f"]["Position"] = UDim2.new(0.5, 0, 3.6, 0);
+G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3f"]["Name"] = [[List]];
+G2L["3f"]["LayoutOrder"] = 999;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.List.UIStroke
-G2L["3f"] = Instance.new("UIStroke", G2L["3e"]);
-G2L["3f"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["40"] = Instance.new("UIStroke", G2L["3f"]);
+G2L["40"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.List.ScrollingFrame
-G2L["40"] = Instance.new("ScrollingFrame", G2L["3e"]);
-G2L["40"]["Active"] = true;
-G2L["40"]["BorderSizePixel"] = 0;
-G2L["40"]["CanvasSize"] = UDim2.new(0, 0, 8, 0);
-G2L["40"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["40"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["40"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["40"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["40"]["ScrollBarThickness"] = 2;
-G2L["40"]["BackgroundTransparency"] = 1;
+G2L["41"] = Instance.new("ScrollingFrame", G2L["3f"]);
+G2L["41"]["Active"] = true;
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["CanvasSize"] = UDim2.new(0, 0, 8, 0);
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["41"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["41"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["41"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["ScrollBarThickness"] = 2;
+G2L["41"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.List.ScrollingFrame.UIListLayout
-G2L["41"] = Instance.new("UIListLayout", G2L["40"]);
-G2L["41"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["41"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["42"] = Instance.new("UIListLayout", G2L["41"]);
+G2L["42"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["42"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.List.UICorner
-G2L["42"] = Instance.new("UICorner", G2L["3e"]);
-G2L["42"]["CornerRadius"] = UDim.new(0.03, 0);
+G2L["43"] = Instance.new("UICorner", G2L["3f"]);
+G2L["43"]["CornerRadius"] = UDim.new(0.03, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.Selected
-G2L["43"] = Instance.new("TextLabel", G2L["39"]);
-G2L["43"]["TextWrapped"] = true;
-G2L["43"]["BorderSizePixel"] = 0;
-G2L["43"]["TextScaled"] = true;
-G2L["43"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["43"]["TextSize"] = 18;
-G2L["43"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["43"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
-G2L["43"]["BackgroundTransparency"] = 1;
-G2L["43"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["43"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["43"]["Text"] = [[Target?]];
-G2L["43"]["Name"] = [[Selected]];
-G2L["43"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["44"] = Instance.new("TextLabel", G2L["3a"]);
+G2L["44"]["TextWrapped"] = true;
+G2L["44"]["BorderSizePixel"] = 0;
+G2L["44"]["TextScaled"] = true;
+G2L["44"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["44"]["TextSize"] = 18;
+G2L["44"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["44"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
+G2L["44"]["BackgroundTransparency"] = 1;
+G2L["44"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["44"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["44"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["44"]["Text"] = [[Target?]];
+G2L["44"]["Name"] = [[Selected]];
+G2L["44"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection2.Selected.UITextSizeConstraint
-G2L["44"] = Instance.new("UITextSizeConstraint", G2L["43"]);
-G2L["44"]["MaxTextSize"] = 18;
+G2L["45"] = Instance.new("UITextSizeConstraint", G2L["44"]);
+G2L["45"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1
-G2L["45"] = Instance.new("TextButton", G2L["28"]);
-G2L["45"]["TextWrapped"] = true;
-G2L["45"]["BorderSizePixel"] = 0;
-G2L["45"]["TextSize"] = 14;
-G2L["45"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["TextScaled"] = true;
-G2L["45"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["45"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["45"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["45"]["Size"] = UDim2.new(0.225, 0, 0.6, 0);
-G2L["45"]["BackgroundTransparency"] = 1;
-G2L["45"]["Name"] = [[Selection1]];
-G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["45"]["Text"] = [[]];
-G2L["45"]["Position"] = UDim2.new(0.425, 0, 0.5, 0);
+G2L["46"] = Instance.new("TextButton", G2L["29"]);
+G2L["46"]["TextWrapped"] = true;
+G2L["46"]["BorderSizePixel"] = 0;
+G2L["46"]["TextSize"] = 14;
+G2L["46"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["TextScaled"] = true;
+G2L["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["46"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["46"]["Size"] = UDim2.new(0.225, 0, 0.6, 0);
+G2L["46"]["BackgroundTransparency"] = 1;
+G2L["46"]["Name"] = [[Selection1]];
+G2L["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["46"]["Text"] = [[]];
+G2L["46"]["Position"] = UDim2.new(0.425, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.UITextSizeConstraint
-G2L["46"] = Instance.new("UITextSizeConstraint", G2L["45"]);
-G2L["46"]["MaxTextSize"] = 18;
+G2L["47"] = Instance.new("UITextSizeConstraint", G2L["46"]);
+G2L["47"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.List
-G2L["47"] = Instance.new("Frame", G2L["45"]);
-G2L["47"]["Visible"] = false;
-G2L["47"]["ZIndex"] = 999;
-G2L["47"]["BorderSizePixel"] = 0;
-G2L["47"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["47"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["47"]["Size"] = UDim2.new(1, 0, 5, 0);
-G2L["47"]["Position"] = UDim2.new(0.5, 0, 3.6, 0);
-G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["47"]["Name"] = [[List]];
-G2L["47"]["LayoutOrder"] = 999;
+G2L["48"] = Instance.new("Frame", G2L["46"]);
+G2L["48"]["Visible"] = false;
+G2L["48"]["ZIndex"] = 999;
+G2L["48"]["BorderSizePixel"] = 0;
+G2L["48"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["48"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["48"]["Size"] = UDim2.new(1, 0, 5, 0);
+G2L["48"]["Position"] = UDim2.new(0.5, 0, 3.6, 0);
+G2L["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["48"]["Name"] = [[List]];
+G2L["48"]["LayoutOrder"] = 999;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.List.UIStroke
-G2L["48"] = Instance.new("UIStroke", G2L["47"]);
-G2L["48"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["49"] = Instance.new("UIStroke", G2L["48"]);
+G2L["49"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.List.ScrollingFrame
-G2L["49"] = Instance.new("ScrollingFrame", G2L["47"]);
-G2L["49"]["Active"] = true;
-G2L["49"]["BorderSizePixel"] = 0;
-G2L["49"]["CanvasSize"] = UDim2.new(0, 0, 8, 0);
-G2L["49"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["49"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["49"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["49"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["49"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["49"]["ScrollBarThickness"] = 2;
-G2L["49"]["BackgroundTransparency"] = 1;
+G2L["4a"] = Instance.new("ScrollingFrame", G2L["48"]);
+G2L["4a"]["Active"] = true;
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["CanvasSize"] = UDim2.new(0, 0, 8, 0);
+G2L["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["4a"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["4a"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4a"]["ScrollBarThickness"] = 2;
+G2L["4a"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.List.ScrollingFrame.UIListLayout
-G2L["4a"] = Instance.new("UIListLayout", G2L["49"]);
-G2L["4a"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["4a"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["4b"] = Instance.new("UIListLayout", G2L["4a"]);
+G2L["4b"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["4b"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.List.UICorner
-G2L["4b"] = Instance.new("UICorner", G2L["47"]);
-G2L["4b"]["CornerRadius"] = UDim.new(0.03, 0);
+G2L["4c"] = Instance.new("UICorner", G2L["48"]);
+G2L["4c"]["CornerRadius"] = UDim.new(0.03, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.UIStroke
-G2L["4c"] = Instance.new("Frame", G2L["45"]);
-G2L["4c"]["ZIndex"] = 0;
-G2L["4c"]["BorderSizePixel"] = 0;
-G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["4c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["4c"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["4c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["4c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4c"]["Name"] = [[UIStroke]];
+G2L["4d"] = Instance.new("Frame", G2L["46"]);
+G2L["4d"]["ZIndex"] = 0;
+G2L["4d"]["BorderSizePixel"] = 0;
+G2L["4d"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["4d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["4d"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["4d"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4d"]["Name"] = [[UIStroke]];
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.UIStroke.UICorner
-G2L["4d"] = Instance.new("UICorner", G2L["4c"]);
-G2L["4d"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["4e"] = Instance.new("UICorner", G2L["4d"]);
+G2L["4e"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.UIStroke.UIStroke
-G2L["4e"] = Instance.new("UIStroke", G2L["4c"]);
-G2L["4e"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["4f"] = Instance.new("UIStroke", G2L["4d"]);
+G2L["4f"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.Selected
-G2L["4f"] = Instance.new("TextLabel", G2L["45"]);
-G2L["4f"]["TextWrapped"] = true;
-G2L["4f"]["BorderSizePixel"] = 0;
-G2L["4f"]["TextScaled"] = true;
-G2L["4f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["4f"]["TextSize"] = 18;
-G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["4f"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
-G2L["4f"]["BackgroundTransparency"] = 1;
-G2L["4f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["4f"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["4f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["4f"]["Text"] = [[Arrow?]];
-G2L["4f"]["Name"] = [[Selected]];
-G2L["4f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["50"] = Instance.new("TextLabel", G2L["46"]);
+G2L["50"]["TextWrapped"] = true;
+G2L["50"]["BorderSizePixel"] = 0;
+G2L["50"]["TextScaled"] = true;
+G2L["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["50"]["TextSize"] = 18;
+G2L["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["50"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
+G2L["50"]["BackgroundTransparency"] = 1;
+G2L["50"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["50"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["50"]["Text"] = [[Arrow?]];
+G2L["50"]["Name"] = [[Selected]];
+G2L["50"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.StandSpinner.Selection1.Selected.UITextSizeConstraint
-G2L["50"] = Instance.new("UITextSizeConstraint", G2L["4f"]);
-G2L["50"]["MaxTextSize"] = 18;
+G2L["51"] = Instance.new("UITextSizeConstraint", G2L["50"]);
+G2L["51"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP
-G2L["51"] = Instance.new("Frame", G2L["10"]);
-G2L["51"]["BorderSizePixel"] = 0;
-G2L["51"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["51"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["51"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
-G2L["51"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
-G2L["51"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["51"]["Name"] = [[ArrowESP]];
-G2L["51"]["LayoutOrder"] = 1;
+G2L["52"] = Instance.new("Frame", G2L["11"]);
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["52"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
+G2L["52"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
+G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["52"]["Name"] = [[ArrowESP]];
+G2L["52"]["LayoutOrder"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Text
-G2L["52"] = Instance.new("TextLabel", G2L["51"]);
-G2L["52"]["TextWrapped"] = true;
-G2L["52"]["BorderSizePixel"] = 0;
-G2L["52"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["52"]["TextScaled"] = true;
-G2L["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["52"]["TextSize"] = 18;
-G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["52"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["52"]["BackgroundTransparency"] = 1;
-G2L["52"]["AnchorPoint"] = Vector2.new(0, 0.5);
-G2L["52"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
-G2L["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["52"]["Text"] = [[Arrow ESP]];
-G2L["52"]["Name"] = [[Text]];
-G2L["52"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
+G2L["53"] = Instance.new("TextLabel", G2L["52"]);
+G2L["53"]["TextWrapped"] = true;
+G2L["53"]["BorderSizePixel"] = 0;
+G2L["53"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["53"]["TextScaled"] = true;
+G2L["53"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["TextSize"] = 18;
+G2L["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["53"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["53"]["BackgroundTransparency"] = 1;
+G2L["53"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["53"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
+G2L["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["53"]["Text"] = [[Arrow ESP]];
+G2L["53"]["Name"] = [[Text]];
+G2L["53"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Text.UITextSizeConstraint
-G2L["53"] = Instance.new("UITextSizeConstraint", G2L["52"]);
-G2L["53"]["MaxTextSize"] = 18;
+G2L["54"] = Instance.new("UITextSizeConstraint", G2L["53"]);
+G2L["54"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button
-G2L["54"] = Instance.new("TextButton", G2L["51"]);
-G2L["54"]["TextWrapped"] = true;
-G2L["54"]["BorderSizePixel"] = 0;
-G2L["54"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["54"]["TextSize"] = 20;
-G2L["54"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["54"]["TextScaled"] = true;
-G2L["54"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["54"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["54"]["ZIndex"] = 2;
-G2L["54"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["54"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
-G2L["54"]["Name"] = [[Button]];
-G2L["54"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["54"]["Text"] = [[]];
-G2L["54"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
+G2L["55"] = Instance.new("TextButton", G2L["52"]);
+G2L["55"]["TextWrapped"] = true;
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["55"]["TextSize"] = 20;
+G2L["55"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["TextScaled"] = true;
+G2L["55"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["55"]["ZIndex"] = 2;
+G2L["55"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["55"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
+G2L["55"]["Name"] = [[Button]];
+G2L["55"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["55"]["Text"] = [[]];
+G2L["55"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button.UICorner
-G2L["55"] = Instance.new("UICorner", G2L["54"]);
-G2L["55"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["56"] = Instance.new("UICorner", G2L["55"]);
+G2L["56"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button.Frame
-G2L["56"] = Instance.new("Frame", G2L["54"]);
-G2L["56"]["BorderSizePixel"] = 0;
-G2L["56"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["56"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["56"]["Size"] = UDim2.new(0.5, 0, 1, 0);
-G2L["56"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
-G2L["56"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["57"] = Instance.new("Frame", G2L["55"]);
+G2L["57"]["BorderSizePixel"] = 0;
+G2L["57"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["57"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["57"]["Size"] = UDim2.new(0.5, 0, 1, 0);
+G2L["57"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
+G2L["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button.Frame.UICorner
-G2L["57"] = Instance.new("UICorner", G2L["56"]);
-G2L["57"]["CornerRadius"] = UDim.new(0.6, 0);
+G2L["58"] = Instance.new("UICorner", G2L["57"]);
+G2L["58"]["CornerRadius"] = UDim.new(0.6, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button.Frame.UIAspectRatioConstraint
-G2L["58"] = Instance.new("UIAspectRatioConstraint", G2L["56"]);
-G2L["58"]["AspectRatio"] = 1.0243;
+G2L["59"] = Instance.new("UIAspectRatioConstraint", G2L["57"]);
+G2L["59"]["AspectRatio"] = 1.0243;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button.Frame.UIStroke
-G2L["59"] = Instance.new("UIStroke", G2L["56"]);
-G2L["59"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["5a"] = Instance.new("UIStroke", G2L["57"]);
+G2L["5a"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button.UITextSizeConstraint
-G2L["5a"] = Instance.new("UITextSizeConstraint", G2L["54"]);
-G2L["5a"]["MaxTextSize"] = 20;
+G2L["5b"] = Instance.new("UITextSizeConstraint", G2L["55"]);
+G2L["5b"]["MaxTextSize"] = 20;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button.UIAspectRatioConstraint
-G2L["5b"] = Instance.new("UIAspectRatioConstraint", G2L["54"]);
-G2L["5b"]["AspectRatio"] = 2.0486;
+G2L["5c"] = Instance.new("UIAspectRatioConstraint", G2L["55"]);
+G2L["5c"]["AspectRatio"] = 2.0486;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button.UIStroke
-G2L["5c"] = Instance.new("Frame", G2L["54"]);
-G2L["5c"]["ZIndex"] = 0;
-G2L["5c"]["BorderSizePixel"] = 0;
-G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["5c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["5c"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["5c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["5c"]["Name"] = [[UIStroke]];
-G2L["5c"]["LayoutOrder"] = -1;
-G2L["5c"]["BackgroundTransparency"] = 1;
+G2L["5d"] = Instance.new("Frame", G2L["55"]);
+G2L["5d"]["ZIndex"] = 0;
+G2L["5d"]["BorderSizePixel"] = 0;
+G2L["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["5d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["5d"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["5d"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5d"]["Name"] = [[UIStroke]];
+G2L["5d"]["LayoutOrder"] = -1;
+G2L["5d"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button.UIStroke.UICorner
-G2L["5d"] = Instance.new("UICorner", G2L["5c"]);
-G2L["5d"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["5e"] = Instance.new("UICorner", G2L["5d"]);
+G2L["5e"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.Button.UIStroke.UIStroke
-G2L["5e"] = Instance.new("UIStroke", G2L["5c"]);
-G2L["5e"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["5f"] = Instance.new("UIStroke", G2L["5d"]);
+G2L["5f"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.UICorner
-G2L["5f"] = Instance.new("UICorner", G2L["51"]);
-G2L["5f"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["60"] = Instance.new("UICorner", G2L["52"]);
+G2L["60"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.UIGradient
-G2L["60"] = Instance.new("UIGradient", G2L["51"]);
-G2L["60"]["Rotation"] = -90;
-G2L["60"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+G2L["61"] = Instance.new("UIGradient", G2L["52"]);
+G2L["61"]["Rotation"] = -90;
+G2L["61"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.ArrowESP.UIStroke
-G2L["61"] = Instance.new("UIStroke", G2L["51"]);
-G2L["61"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["62"] = Instance.new("UIStroke", G2L["52"]);
+G2L["62"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand
-G2L["62"] = Instance.new("Frame", G2L["10"]);
-G2L["62"]["BorderSizePixel"] = 0;
-G2L["62"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["62"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["62"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
-G2L["62"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
-G2L["62"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["62"]["Name"] = [[SummonStand]];
-G2L["62"]["LayoutOrder"] = 3;
+G2L["63"] = Instance.new("Frame", G2L["11"]);
+G2L["63"]["BorderSizePixel"] = 0;
+G2L["63"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["63"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["63"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
+G2L["63"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
+G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["63"]["Name"] = [[SummonStand]];
+G2L["63"]["LayoutOrder"] = 3;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Text
-G2L["63"] = Instance.new("TextLabel", G2L["62"]);
-G2L["63"]["TextWrapped"] = true;
-G2L["63"]["BorderSizePixel"] = 0;
-G2L["63"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["63"]["TextScaled"] = true;
-G2L["63"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["63"]["TextSize"] = 18;
-G2L["63"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["63"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["63"]["BackgroundTransparency"] = 1;
-G2L["63"]["AnchorPoint"] = Vector2.new(0, 0.5);
-G2L["63"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
-G2L["63"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["63"]["Text"] = [[Summon Stand]];
-G2L["63"]["Name"] = [[Text]];
-G2L["63"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
+G2L["64"] = Instance.new("TextLabel", G2L["63"]);
+G2L["64"]["TextWrapped"] = true;
+G2L["64"]["BorderSizePixel"] = 0;
+G2L["64"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["64"]["TextScaled"] = true;
+G2L["64"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["TextSize"] = 18;
+G2L["64"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["64"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["64"]["BackgroundTransparency"] = 1;
+G2L["64"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["64"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
+G2L["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["64"]["Text"] = [[Summon Stand]];
+G2L["64"]["Name"] = [[Text]];
+G2L["64"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Text.UITextSizeConstraint
-G2L["64"] = Instance.new("UITextSizeConstraint", G2L["63"]);
-G2L["64"]["MaxTextSize"] = 18;
+G2L["65"] = Instance.new("UITextSizeConstraint", G2L["64"]);
+G2L["65"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button
-G2L["65"] = Instance.new("TextButton", G2L["62"]);
-G2L["65"]["TextWrapped"] = true;
-G2L["65"]["BorderSizePixel"] = 0;
-G2L["65"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["65"]["TextSize"] = 20;
-G2L["65"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["65"]["TextScaled"] = true;
-G2L["65"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["65"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["65"]["ZIndex"] = 2;
-G2L["65"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["65"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
-G2L["65"]["Name"] = [[Button]];
-G2L["65"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["65"]["Text"] = [[]];
-G2L["65"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
+G2L["66"] = Instance.new("TextButton", G2L["63"]);
+G2L["66"]["TextWrapped"] = true;
+G2L["66"]["BorderSizePixel"] = 0;
+G2L["66"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["66"]["TextSize"] = 20;
+G2L["66"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["66"]["TextScaled"] = true;
+G2L["66"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["66"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["66"]["ZIndex"] = 2;
+G2L["66"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["66"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
+G2L["66"]["Name"] = [[Button]];
+G2L["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["66"]["Text"] = [[]];
+G2L["66"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button.UICorner
-G2L["66"] = Instance.new("UICorner", G2L["65"]);
-G2L["66"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["67"] = Instance.new("UICorner", G2L["66"]);
+G2L["67"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button.Frame
-G2L["67"] = Instance.new("Frame", G2L["65"]);
-G2L["67"]["BorderSizePixel"] = 0;
-G2L["67"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["67"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["67"]["Size"] = UDim2.new(0.5, 0, 1, 0);
-G2L["67"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
-G2L["67"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["68"] = Instance.new("Frame", G2L["66"]);
+G2L["68"]["BorderSizePixel"] = 0;
+G2L["68"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["68"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["68"]["Size"] = UDim2.new(0.5, 0, 1, 0);
+G2L["68"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
+G2L["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button.Frame.UICorner
-G2L["68"] = Instance.new("UICorner", G2L["67"]);
-G2L["68"]["CornerRadius"] = UDim.new(0.6, 0);
+G2L["69"] = Instance.new("UICorner", G2L["68"]);
+G2L["69"]["CornerRadius"] = UDim.new(0.6, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button.Frame.UIAspectRatioConstraint
-G2L["69"] = Instance.new("UIAspectRatioConstraint", G2L["67"]);
-G2L["69"]["AspectRatio"] = 1.0243;
+G2L["6a"] = Instance.new("UIAspectRatioConstraint", G2L["68"]);
+G2L["6a"]["AspectRatio"] = 1.0243;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button.Frame.UIStroke
-G2L["6a"] = Instance.new("UIStroke", G2L["67"]);
-G2L["6a"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["6b"] = Instance.new("UIStroke", G2L["68"]);
+G2L["6b"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button.UITextSizeConstraint
-G2L["6b"] = Instance.new("UITextSizeConstraint", G2L["65"]);
-G2L["6b"]["MaxTextSize"] = 20;
+G2L["6c"] = Instance.new("UITextSizeConstraint", G2L["66"]);
+G2L["6c"]["MaxTextSize"] = 20;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button.UIAspectRatioConstraint
-G2L["6c"] = Instance.new("UIAspectRatioConstraint", G2L["65"]);
-G2L["6c"]["AspectRatio"] = 2.0486;
+G2L["6d"] = Instance.new("UIAspectRatioConstraint", G2L["66"]);
+G2L["6d"]["AspectRatio"] = 2.0486;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button.UIStroke
-G2L["6d"] = Instance.new("Frame", G2L["65"]);
-G2L["6d"]["ZIndex"] = 0;
-G2L["6d"]["BorderSizePixel"] = 0;
-G2L["6d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["6d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["6d"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["6d"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["6d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6d"]["Name"] = [[UIStroke]];
-G2L["6d"]["LayoutOrder"] = -1;
-G2L["6d"]["BackgroundTransparency"] = 1;
+G2L["6e"] = Instance.new("Frame", G2L["66"]);
+G2L["6e"]["ZIndex"] = 0;
+G2L["6e"]["BorderSizePixel"] = 0;
+G2L["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["6e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["6e"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["6e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6e"]["Name"] = [[UIStroke]];
+G2L["6e"]["LayoutOrder"] = -1;
+G2L["6e"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button.UIStroke.UICorner
-G2L["6e"] = Instance.new("UICorner", G2L["6d"]);
-G2L["6e"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["6f"] = Instance.new("UICorner", G2L["6e"]);
+G2L["6f"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.Button.UIStroke.UIStroke
-G2L["6f"] = Instance.new("UIStroke", G2L["6d"]);
-G2L["6f"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["70"] = Instance.new("UIStroke", G2L["6e"]);
+G2L["70"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.UICorner
-G2L["70"] = Instance.new("UICorner", G2L["62"]);
-G2L["70"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["71"] = Instance.new("UICorner", G2L["63"]);
+G2L["71"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.UIGradient
-G2L["71"] = Instance.new("UIGradient", G2L["62"]);
-G2L["71"]["Rotation"] = -90;
-G2L["71"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+G2L["72"] = Instance.new("UIGradient", G2L["63"]);
+G2L["72"]["Rotation"] = -90;
+G2L["72"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.SummonStand.UIStroke
-G2L["72"] = Instance.new("UIStroke", G2L["62"]);
-G2L["72"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["73"] = Instance.new("UIStroke", G2L["63"]);
+G2L["73"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid
-G2L["73"] = Instance.new("Frame", G2L["10"]);
-G2L["73"]["BorderSizePixel"] = 0;
-G2L["73"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["73"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["73"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
-G2L["73"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
-G2L["73"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["73"]["Name"] = [[AutoRaid]];
-G2L["73"]["LayoutOrder"] = 4;
+G2L["74"] = Instance.new("Frame", G2L["11"]);
+G2L["74"]["BorderSizePixel"] = 0;
+G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["74"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["74"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
+G2L["74"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
+G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["74"]["Name"] = [[AutoRaid]];
+G2L["74"]["LayoutOrder"] = 4;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Text
-G2L["74"] = Instance.new("TextLabel", G2L["73"]);
-G2L["74"]["TextWrapped"] = true;
-G2L["74"]["BorderSizePixel"] = 0;
-G2L["74"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["74"]["TextScaled"] = true;
-G2L["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["74"]["TextSize"] = 18;
-G2L["74"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["74"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["74"]["BackgroundTransparency"] = 1;
-G2L["74"]["AnchorPoint"] = Vector2.new(0, 0.5);
-G2L["74"]["Size"] = UDim2.new(0.25522, 0, 0.6, 0);
-G2L["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["74"]["Text"] = [[Auto Raid]];
-G2L["74"]["Name"] = [[Text]];
-G2L["74"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
+G2L["75"] = Instance.new("TextLabel", G2L["74"]);
+G2L["75"]["TextWrapped"] = true;
+G2L["75"]["BorderSizePixel"] = 0;
+G2L["75"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["75"]["TextScaled"] = true;
+G2L["75"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["TextSize"] = 18;
+G2L["75"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["75"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["75"]["BackgroundTransparency"] = 1;
+G2L["75"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["75"]["Size"] = UDim2.new(0.25522, 0, 0.6, 0);
+G2L["75"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["75"]["Text"] = [[Auto Raid]];
+G2L["75"]["Name"] = [[Text]];
+G2L["75"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Text.UITextSizeConstraint
-G2L["75"] = Instance.new("UITextSizeConstraint", G2L["74"]);
-G2L["75"]["MaxTextSize"] = 18;
+G2L["76"] = Instance.new("UITextSizeConstraint", G2L["75"]);
+G2L["76"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button
-G2L["76"] = Instance.new("TextButton", G2L["73"]);
-G2L["76"]["TextWrapped"] = true;
-G2L["76"]["BorderSizePixel"] = 0;
-G2L["76"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["76"]["TextSize"] = 20;
-G2L["76"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["76"]["TextScaled"] = true;
-G2L["76"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["76"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["76"]["ZIndex"] = 2;
-G2L["76"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["76"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
-G2L["76"]["Name"] = [[Button]];
-G2L["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["76"]["Text"] = [[]];
-G2L["76"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
+G2L["77"] = Instance.new("TextButton", G2L["74"]);
+G2L["77"]["TextWrapped"] = true;
+G2L["77"]["BorderSizePixel"] = 0;
+G2L["77"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["77"]["TextSize"] = 20;
+G2L["77"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["77"]["TextScaled"] = true;
+G2L["77"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["77"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["77"]["ZIndex"] = 2;
+G2L["77"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["77"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
+G2L["77"]["Name"] = [[Button]];
+G2L["77"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["77"]["Text"] = [[]];
+G2L["77"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button.UICorner
-G2L["77"] = Instance.new("UICorner", G2L["76"]);
-G2L["77"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["78"] = Instance.new("UICorner", G2L["77"]);
+G2L["78"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button.Frame
-G2L["78"] = Instance.new("Frame", G2L["76"]);
-G2L["78"]["BorderSizePixel"] = 0;
-G2L["78"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["78"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["78"]["Size"] = UDim2.new(0.5, 0, 1, 0);
-G2L["78"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
-G2L["78"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["79"] = Instance.new("Frame", G2L["77"]);
+G2L["79"]["BorderSizePixel"] = 0;
+G2L["79"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["79"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["79"]["Size"] = UDim2.new(0.5, 0, 1, 0);
+G2L["79"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
+G2L["79"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button.Frame.UICorner
-G2L["79"] = Instance.new("UICorner", G2L["78"]);
-G2L["79"]["CornerRadius"] = UDim.new(0.6, 0);
+G2L["7a"] = Instance.new("UICorner", G2L["79"]);
+G2L["7a"]["CornerRadius"] = UDim.new(0.6, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button.Frame.UIAspectRatioConstraint
-G2L["7a"] = Instance.new("UIAspectRatioConstraint", G2L["78"]);
-G2L["7a"]["AspectRatio"] = 1.0243;
+G2L["7b"] = Instance.new("UIAspectRatioConstraint", G2L["79"]);
+G2L["7b"]["AspectRatio"] = 1.0243;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button.Frame.UIStroke
-G2L["7b"] = Instance.new("UIStroke", G2L["78"]);
-G2L["7b"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["7c"] = Instance.new("UIStroke", G2L["79"]);
+G2L["7c"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button.UITextSizeConstraint
-G2L["7c"] = Instance.new("UITextSizeConstraint", G2L["76"]);
-G2L["7c"]["MaxTextSize"] = 20;
+G2L["7d"] = Instance.new("UITextSizeConstraint", G2L["77"]);
+G2L["7d"]["MaxTextSize"] = 20;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button.UIAspectRatioConstraint
-G2L["7d"] = Instance.new("UIAspectRatioConstraint", G2L["76"]);
-G2L["7d"]["AspectRatio"] = 2.0486;
+G2L["7e"] = Instance.new("UIAspectRatioConstraint", G2L["77"]);
+G2L["7e"]["AspectRatio"] = 2.0486;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button.UIStroke
-G2L["7e"] = Instance.new("Frame", G2L["76"]);
-G2L["7e"]["ZIndex"] = 0;
-G2L["7e"]["BorderSizePixel"] = 0;
-G2L["7e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["7e"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["7e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["7e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7e"]["Name"] = [[UIStroke]];
-G2L["7e"]["LayoutOrder"] = -1;
-G2L["7e"]["BackgroundTransparency"] = 1;
+G2L["7f"] = Instance.new("Frame", G2L["77"]);
+G2L["7f"]["ZIndex"] = 0;
+G2L["7f"]["BorderSizePixel"] = 0;
+G2L["7f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["7f"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["7f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["7f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7f"]["Name"] = [[UIStroke]];
+G2L["7f"]["LayoutOrder"] = -1;
+G2L["7f"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button.UIStroke.UICorner
-G2L["7f"] = Instance.new("UICorner", G2L["7e"]);
-G2L["7f"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["80"] = Instance.new("UICorner", G2L["7f"]);
+G2L["80"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Button.UIStroke.UIStroke
-G2L["80"] = Instance.new("UIStroke", G2L["7e"]);
-G2L["80"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["81"] = Instance.new("UIStroke", G2L["7f"]);
+G2L["81"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.UICorner
-G2L["81"] = Instance.new("UICorner", G2L["73"]);
-G2L["81"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["82"] = Instance.new("UICorner", G2L["74"]);
+G2L["82"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.UIGradient
-G2L["82"] = Instance.new("UIGradient", G2L["73"]);
-G2L["82"]["Rotation"] = -90;
-G2L["82"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+G2L["83"] = Instance.new("UIGradient", G2L["74"]);
+G2L["83"]["Rotation"] = -90;
+G2L["83"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.UIStroke
-G2L["83"] = Instance.new("UIStroke", G2L["73"]);
-G2L["83"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["84"] = Instance.new("UIStroke", G2L["74"]);
+G2L["84"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Desc
-G2L["84"] = Instance.new("TextLabel", G2L["73"]);
-G2L["84"]["TextWrapped"] = true;
-G2L["84"]["BorderSizePixel"] = 0;
-G2L["84"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["84"]["TextScaled"] = true;
-G2L["84"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["84"]["TextSize"] = 18;
-G2L["84"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["84"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
-G2L["84"]["BackgroundTransparency"] = 1;
-G2L["84"]["AnchorPoint"] = Vector2.new(0, 0.5);
-G2L["84"]["Size"] = UDim2.new(0.5, 0, 0.8, 0);
-G2L["84"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["84"]["Text"] = [[If Auto Raid and Kill Nearest are activated, it will kill only in Raid Mode]];
-G2L["84"]["Name"] = [[Desc]];
-G2L["84"]["Position"] = UDim2.new(0.3125, 0, 0.5, 0);
+G2L["85"] = Instance.new("TextLabel", G2L["74"]);
+G2L["85"]["TextWrapped"] = true;
+G2L["85"]["BorderSizePixel"] = 0;
+G2L["85"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["85"]["TextScaled"] = true;
+G2L["85"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["85"]["TextSize"] = 18;
+G2L["85"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["85"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
+G2L["85"]["BackgroundTransparency"] = 1;
+G2L["85"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["85"]["Size"] = UDim2.new(0.5, 0, 0.8, 0);
+G2L["85"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["85"]["Text"] = [[If Auto Raid and Kill Nearest are activated, it will kill only in Raid Mode]];
+G2L["85"]["Name"] = [[Desc]];
+G2L["85"]["Position"] = UDim2.new(0.3125, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoRaid.Desc.UITextSizeConstraint
-G2L["85"] = Instance.new("UITextSizeConstraint", G2L["84"]);
-G2L["85"]["MaxTextSize"] = 18;
+G2L["86"] = Instance.new("UITextSizeConstraint", G2L["85"]);
+G2L["86"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest
-G2L["86"] = Instance.new("Frame", G2L["10"]);
-G2L["86"]["BorderSizePixel"] = 0;
-G2L["86"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["86"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["86"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
-G2L["86"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
-G2L["86"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["86"]["Name"] = [[KillNearest]];
-G2L["86"]["LayoutOrder"] = 5;
+G2L["87"] = Instance.new("Frame", G2L["11"]);
+G2L["87"]["BorderSizePixel"] = 0;
+G2L["87"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["87"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["87"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
+G2L["87"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
+G2L["87"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["87"]["Name"] = [[KillNearest]];
+G2L["87"]["LayoutOrder"] = 5;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Text
-G2L["87"] = Instance.new("TextLabel", G2L["86"]);
-G2L["87"]["TextWrapped"] = true;
-G2L["87"]["BorderSizePixel"] = 0;
-G2L["87"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["87"]["TextScaled"] = true;
-G2L["87"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["87"]["TextSize"] = 18;
-G2L["87"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["87"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["87"]["BackgroundTransparency"] = 1;
-G2L["87"]["AnchorPoint"] = Vector2.new(0, 0.5);
-G2L["87"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
-G2L["87"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["87"]["Text"] = [[Kill Nearest]];
-G2L["87"]["Name"] = [[Text]];
-G2L["87"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
+G2L["88"] = Instance.new("TextLabel", G2L["87"]);
+G2L["88"]["TextWrapped"] = true;
+G2L["88"]["BorderSizePixel"] = 0;
+G2L["88"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["88"]["TextScaled"] = true;
+G2L["88"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["88"]["TextSize"] = 18;
+G2L["88"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["88"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["88"]["BackgroundTransparency"] = 1;
+G2L["88"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["88"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
+G2L["88"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["88"]["Text"] = [[Kill Nearest]];
+G2L["88"]["Name"] = [[Text]];
+G2L["88"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Text.UITextSizeConstraint
-G2L["88"] = Instance.new("UITextSizeConstraint", G2L["87"]);
-G2L["88"]["MaxTextSize"] = 18;
+G2L["89"] = Instance.new("UITextSizeConstraint", G2L["88"]);
+G2L["89"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button
-G2L["89"] = Instance.new("TextButton", G2L["86"]);
-G2L["89"]["TextWrapped"] = true;
-G2L["89"]["BorderSizePixel"] = 0;
-G2L["89"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["89"]["TextSize"] = 20;
-G2L["89"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["89"]["TextScaled"] = true;
-G2L["89"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["89"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["89"]["ZIndex"] = 2;
-G2L["89"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["89"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
-G2L["89"]["Name"] = [[Button]];
-G2L["89"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["89"]["Text"] = [[]];
-G2L["89"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
+G2L["8a"] = Instance.new("TextButton", G2L["87"]);
+G2L["8a"]["TextWrapped"] = true;
+G2L["8a"]["BorderSizePixel"] = 0;
+G2L["8a"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["8a"]["TextSize"] = 20;
+G2L["8a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["8a"]["TextScaled"] = true;
+G2L["8a"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["8a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["8a"]["ZIndex"] = 2;
+G2L["8a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["8a"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
+G2L["8a"]["Name"] = [[Button]];
+G2L["8a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8a"]["Text"] = [[]];
+G2L["8a"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button.UICorner
-G2L["8a"] = Instance.new("UICorner", G2L["89"]);
-G2L["8a"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["8b"] = Instance.new("UICorner", G2L["8a"]);
+G2L["8b"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button.Frame
-G2L["8b"] = Instance.new("Frame", G2L["89"]);
-G2L["8b"]["BorderSizePixel"] = 0;
-G2L["8b"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
-G2L["8b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["8b"]["Size"] = UDim2.new(0.5, 0, 1, 0);
-G2L["8b"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
-G2L["8b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8c"] = Instance.new("Frame", G2L["8a"]);
+G2L["8c"]["BorderSizePixel"] = 0;
+G2L["8c"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["8c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["8c"]["Size"] = UDim2.new(0.5, 0, 1, 0);
+G2L["8c"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
+G2L["8c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button.Frame.UICorner
-G2L["8c"] = Instance.new("UICorner", G2L["8b"]);
-G2L["8c"]["CornerRadius"] = UDim.new(0.6, 0);
+G2L["8d"] = Instance.new("UICorner", G2L["8c"]);
+G2L["8d"]["CornerRadius"] = UDim.new(0.6, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button.Frame.UIAspectRatioConstraint
-G2L["8d"] = Instance.new("UIAspectRatioConstraint", G2L["8b"]);
-G2L["8d"]["AspectRatio"] = 1.0243;
+G2L["8e"] = Instance.new("UIAspectRatioConstraint", G2L["8c"]);
+G2L["8e"]["AspectRatio"] = 1.0243;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button.Frame.UIStroke
-G2L["8e"] = Instance.new("UIStroke", G2L["8b"]);
-G2L["8e"]["Color"] = Color3.fromRGB(255, 255, 255);
+G2L["8f"] = Instance.new("UIStroke", G2L["8c"]);
+G2L["8f"]["Color"] = Color3.fromRGB(255, 255, 255);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button.UITextSizeConstraint
-G2L["8f"] = Instance.new("UITextSizeConstraint", G2L["89"]);
-G2L["8f"]["MaxTextSize"] = 20;
+G2L["90"] = Instance.new("UITextSizeConstraint", G2L["8a"]);
+G2L["90"]["MaxTextSize"] = 20;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button.UIAspectRatioConstraint
-G2L["90"] = Instance.new("UIAspectRatioConstraint", G2L["89"]);
-G2L["90"]["AspectRatio"] = 2.0486;
+G2L["91"] = Instance.new("UIAspectRatioConstraint", G2L["8a"]);
+G2L["91"]["AspectRatio"] = 2.0486;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button.UIStroke
-G2L["91"] = Instance.new("Frame", G2L["89"]);
-G2L["91"]["ZIndex"] = 0;
-G2L["91"]["BorderSizePixel"] = 0;
-G2L["91"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["91"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["91"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["91"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["91"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["91"]["Name"] = [[UIStroke]];
-G2L["91"]["LayoutOrder"] = -1;
-G2L["91"]["BackgroundTransparency"] = 1;
+G2L["92"] = Instance.new("Frame", G2L["8a"]);
+G2L["92"]["ZIndex"] = 0;
+G2L["92"]["BorderSizePixel"] = 0;
+G2L["92"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["92"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["92"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["92"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["92"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["92"]["Name"] = [[UIStroke]];
+G2L["92"]["LayoutOrder"] = -1;
+G2L["92"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button.UIStroke.UICorner
-G2L["92"] = Instance.new("UICorner", G2L["91"]);
-G2L["92"]["CornerRadius"] = UDim.new(0.4, 0);
+G2L["93"] = Instance.new("UICorner", G2L["92"]);
+G2L["93"]["CornerRadius"] = UDim.new(0.4, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Button.UIStroke.UIStroke
-G2L["93"] = Instance.new("UIStroke", G2L["91"]);
-G2L["93"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["94"] = Instance.new("UIStroke", G2L["92"]);
+G2L["94"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.UICorner
-G2L["94"] = Instance.new("UICorner", G2L["86"]);
-G2L["94"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["95"] = Instance.new("UICorner", G2L["87"]);
+G2L["95"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.UIGradient
-G2L["95"] = Instance.new("UIGradient", G2L["86"]);
-G2L["95"]["Rotation"] = -90;
-G2L["95"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+G2L["96"] = Instance.new("UIGradient", G2L["87"]);
+G2L["96"]["Rotation"] = -90;
+G2L["96"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.UIStroke
-G2L["96"] = Instance.new("UIStroke", G2L["86"]);
-G2L["96"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["97"] = Instance.new("UIStroke", G2L["87"]);
+G2L["97"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1
-G2L["97"] = Instance.new("TextButton", G2L["86"]);
-G2L["97"]["TextWrapped"] = true;
-G2L["97"]["BorderSizePixel"] = 0;
-G2L["97"]["TextSize"] = 14;
-G2L["97"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["97"]["TextScaled"] = true;
-G2L["97"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["97"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["97"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["97"]["Size"] = UDim2.new(0.225, 0, 0.6, 0);
-G2L["97"]["BackgroundTransparency"] = 1;
-G2L["97"]["Name"] = [[Selection1]];
-G2L["97"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["97"]["Text"] = [[]];
-G2L["97"]["Position"] = UDim2.new(0.425, 0, 0.5, 0);
+G2L["98"] = Instance.new("TextButton", G2L["87"]);
+G2L["98"]["TextWrapped"] = true;
+G2L["98"]["BorderSizePixel"] = 0;
+G2L["98"]["TextSize"] = 14;
+G2L["98"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["98"]["TextScaled"] = true;
+G2L["98"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["98"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["98"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["98"]["Size"] = UDim2.new(0.225, 0, 0.6, 0);
+G2L["98"]["BackgroundTransparency"] = 1;
+G2L["98"]["Name"] = [[Selection1]];
+G2L["98"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["98"]["Text"] = [[]];
+G2L["98"]["Position"] = UDim2.new(0.425, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.UITextSizeConstraint
-G2L["98"] = Instance.new("UITextSizeConstraint", G2L["97"]);
-G2L["98"]["MaxTextSize"] = 18;
+G2L["99"] = Instance.new("UITextSizeConstraint", G2L["98"]);
+G2L["99"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List
-G2L["99"] = Instance.new("Frame", G2L["97"]);
-G2L["99"]["Visible"] = false;
-G2L["99"]["ZIndex"] = 999;
-G2L["99"]["BorderSizePixel"] = 0;
-G2L["99"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["99"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["99"]["Size"] = UDim2.new(1, 0, 5, 0);
-G2L["99"]["Position"] = UDim2.new(0.5, 0, 3.6, 0);
-G2L["99"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["99"]["Name"] = [[List]];
-G2L["99"]["LayoutOrder"] = 999;
+G2L["9a"] = Instance.new("Frame", G2L["98"]);
+G2L["9a"]["Visible"] = false;
+G2L["9a"]["ZIndex"] = 999;
+G2L["9a"]["BorderSizePixel"] = 0;
+G2L["9a"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["9a"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["9a"]["Size"] = UDim2.new(1, 0, 5, 0);
+G2L["9a"]["Position"] = UDim2.new(0.5, 0, 3.6, 0);
+G2L["9a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9a"]["Name"] = [[List]];
+G2L["9a"]["LayoutOrder"] = 999;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.UIStroke
-G2L["9a"] = Instance.new("UIStroke", G2L["99"]);
-G2L["9a"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["9b"] = Instance.new("UIStroke", G2L["9a"]);
+G2L["9b"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame
-G2L["9b"] = Instance.new("ScrollingFrame", G2L["99"]);
-G2L["9b"]["Active"] = true;
-G2L["9b"]["BorderSizePixel"] = 0;
-G2L["9b"]["CanvasSize"] = UDim2.new(0, 0, 8, 0);
-G2L["9b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["9b"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["9b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["9b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["9b"]["ScrollBarThickness"] = 2;
-G2L["9b"]["BackgroundTransparency"] = 1;
+G2L["9c"] = Instance.new("ScrollingFrame", G2L["9a"]);
+G2L["9c"]["Active"] = true;
+G2L["9c"]["BorderSizePixel"] = 0;
+G2L["9c"]["CanvasSize"] = UDim2.new(0, 0, 8, 0);
+G2L["9c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["9c"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["9c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["9c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9c"]["ScrollBarThickness"] = 2;
+G2L["9c"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.UIListLayout
-G2L["9c"] = Instance.new("UIListLayout", G2L["9b"]);
-G2L["9c"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["9c"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["9d"] = Instance.new("UIListLayout", G2L["9c"]);
+G2L["9d"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["9d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Below
-G2L["9d"] = Instance.new("TextButton", G2L["9b"]);
-G2L["9d"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["9d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["9d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["9d"]["Size"] = UDim2.new(1, 0, 0.025, 0);
-G2L["9d"]["LayoutOrder"] = 1;
-G2L["9d"]["Name"] = [[Below]];
-G2L["9d"]["Text"] = [[]];
-G2L["9d"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["9e"] = Instance.new("TextButton", G2L["9c"]);
+G2L["9e"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["9e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["9e"]["Size"] = UDim2.new(1, 0, 0.025, 0);
+G2L["9e"]["LayoutOrder"] = 1;
+G2L["9e"]["Name"] = [[Below]];
+G2L["9e"]["Text"] = [[]];
+G2L["9e"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Below.UITextSizeConstraint
-G2L["9e"] = Instance.new("UITextSizeConstraint", G2L["9d"]);
-G2L["9e"]["MaxTextSize"] = 26;
+G2L["9f"] = Instance.new("UITextSizeConstraint", G2L["9e"]);
+G2L["9f"]["MaxTextSize"] = 26;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Below.TextLabel
-G2L["9f"] = Instance.new("TextLabel", G2L["9d"]);
-G2L["9f"]["TextSize"] = 14;
-G2L["9f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["9f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["9f"]["BackgroundTransparency"] = 1;
-G2L["9f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["9f"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["9f"]["Text"] = [[Below]];
-G2L["9f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["a0"] = Instance.new("TextLabel", G2L["9e"]);
+G2L["a0"]["TextSize"] = 14;
+G2L["a0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a0"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a0"]["BackgroundTransparency"] = 1;
+G2L["a0"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["a0"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["a0"]["Text"] = [[Below]];
+G2L["a0"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Below.TextLabel.UITextSizeConstraint
-G2L["a0"] = Instance.new("UITextSizeConstraint", G2L["9f"]);
-G2L["a0"]["MaxTextSize"] = 18;
+G2L["a1"] = Instance.new("UITextSizeConstraint", G2L["a0"]);
+G2L["a1"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Behind
-G2L["a1"] = Instance.new("TextButton", G2L["9b"]);
-G2L["a1"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["a1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["a1"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["a1"]["Size"] = UDim2.new(1, 0, 0.025, 0);
-G2L["a1"]["LayoutOrder"] = 2;
-G2L["a1"]["Name"] = [[Behind]];
-G2L["a1"]["Text"] = [[]];
-G2L["a1"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["a2"] = Instance.new("TextButton", G2L["9c"]);
+G2L["a2"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["a2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["a2"]["Size"] = UDim2.new(1, 0, 0.025, 0);
+G2L["a2"]["LayoutOrder"] = 2;
+G2L["a2"]["Name"] = [[Behind]];
+G2L["a2"]["Text"] = [[]];
+G2L["a2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Behind.UITextSizeConstraint
-G2L["a2"] = Instance.new("UITextSizeConstraint", G2L["a1"]);
-G2L["a2"]["MaxTextSize"] = 26;
+G2L["a3"] = Instance.new("UITextSizeConstraint", G2L["a2"]);
+G2L["a3"]["MaxTextSize"] = 26;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Behind.TextLabel
-G2L["a3"] = Instance.new("TextLabel", G2L["a1"]);
-G2L["a3"]["TextSize"] = 14;
-G2L["a3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["a3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a3"]["BackgroundTransparency"] = 1;
-G2L["a3"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["a3"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["a3"]["Text"] = [[Behind]];
-G2L["a3"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["a4"] = Instance.new("TextLabel", G2L["a2"]);
+G2L["a4"]["TextSize"] = 14;
+G2L["a4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a4"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a4"]["BackgroundTransparency"] = 1;
+G2L["a4"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["a4"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["a4"]["Text"] = [[Behind]];
+G2L["a4"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Behind.TextLabel.UITextSizeConstraint
-G2L["a4"] = Instance.new("UITextSizeConstraint", G2L["a3"]);
-G2L["a4"]["MaxTextSize"] = 18;
+G2L["a5"] = Instance.new("UITextSizeConstraint", G2L["a4"]);
+G2L["a5"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Above
-G2L["a5"] = Instance.new("TextButton", G2L["9b"]);
-G2L["a5"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["a5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["a5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["a5"]["Size"] = UDim2.new(1, 0, 0.025, 0);
-G2L["a5"]["Name"] = [[Above]];
-G2L["a5"]["Text"] = [[]];
-G2L["a5"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["a6"] = Instance.new("TextButton", G2L["9c"]);
+G2L["a6"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["a6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["a6"]["Size"] = UDim2.new(1, 0, 0.025, 0);
+G2L["a6"]["Name"] = [[Above]];
+G2L["a6"]["Text"] = [[]];
+G2L["a6"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Above.UITextSizeConstraint
-G2L["a6"] = Instance.new("UITextSizeConstraint", G2L["a5"]);
-G2L["a6"]["MaxTextSize"] = 26;
+G2L["a7"] = Instance.new("UITextSizeConstraint", G2L["a6"]);
+G2L["a7"]["MaxTextSize"] = 26;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Above.TextLabel
-G2L["a7"] = Instance.new("TextLabel", G2L["a5"]);
-G2L["a7"]["TextSize"] = 14;
-G2L["a7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["a7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["a7"]["BackgroundTransparency"] = 1;
-G2L["a7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["a7"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["a7"]["Text"] = [[Above]];
-G2L["a7"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["a8"] = Instance.new("TextLabel", G2L["a6"]);
+G2L["a8"]["TextSize"] = 14;
+G2L["a8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["a8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["a8"]["BackgroundTransparency"] = 1;
+G2L["a8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["a8"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["a8"]["Text"] = [[Above]];
+G2L["a8"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.ScrollingFrame.Above.TextLabel.UITextSizeConstraint
-G2L["a8"] = Instance.new("UITextSizeConstraint", G2L["a7"]);
-G2L["a8"]["MaxTextSize"] = 18;
+G2L["a9"] = Instance.new("UITextSizeConstraint", G2L["a8"]);
+G2L["a9"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.List.UICorner
-G2L["a9"] = Instance.new("UICorner", G2L["99"]);
-G2L["a9"]["CornerRadius"] = UDim.new(0.03, 0);
+G2L["aa"] = Instance.new("UICorner", G2L["9a"]);
+G2L["aa"]["CornerRadius"] = UDim.new(0.03, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.UIStroke
-G2L["aa"] = Instance.new("Frame", G2L["97"]);
-G2L["aa"]["ZIndex"] = 0;
-G2L["aa"]["BorderSizePixel"] = 0;
-G2L["aa"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["aa"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["aa"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["aa"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["aa"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["aa"]["Name"] = [[UIStroke]];
+G2L["ab"] = Instance.new("Frame", G2L["98"]);
+G2L["ab"]["ZIndex"] = 0;
+G2L["ab"]["BorderSizePixel"] = 0;
+G2L["ab"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["ab"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["ab"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["ab"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["ab"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ab"]["Name"] = [[UIStroke]];
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.UIStroke.UICorner
-G2L["ab"] = Instance.new("UICorner", G2L["aa"]);
-G2L["ab"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["ac"] = Instance.new("UICorner", G2L["ab"]);
+G2L["ac"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.UIStroke.UIStroke
-G2L["ac"] = Instance.new("UIStroke", G2L["aa"]);
-G2L["ac"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["ad"] = Instance.new("UIStroke", G2L["ab"]);
+G2L["ad"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.Select
-G2L["ad"] = Instance.new("TextLabel", G2L["97"]);
-G2L["ad"]["TextWrapped"] = true;
-G2L["ad"]["BorderSizePixel"] = 0;
-G2L["ad"]["TextScaled"] = true;
-G2L["ad"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["ad"]["TextSize"] = 18;
-G2L["ad"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["ad"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
-G2L["ad"]["BackgroundTransparency"] = 1;
-G2L["ad"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["ad"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["ad"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ad"]["Text"] = [[Method?]];
-G2L["ad"]["Name"] = [[Select]];
-G2L["ad"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["ae"] = Instance.new("TextLabel", G2L["98"]);
+G2L["ae"]["TextWrapped"] = true;
+G2L["ae"]["BorderSizePixel"] = 0;
+G2L["ae"]["TextScaled"] = true;
+G2L["ae"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ae"]["TextSize"] = 18;
+G2L["ae"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["ae"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
+G2L["ae"]["BackgroundTransparency"] = 1;
+G2L["ae"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["ae"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["ae"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ae"]["Text"] = [[Method?]];
+G2L["ae"]["Name"] = [[Select]];
+G2L["ae"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection1.Select.UITextSizeConstraint
-G2L["ae"] = Instance.new("UITextSizeConstraint", G2L["ad"]);
-G2L["ae"]["MaxTextSize"] = 18;
+G2L["af"] = Instance.new("UITextSizeConstraint", G2L["ae"]);
+G2L["af"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2
-G2L["af"] = Instance.new("TextButton", G2L["86"]);
-G2L["af"]["TextWrapped"] = true;
-G2L["af"]["BorderSizePixel"] = 0;
-G2L["af"]["TextSize"] = 14;
-G2L["af"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["af"]["TextScaled"] = true;
-G2L["af"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["af"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["af"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["af"]["Size"] = UDim2.new(0.225, 0, 0.6, 0);
-G2L["af"]["BackgroundTransparency"] = 1;
-G2L["af"]["Name"] = [[Selection2]];
-G2L["af"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["af"]["Text"] = [[]];
-G2L["af"]["Position"] = UDim2.new(0.685, 0, 0.5, 0);
+G2L["b0"] = Instance.new("TextButton", G2L["87"]);
+G2L["b0"]["TextWrapped"] = true;
+G2L["b0"]["BorderSizePixel"] = 0;
+G2L["b0"]["TextSize"] = 14;
+G2L["b0"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b0"]["TextScaled"] = true;
+G2L["b0"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b0"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b0"]["Size"] = UDim2.new(0.225, 0, 0.6, 0);
+G2L["b0"]["BackgroundTransparency"] = 1;
+G2L["b0"]["Name"] = [[Selection2]];
+G2L["b0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b0"]["Text"] = [[]];
+G2L["b0"]["Position"] = UDim2.new(0.685, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.UIStroke
-G2L["b0"] = Instance.new("Frame", G2L["af"]);
-G2L["b0"]["ZIndex"] = 0;
-G2L["b0"]["BorderSizePixel"] = 0;
-G2L["b0"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["b0"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["b0"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["b0"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["b0"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b0"]["Name"] = [[UIStroke]];
+G2L["b1"] = Instance.new("Frame", G2L["b0"]);
+G2L["b1"]["ZIndex"] = 0;
+G2L["b1"]["BorderSizePixel"] = 0;
+G2L["b1"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["b1"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b1"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["b1"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["b1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b1"]["Name"] = [[UIStroke]];
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.UIStroke.UICorner
-G2L["b1"] = Instance.new("UICorner", G2L["b0"]);
-G2L["b1"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["b2"] = Instance.new("UICorner", G2L["b1"]);
+G2L["b2"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.UIStroke.UIStroke
-G2L["b2"] = Instance.new("UIStroke", G2L["b0"]);
-G2L["b2"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["b3"] = Instance.new("UIStroke", G2L["b1"]);
+G2L["b3"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.UITextSizeConstraint
-G2L["b3"] = Instance.new("UITextSizeConstraint", G2L["af"]);
-G2L["b3"]["MaxTextSize"] = 18;
+G2L["b4"] = Instance.new("UITextSizeConstraint", G2L["b0"]);
+G2L["b4"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List
-G2L["b4"] = Instance.new("Frame", G2L["af"]);
-G2L["b4"]["Visible"] = false;
-G2L["b4"]["ZIndex"] = 999;
-G2L["b4"]["BorderSizePixel"] = 0;
-G2L["b4"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["b4"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["b4"]["Size"] = UDim2.new(1, 0, 5, 0);
-G2L["b4"]["Position"] = UDim2.new(0.5, 0, 3.6, 0);
-G2L["b4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b4"]["Name"] = [[List]];
-G2L["b4"]["LayoutOrder"] = 999;
+G2L["b5"] = Instance.new("Frame", G2L["b0"]);
+G2L["b5"]["Visible"] = false;
+G2L["b5"]["ZIndex"] = 999;
+G2L["b5"]["BorderSizePixel"] = 0;
+G2L["b5"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["b5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b5"]["Size"] = UDim2.new(1, 0, 5, 0);
+G2L["b5"]["Position"] = UDim2.new(0.5, 0, 3.6, 0);
+G2L["b5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b5"]["Name"] = [[List]];
+G2L["b5"]["LayoutOrder"] = 999;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.UIStroke
-G2L["b5"] = Instance.new("UIStroke", G2L["b4"]);
-G2L["b5"]["Color"] = Color3.fromRGB(101, 101, 101);
+G2L["b6"] = Instance.new("UIStroke", G2L["b5"]);
+G2L["b6"]["Color"] = Color3.fromRGB(101, 101, 101);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame
-G2L["b6"] = Instance.new("ScrollingFrame", G2L["b4"]);
-G2L["b6"]["Active"] = true;
-G2L["b6"]["BorderSizePixel"] = 0;
-G2L["b6"]["CanvasSize"] = UDim2.new(0, 0, 8, 0);
-G2L["b6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["b6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["b6"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["b6"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["b6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b6"]["ScrollBarThickness"] = 2;
-G2L["b6"]["BackgroundTransparency"] = 1;
+G2L["b7"] = Instance.new("ScrollingFrame", G2L["b5"]);
+G2L["b7"]["Active"] = true;
+G2L["b7"]["BorderSizePixel"] = 0;
+G2L["b7"]["CanvasSize"] = UDim2.new(0, 0, 8, 0);
+G2L["b7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b7"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["b7"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["b7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b7"]["ScrollBarThickness"] = 2;
+G2L["b7"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.UIListLayout
-G2L["b7"] = Instance.new("UIListLayout", G2L["b6"]);
-G2L["b7"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["b7"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+G2L["b8"] = Instance.new("UIListLayout", G2L["b7"]);
+G2L["b8"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["b8"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.E
-G2L["b8"] = Instance.new("TextButton", G2L["b6"]);
-G2L["b8"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["b8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["b8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["b8"]["Size"] = UDim2.new(1, 0, 0.025, 0);
-G2L["b8"]["Name"] = [[E]];
-G2L["b8"]["Text"] = [[]];
-G2L["b8"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["b9"] = Instance.new("TextButton", G2L["b7"]);
+G2L["b9"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["b9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["b9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["b9"]["Size"] = UDim2.new(1, 0, 0.025, 0);
+G2L["b9"]["Name"] = [[E]];
+G2L["b9"]["Text"] = [[]];
+G2L["b9"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.E.UITextSizeConstraint
-G2L["b9"] = Instance.new("UITextSizeConstraint", G2L["b8"]);
-G2L["b9"]["MaxTextSize"] = 26;
+G2L["ba"] = Instance.new("UITextSizeConstraint", G2L["b9"]);
+G2L["ba"]["MaxTextSize"] = 26;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.E.TextLabel
-G2L["ba"] = Instance.new("TextLabel", G2L["b8"]);
-G2L["ba"]["TextSize"] = 14;
-G2L["ba"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["ba"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["ba"]["BackgroundTransparency"] = 1;
-G2L["ba"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["ba"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["ba"]["Text"] = [[E]];
-G2L["ba"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["bb"] = Instance.new("TextLabel", G2L["b9"]);
+G2L["bb"]["TextSize"] = 14;
+G2L["bb"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["bb"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bb"]["BackgroundTransparency"] = 1;
+G2L["bb"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["bb"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["bb"]["Text"] = [[E]];
+G2L["bb"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.E.TextLabel.UITextSizeConstraint
-G2L["bb"] = Instance.new("UITextSizeConstraint", G2L["ba"]);
-G2L["bb"]["MaxTextSize"] = 18;
+G2L["bc"] = Instance.new("UITextSizeConstraint", G2L["bb"]);
+G2L["bc"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.R
-G2L["bc"] = Instance.new("TextButton", G2L["b6"]);
-G2L["bc"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["bc"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["bc"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["bc"]["Size"] = UDim2.new(1, 0, 0.025, 0);
-G2L["bc"]["LayoutOrder"] = 1;
-G2L["bc"]["Name"] = [[R]];
-G2L["bc"]["Text"] = [[]];
-G2L["bc"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["bd"] = Instance.new("TextButton", G2L["b7"]);
+G2L["bd"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["bd"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["bd"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["bd"]["Size"] = UDim2.new(1, 0, 0.025, 0);
+G2L["bd"]["LayoutOrder"] = 1;
+G2L["bd"]["Name"] = [[R]];
+G2L["bd"]["Text"] = [[]];
+G2L["bd"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.R.UITextSizeConstraint
-G2L["bd"] = Instance.new("UITextSizeConstraint", G2L["bc"]);
-G2L["bd"]["MaxTextSize"] = 26;
+G2L["be"] = Instance.new("UITextSizeConstraint", G2L["bd"]);
+G2L["be"]["MaxTextSize"] = 26;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.R.TextLabel
-G2L["be"] = Instance.new("TextLabel", G2L["bc"]);
-G2L["be"]["TextSize"] = 14;
-G2L["be"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["be"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["be"]["BackgroundTransparency"] = 1;
-G2L["be"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["be"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["be"]["Text"] = [[R]];
-G2L["be"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["bf"] = Instance.new("TextLabel", G2L["bd"]);
+G2L["bf"]["TextSize"] = 14;
+G2L["bf"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["bf"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["bf"]["BackgroundTransparency"] = 1;
+G2L["bf"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["bf"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["bf"]["Text"] = [[R]];
+G2L["bf"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.R.TextLabel.UITextSizeConstraint
-G2L["bf"] = Instance.new("UITextSizeConstraint", G2L["be"]);
-G2L["bf"]["MaxTextSize"] = 18;
+G2L["c0"] = Instance.new("UITextSizeConstraint", G2L["bf"]);
+G2L["c0"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.Z
-G2L["c0"] = Instance.new("TextButton", G2L["b6"]);
-G2L["c0"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["c0"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["c0"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["c0"]["Size"] = UDim2.new(1, 0, 0.025, 0);
-G2L["c0"]["LayoutOrder"] = 2;
-G2L["c0"]["Name"] = [[Z]];
-G2L["c0"]["Text"] = [[]];
-G2L["c0"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["c1"] = Instance.new("TextButton", G2L["b7"]);
+G2L["c1"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["c1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c1"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["c1"]["Size"] = UDim2.new(1, 0, 0.025, 0);
+G2L["c1"]["LayoutOrder"] = 2;
+G2L["c1"]["Name"] = [[Z]];
+G2L["c1"]["Text"] = [[]];
+G2L["c1"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.Z.UITextSizeConstraint
-G2L["c1"] = Instance.new("UITextSizeConstraint", G2L["c0"]);
-G2L["c1"]["MaxTextSize"] = 26;
+G2L["c2"] = Instance.new("UITextSizeConstraint", G2L["c1"]);
+G2L["c2"]["MaxTextSize"] = 26;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.Z.TextLabel
-G2L["c2"] = Instance.new("TextLabel", G2L["c0"]);
-G2L["c2"]["TextSize"] = 14;
-G2L["c2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["c2"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c2"]["BackgroundTransparency"] = 1;
-G2L["c2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["c2"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["c2"]["Text"] = [[Z]];
-G2L["c2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["c3"] = Instance.new("TextLabel", G2L["c1"]);
+G2L["c3"]["TextSize"] = 14;
+G2L["c3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c3"]["BackgroundTransparency"] = 1;
+G2L["c3"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["c3"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["c3"]["Text"] = [[Z]];
+G2L["c3"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.Z.TextLabel.UITextSizeConstraint
-G2L["c3"] = Instance.new("UITextSizeConstraint", G2L["c2"]);
-G2L["c3"]["MaxTextSize"] = 18;
+G2L["c4"] = Instance.new("UITextSizeConstraint", G2L["c3"]);
+G2L["c4"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.X
-G2L["c4"] = Instance.new("TextButton", G2L["b6"]);
-G2L["c4"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["c4"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["c4"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["c4"]["Size"] = UDim2.new(1, 0, 0.025, 0);
-G2L["c4"]["LayoutOrder"] = 3;
-G2L["c4"]["Name"] = [[X]];
-G2L["c4"]["Text"] = [[]];
-G2L["c4"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["c5"] = Instance.new("TextButton", G2L["b7"]);
+G2L["c5"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["c5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["c5"]["Size"] = UDim2.new(1, 0, 0.025, 0);
+G2L["c5"]["LayoutOrder"] = 3;
+G2L["c5"]["Name"] = [[X]];
+G2L["c5"]["Text"] = [[]];
+G2L["c5"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.X.UITextSizeConstraint
-G2L["c5"] = Instance.new("UITextSizeConstraint", G2L["c4"]);
-G2L["c5"]["MaxTextSize"] = 26;
+G2L["c6"] = Instance.new("UITextSizeConstraint", G2L["c5"]);
+G2L["c6"]["MaxTextSize"] = 26;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.X.TextLabel
-G2L["c6"] = Instance.new("TextLabel", G2L["c4"]);
-G2L["c6"]["TextSize"] = 14;
-G2L["c6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["c6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c6"]["BackgroundTransparency"] = 1;
-G2L["c6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["c6"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["c6"]["Text"] = [[X]];
-G2L["c6"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["c7"] = Instance.new("TextLabel", G2L["c5"]);
+G2L["c7"]["TextSize"] = 14;
+G2L["c7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c7"]["BackgroundTransparency"] = 1;
+G2L["c7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["c7"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["c7"]["Text"] = [[X]];
+G2L["c7"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.X.TextLabel.UITextSizeConstraint
-G2L["c7"] = Instance.new("UITextSizeConstraint", G2L["c6"]);
-G2L["c7"]["MaxTextSize"] = 18;
+G2L["c8"] = Instance.new("UITextSizeConstraint", G2L["c7"]);
+G2L["c8"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.B
-G2L["c8"] = Instance.new("TextButton", G2L["b6"]);
-G2L["c8"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["c8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["c8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["c8"]["Size"] = UDim2.new(1, 0, 0.025, 0);
-G2L["c8"]["LayoutOrder"] = 4;
-G2L["c8"]["Name"] = [[B]];
-G2L["c8"]["Text"] = [[]];
-G2L["c8"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["c9"] = Instance.new("TextButton", G2L["b7"]);
+G2L["c9"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["c9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["c9"]["Size"] = UDim2.new(1, 0, 0.025, 0);
+G2L["c9"]["LayoutOrder"] = 4;
+G2L["c9"]["Name"] = [[B]];
+G2L["c9"]["Text"] = [[]];
+G2L["c9"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.B.UITextSizeConstraint
-G2L["c9"] = Instance.new("UITextSizeConstraint", G2L["c8"]);
-G2L["c9"]["MaxTextSize"] = 26;
+G2L["ca"] = Instance.new("UITextSizeConstraint", G2L["c9"]);
+G2L["ca"]["MaxTextSize"] = 26;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.B.TextLabel
-G2L["ca"] = Instance.new("TextLabel", G2L["c8"]);
-G2L["ca"]["TextSize"] = 14;
-G2L["ca"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["ca"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["ca"]["BackgroundTransparency"] = 1;
-G2L["ca"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["ca"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["ca"]["Text"] = [[B]];
-G2L["ca"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["cb"] = Instance.new("TextLabel", G2L["c9"]);
+G2L["cb"]["TextSize"] = 14;
+G2L["cb"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["cb"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["cb"]["BackgroundTransparency"] = 1;
+G2L["cb"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["cb"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["cb"]["Text"] = [[B]];
+G2L["cb"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.B.TextLabel.UITextSizeConstraint
-G2L["cb"] = Instance.new("UITextSizeConstraint", G2L["ca"]);
-G2L["cb"]["MaxTextSize"] = 18;
+G2L["cc"] = Instance.new("UITextSizeConstraint", G2L["cb"]);
+G2L["cc"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.V
-G2L["cc"] = Instance.new("TextButton", G2L["b6"]);
-G2L["cc"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
-G2L["cc"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["cc"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["cc"]["Size"] = UDim2.new(1, 0, 0.025, 0);
-G2L["cc"]["LayoutOrder"] = 5;
-G2L["cc"]["Name"] = [[V]];
-G2L["cc"]["Text"] = [[]];
-G2L["cc"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["cd"] = Instance.new("TextButton", G2L["b7"]);
+G2L["cd"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["cd"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["cd"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["cd"]["Size"] = UDim2.new(1, 0, 0.025, 0);
+G2L["cd"]["LayoutOrder"] = 5;
+G2L["cd"]["Name"] = [[V]];
+G2L["cd"]["Text"] = [[]];
+G2L["cd"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.V.UITextSizeConstraint
-G2L["cd"] = Instance.new("UITextSizeConstraint", G2L["cc"]);
-G2L["cd"]["MaxTextSize"] = 26;
+G2L["ce"] = Instance.new("UITextSizeConstraint", G2L["cd"]);
+G2L["ce"]["MaxTextSize"] = 26;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.V.TextLabel
-G2L["ce"] = Instance.new("TextLabel", G2L["cc"]);
-G2L["ce"]["TextSize"] = 14;
-G2L["ce"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["ce"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["ce"]["BackgroundTransparency"] = 1;
-G2L["ce"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["ce"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["ce"]["Text"] = [[V]];
-G2L["ce"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["cf"] = Instance.new("TextLabel", G2L["cd"]);
+G2L["cf"]["TextSize"] = 14;
+G2L["cf"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["cf"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["cf"]["BackgroundTransparency"] = 1;
+G2L["cf"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["cf"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["cf"]["Text"] = [[V]];
+G2L["cf"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.ScrollingFrame.V.TextLabel.UITextSizeConstraint
-G2L["cf"] = Instance.new("UITextSizeConstraint", G2L["ce"]);
-G2L["cf"]["MaxTextSize"] = 18;
+G2L["d0"] = Instance.new("UITextSizeConstraint", G2L["cf"]);
+G2L["d0"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.List.UICorner
-G2L["d0"] = Instance.new("UICorner", G2L["b4"]);
-G2L["d0"]["CornerRadius"] = UDim.new(0.03, 0);
+G2L["d1"] = Instance.new("UICorner", G2L["b5"]);
+G2L["d1"]["CornerRadius"] = UDim.new(0.03, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.Selected
-G2L["d1"] = Instance.new("TextLabel", G2L["af"]);
-G2L["d1"]["TextWrapped"] = true;
-G2L["d1"]["BorderSizePixel"] = 0;
-G2L["d1"]["TextScaled"] = true;
-G2L["d1"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d1"]["TextSize"] = 18;
-G2L["d1"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["d1"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
-G2L["d1"]["BackgroundTransparency"] = 1;
-G2L["d1"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["d1"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["d1"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d1"]["Text"] = [[Skills?]];
-G2L["d1"]["Name"] = [[Selected]];
-G2L["d1"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["d2"] = Instance.new("TextLabel", G2L["b0"]);
+G2L["d2"]["TextWrapped"] = true;
+G2L["d2"]["BorderSizePixel"] = 0;
+G2L["d2"]["TextScaled"] = true;
+G2L["d2"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d2"]["TextSize"] = 18;
+G2L["d2"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["d2"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
+G2L["d2"]["BackgroundTransparency"] = 1;
+G2L["d2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["d2"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["d2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d2"]["Text"] = [[Skills?]];
+G2L["d2"]["Name"] = [[Selected]];
+G2L["d2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest.Selection2.Selected.UITextSizeConstraint
-G2L["d2"] = Instance.new("UITextSizeConstraint", G2L["d1"]);
-G2L["d2"]["MaxTextSize"] = 18;
+G2L["d3"] = Instance.new("UITextSizeConstraint", G2L["d2"]);
+G2L["d3"]["MaxTextSize"] = 18;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation
+G2L["d4"] = Instance.new("Frame", G2L["11"]);
+G2L["d4"]["BorderSizePixel"] = 0;
+G2L["d4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d4"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["d4"]["Size"] = UDim2.new(0.9, 0, 0.04, 0);
+G2L["d4"]["Position"] = UDim2.new(0.5, 0, 0.075, 0);
+G2L["d4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d4"]["Name"] = [[AutoMeditation]];
+G2L["d4"]["LayoutOrder"] = 6;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Text
+G2L["d5"] = Instance.new("TextLabel", G2L["d4"]);
+G2L["d5"]["TextWrapped"] = true;
+G2L["d5"]["BorderSizePixel"] = 0;
+G2L["d5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["d5"]["TextScaled"] = true;
+G2L["d5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d5"]["TextSize"] = 18;
+G2L["d5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["d5"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d5"]["BackgroundTransparency"] = 1;
+G2L["d5"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["d5"]["Size"] = UDim2.new(0.3, 0, 0.6, 0);
+G2L["d5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d5"]["Text"] = [[Auto Meditation]];
+G2L["d5"]["Name"] = [[Text]];
+G2L["d5"]["Position"] = UDim2.new(0.03, 0, 0.5, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Text.UITextSizeConstraint
+G2L["d6"] = Instance.new("UITextSizeConstraint", G2L["d5"]);
+G2L["d6"]["MaxTextSize"] = 18;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button
+G2L["d7"] = Instance.new("TextButton", G2L["d4"]);
+G2L["d7"]["TextWrapped"] = true;
+G2L["d7"]["BorderSizePixel"] = 0;
+G2L["d7"]["TextStrokeColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["d7"]["TextSize"] = 20;
+G2L["d7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d7"]["TextScaled"] = true;
+G2L["d7"]["BackgroundColor3"] = Color3.fromRGB(26, 26, 26);
+G2L["d7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Nunito.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["d7"]["ZIndex"] = 2;
+G2L["d7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["d7"]["Size"] = UDim2.new(0.1, 0, 0.6, 0);
+G2L["d7"]["Name"] = [[Button]];
+G2L["d7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["d7"]["Text"] = [[]];
+G2L["d7"]["Position"] = UDim2.new(0.9, 0, 0.5, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button.UICorner
+G2L["d8"] = Instance.new("UICorner", G2L["d7"]);
+G2L["d8"]["CornerRadius"] = UDim.new(0.4, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button.Frame
+G2L["d9"] = Instance.new("Frame", G2L["d7"]);
+G2L["d9"]["BorderSizePixel"] = 0;
+G2L["d9"]["BackgroundColor3"] = Color3.fromRGB(44, 178, 255);
+G2L["d9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["d9"]["Size"] = UDim2.new(0.5, 0, 1, 0);
+G2L["d9"]["Position"] = UDim2.new(0.2, 0, 0.5, 0);
+G2L["d9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button.Frame.UICorner
+G2L["da"] = Instance.new("UICorner", G2L["d9"]);
+G2L["da"]["CornerRadius"] = UDim.new(0.6, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button.Frame.UIAspectRatioConstraint
+G2L["db"] = Instance.new("UIAspectRatioConstraint", G2L["d9"]);
+G2L["db"]["AspectRatio"] = 1.0243;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button.Frame.UIStroke
+G2L["dc"] = Instance.new("UIStroke", G2L["d9"]);
+G2L["dc"]["Color"] = Color3.fromRGB(255, 255, 255);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button.UITextSizeConstraint
+G2L["dd"] = Instance.new("UITextSizeConstraint", G2L["d7"]);
+G2L["dd"]["MaxTextSize"] = 20;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button.UIAspectRatioConstraint
+G2L["de"] = Instance.new("UIAspectRatioConstraint", G2L["d7"]);
+G2L["de"]["AspectRatio"] = 2.0486;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button.UIStroke
+G2L["df"] = Instance.new("Frame", G2L["d7"]);
+G2L["df"]["ZIndex"] = 0;
+G2L["df"]["BorderSizePixel"] = 0;
+G2L["df"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["df"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["df"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["df"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["df"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["df"]["Name"] = [[UIStroke]];
+G2L["df"]["LayoutOrder"] = -1;
+G2L["df"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button.UIStroke.UICorner
+G2L["e0"] = Instance.new("UICorner", G2L["df"]);
+G2L["e0"]["CornerRadius"] = UDim.new(0.4, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Button.UIStroke.UIStroke
+G2L["e1"] = Instance.new("UIStroke", G2L["df"]);
+G2L["e1"]["Color"] = Color3.fromRGB(101, 101, 101);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.UICorner
+G2L["e2"] = Instance.new("UICorner", G2L["d4"]);
+G2L["e2"]["CornerRadius"] = UDim.new(0.2, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.UIGradient
+G2L["e3"] = Instance.new("UIGradient", G2L["d4"]);
+G2L["e3"]["Rotation"] = -90;
+G2L["e3"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.UIStroke
+G2L["e4"] = Instance.new("UIStroke", G2L["d4"]);
+G2L["e4"]["Color"] = Color3.fromRGB(101, 101, 101);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Desc
+G2L["e5"] = Instance.new("TextLabel", G2L["d4"]);
+G2L["e5"]["TextWrapped"] = true;
+G2L["e5"]["BorderSizePixel"] = 0;
+G2L["e5"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["e5"]["TextScaled"] = true;
+G2L["e5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e5"]["TextSize"] = 18;
+G2L["e5"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["e5"]["TextColor3"] = Color3.fromRGB(85, 85, 85);
+G2L["e5"]["BackgroundTransparency"] = 1;
+G2L["e5"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["e5"]["Size"] = UDim2.new(0.5, 0, 0.8, 0);
+G2L["e5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e5"]["Text"] = [[If Auto Meditation and Kill Nearest are activated, it will kill only in Medidation Mode]];
+G2L["e5"]["Name"] = [[Desc]];
+G2L["e5"]["Position"] = UDim2.new(0.3125, 0, 0.5, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Content.AutoMeditation.Desc.UITextSizeConstraint
+G2L["e6"] = Instance.new("UITextSizeConstraint", G2L["e5"]);
+G2L["e6"]["MaxTextSize"] = 18;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section
-G2L["d3"] = Instance.new("Frame", G2L["5"]);
-G2L["d3"]["BorderSizePixel"] = 0;
-G2L["d3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d3"]["Size"] = UDim2.new(0.25, 0, 0.878, 0);
-G2L["d3"]["Position"] = UDim2.new(0, 0, 0.122, 0);
-G2L["d3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d3"]["Name"] = [[Section]];
+G2L["e7"] = Instance.new("Frame", G2L["5"]);
+G2L["e7"]["BorderSizePixel"] = 0;
+G2L["e7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["e7"]["Size"] = UDim2.new(0.25, 0, 0.878, 0);
+G2L["e7"]["Position"] = UDim2.new(0, 0, 0.122, 0);
+G2L["e7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e7"]["Name"] = [[Section]];
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling
-G2L["d4"] = Instance.new("ScrollingFrame", G2L["d3"]);
-G2L["d4"]["Active"] = true;
-G2L["d4"]["BorderSizePixel"] = 0;
-G2L["d4"]["CanvasSize"] = UDim2.new(0, 0, 0.9, 0);
-G2L["d4"]["BackgroundColor3"] = Color3.fromRGB(22, 22, 22);
-G2L["d4"]["Name"] = [[Scrolling]];
-G2L["d4"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["d4"]["Size"] = UDim2.new(1, 0, 0.95092, 0);
-G2L["d4"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d4"]["Position"] = UDim2.new(0.5, 0, 0.52454, 0);
-G2L["d4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d4"]["ScrollBarThickness"] = 2;
-G2L["d4"]["BackgroundTransparency"] = 1;
+G2L["e8"] = Instance.new("ScrollingFrame", G2L["e7"]);
+G2L["e8"]["Active"] = true;
+G2L["e8"]["BorderSizePixel"] = 0;
+G2L["e8"]["CanvasSize"] = UDim2.new(0, 0, 0.9, 0);
+G2L["e8"]["BackgroundColor3"] = Color3.fromRGB(22, 22, 22);
+G2L["e8"]["Name"] = [[Scrolling]];
+G2L["e8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["e8"]["Size"] = UDim2.new(1, 0, 0.95092, 0);
+G2L["e8"]["ScrollBarImageColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e8"]["Position"] = UDim2.new(0.5, 0, 0.52454, 0);
+G2L["e8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e8"]["ScrollBarThickness"] = 2;
+G2L["e8"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.UICorner
-G2L["d5"] = Instance.new("UICorner", G2L["d4"]);
+G2L["e9"] = Instance.new("UICorner", G2L["e8"]);
 
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton
-G2L["d6"] = Instance.new("TextButton", G2L["d4"]);
-G2L["d6"]["TextWrapped"] = true;
-G2L["d6"]["BorderSizePixel"] = 0;
-G2L["d6"]["TextSize"] = 20;
-G2L["d6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["d6"]["AnchorPoint"] = Vector2.new(0.5, 0);
-G2L["d6"]["Size"] = UDim2.new(0.7, 0, 0.09, 0);
-G2L["d6"]["BackgroundTransparency"] = 1;
-G2L["d6"]["Name"] = [[MainButton]];
-G2L["d6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["d6"]["Text"] = [[]];
-G2L["d6"]["Position"] = UDim2.new(0.5, 0, 0.48, 0);
+G2L["ea"] = Instance.new("TextButton", G2L["e8"]);
+G2L["ea"]["TextWrapped"] = true;
+G2L["ea"]["BorderSizePixel"] = 0;
+G2L["ea"]["TextSize"] = 20;
+G2L["ea"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ea"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ea"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["ea"]["AnchorPoint"] = Vector2.new(0.5, 0);
+G2L["ea"]["Size"] = UDim2.new(0.7, 0, 0.09, 0);
+G2L["ea"]["BackgroundTransparency"] = 1;
+G2L["ea"]["Name"] = [[MainButton]];
+G2L["ea"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ea"]["Text"] = [[]];
+G2L["ea"]["Position"] = UDim2.new(0.5, 0, 0.48, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.UITextSizeConstraint
-G2L["d7"] = Instance.new("UITextSizeConstraint", G2L["d6"]);
-G2L["d7"]["MaxTextSize"] = 20;
+G2L["eb"] = Instance.new("UITextSizeConstraint", G2L["ea"]);
+G2L["eb"]["MaxTextSize"] = 20;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.UICorner
-G2L["d8"] = Instance.new("UICorner", G2L["d6"]);
-G2L["d8"]["CornerRadius"] = UDim.new(0.2, 0);
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame
-G2L["d9"] = Instance.new("Frame", G2L["d6"]);
-G2L["d9"]["BorderSizePixel"] = 0;
-G2L["d9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["d9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["d9"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["d9"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["d9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.UIGradient
-G2L["da"] = Instance.new("UIGradient", G2L["d9"]);
-G2L["da"]["Rotation"] = -90;
-G2L["da"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.Text
-G2L["db"] = Instance.new("TextLabel", G2L["d9"]);
-G2L["db"]["TextWrapped"] = true;
-G2L["db"]["BorderSizePixel"] = 0;
-G2L["db"]["TextScaled"] = true;
-G2L["db"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["db"]["TextSize"] = 18;
-G2L["db"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["db"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["db"]["BackgroundTransparency"] = 1;
-G2L["db"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["db"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["db"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["db"]["Text"] = [[Main]];
-G2L["db"]["Name"] = [[Text]];
-G2L["db"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.Text.UITextSizeConstraint
-G2L["dc"] = Instance.new("UITextSizeConstraint", G2L["db"]);
-G2L["dc"]["MaxTextSize"] = 18;
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.Text.UIAspectRatioConstraint
-G2L["dd"] = Instance.new("UIAspectRatioConstraint", G2L["db"]);
-G2L["dd"]["AspectRatio"] = 3.51274;
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.UIStroke
-G2L["de"] = Instance.new("UIStroke", G2L["d9"]);
-G2L["de"]["Color"] = Color3.fromRGB(101, 101, 101);
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.UICorner
-G2L["df"] = Instance.new("UICorner", G2L["d9"]);
-G2L["df"]["CornerRadius"] = UDim.new(0.2, 0);
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.UIAspectRatioConstraint
-G2L["e0"] = Instance.new("UIAspectRatioConstraint", G2L["d9"]);
-G2L["e0"]["AspectRatio"] = 3.51274;
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.UIAspectRatioConstraint
-G2L["e1"] = Instance.new("UIAspectRatioConstraint", G2L["d6"]);
-G2L["e1"]["AspectRatio"] = 3.51274;
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.UIListLayout
-G2L["e2"] = Instance.new("UIListLayout", G2L["d4"]);
-G2L["e2"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["e2"]["Padding"] = UDim.new(0.025, 0);
-G2L["e2"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript
-G2L["e3"] = Instance.new("TextButton", G2L["d4"]);
-G2L["e3"]["TextWrapped"] = true;
-G2L["e3"]["BorderSizePixel"] = 0;
-G2L["e3"]["TextSize"] = 20;
-G2L["e3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e3"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["e3"]["AnchorPoint"] = Vector2.new(0.5, 0);
-G2L["e3"]["Size"] = UDim2.new(0.7, 0, 0.09, 0);
-G2L["e3"]["BackgroundTransparency"] = 1;
-G2L["e3"]["LayoutOrder"] = 99999;
-G2L["e3"]["Name"] = [[DeleteScript]];
-G2L["e3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e3"]["Text"] = [[]];
-G2L["e3"]["Position"] = UDim2.new(0.5, 0, 0.48, 0);
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.UITextSizeConstraint
-G2L["e4"] = Instance.new("UITextSizeConstraint", G2L["e3"]);
-G2L["e4"]["MaxTextSize"] = 20;
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.UICorner
-G2L["e5"] = Instance.new("UICorner", G2L["e3"]);
-G2L["e5"]["CornerRadius"] = UDim.new(0.2, 0);
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame
-G2L["e6"] = Instance.new("Frame", G2L["e3"]);
-G2L["e6"]["BorderSizePixel"] = 0;
-G2L["e6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["e6"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["e6"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["e6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.UIGradient
-G2L["e7"] = Instance.new("UIGradient", G2L["e6"]);
-G2L["e7"]["Rotation"] = -90;
-G2L["e7"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.Text
-G2L["e8"] = Instance.new("TextLabel", G2L["e6"]);
-G2L["e8"]["TextWrapped"] = true;
-G2L["e8"]["BorderSizePixel"] = 0;
-G2L["e8"]["TextScaled"] = true;
-G2L["e8"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e8"]["TextSize"] = 18;
-G2L["e8"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["e8"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["e8"]["BackgroundTransparency"] = 1;
-G2L["e8"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["e8"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["e8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e8"]["Text"] = [[Delete]];
-G2L["e8"]["Name"] = [[Text]];
-G2L["e8"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.Text.UITextSizeConstraint
-G2L["e9"] = Instance.new("UITextSizeConstraint", G2L["e8"]);
-G2L["e9"]["MaxTextSize"] = 18;
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.Text.UIAspectRatioConstraint
-G2L["ea"] = Instance.new("UIAspectRatioConstraint", G2L["e8"]);
-G2L["ea"]["AspectRatio"] = 3.51274;
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.UIStroke
-G2L["eb"] = Instance.new("UIStroke", G2L["e6"]);
-G2L["eb"]["Color"] = Color3.fromRGB(101, 101, 101);
-
-
--- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.UICorner
-G2L["ec"] = Instance.new("UICorner", G2L["e6"]);
+G2L["ec"] = Instance.new("UICorner", G2L["ea"]);
 G2L["ec"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame
+G2L["ed"] = Instance.new("Frame", G2L["ea"]);
+G2L["ed"]["BorderSizePixel"] = 0;
+G2L["ed"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ed"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["ed"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["ed"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["ed"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.UIGradient
+G2L["ee"] = Instance.new("UIGradient", G2L["ed"]);
+G2L["ee"]["Rotation"] = -90;
+G2L["ee"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.Text
+G2L["ef"] = Instance.new("TextLabel", G2L["ed"]);
+G2L["ef"]["TextWrapped"] = true;
+G2L["ef"]["BorderSizePixel"] = 0;
+G2L["ef"]["TextScaled"] = true;
+G2L["ef"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ef"]["TextSize"] = 18;
+G2L["ef"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["ef"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["ef"]["BackgroundTransparency"] = 1;
+G2L["ef"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["ef"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["ef"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["ef"]["Text"] = [[Main]];
+G2L["ef"]["Name"] = [[Text]];
+G2L["ef"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.Text.UITextSizeConstraint
+G2L["f0"] = Instance.new("UITextSizeConstraint", G2L["ef"]);
+G2L["f0"]["MaxTextSize"] = 18;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.Text.UIAspectRatioConstraint
+G2L["f1"] = Instance.new("UIAspectRatioConstraint", G2L["ef"]);
+G2L["f1"]["AspectRatio"] = 3.51274;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.UIStroke
+G2L["f2"] = Instance.new("UIStroke", G2L["ed"]);
+G2L["f2"]["Color"] = Color3.fromRGB(101, 101, 101);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.UICorner
+G2L["f3"] = Instance.new("UICorner", G2L["ed"]);
+G2L["f3"]["CornerRadius"] = UDim.new(0.2, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.Frame.UIAspectRatioConstraint
+G2L["f4"] = Instance.new("UIAspectRatioConstraint", G2L["ed"]);
+G2L["f4"]["AspectRatio"] = 3.51274;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.MainButton.UIAspectRatioConstraint
+G2L["f5"] = Instance.new("UIAspectRatioConstraint", G2L["ea"]);
+G2L["f5"]["AspectRatio"] = 3.51274;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.UIListLayout
+G2L["f6"] = Instance.new("UIListLayout", G2L["e8"]);
+G2L["f6"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["f6"]["Padding"] = UDim.new(0.025, 0);
+G2L["f6"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript
+G2L["f7"] = Instance.new("TextButton", G2L["e8"]);
+G2L["f7"]["TextWrapped"] = true;
+G2L["f7"]["BorderSizePixel"] = 0;
+G2L["f7"]["TextSize"] = 20;
+G2L["f7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["f7"]["AnchorPoint"] = Vector2.new(0.5, 0);
+G2L["f7"]["Size"] = UDim2.new(0.7, 0, 0.09, 0);
+G2L["f7"]["BackgroundTransparency"] = 1;
+G2L["f7"]["LayoutOrder"] = 99999;
+G2L["f7"]["Name"] = [[DeleteScript]];
+G2L["f7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f7"]["Text"] = [[]];
+G2L["f7"]["Position"] = UDim2.new(0.5, 0, 0.48, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.UITextSizeConstraint
+G2L["f8"] = Instance.new("UITextSizeConstraint", G2L["f7"]);
+G2L["f8"]["MaxTextSize"] = 20;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.UICorner
+G2L["f9"] = Instance.new("UICorner", G2L["f7"]);
+G2L["f9"]["CornerRadius"] = UDim.new(0.2, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame
+G2L["fa"] = Instance.new("Frame", G2L["f7"]);
+G2L["fa"]["BorderSizePixel"] = 0;
+G2L["fa"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["fa"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["fa"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["fa"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["fa"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.UIGradient
+G2L["fb"] = Instance.new("UIGradient", G2L["fa"]);
+G2L["fb"]["Rotation"] = -90;
+G2L["fb"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.Text
+G2L["fc"] = Instance.new("TextLabel", G2L["fa"]);
+G2L["fc"]["TextWrapped"] = true;
+G2L["fc"]["BorderSizePixel"] = 0;
+G2L["fc"]["TextScaled"] = true;
+G2L["fc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["fc"]["TextSize"] = 18;
+G2L["fc"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["fc"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["fc"]["BackgroundTransparency"] = 1;
+G2L["fc"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["fc"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["fc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["fc"]["Text"] = [[Delete]];
+G2L["fc"]["Name"] = [[Text]];
+G2L["fc"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.Text.UITextSizeConstraint
+G2L["fd"] = Instance.new("UITextSizeConstraint", G2L["fc"]);
+G2L["fd"]["MaxTextSize"] = 18;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.Text.UIAspectRatioConstraint
+G2L["fe"] = Instance.new("UIAspectRatioConstraint", G2L["fc"]);
+G2L["fe"]["AspectRatio"] = 3.51274;
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.UIStroke
+G2L["ff"] = Instance.new("UIStroke", G2L["fa"]);
+G2L["ff"]["Color"] = Color3.fromRGB(101, 101, 101);
+
+
+-- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.UICorner
+G2L["100"] = Instance.new("UICorner", G2L["fa"]);
+G2L["100"]["CornerRadius"] = UDim.new(0.2, 0);
+
+
 -- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.Frame.UIAspectRatioConstraint
-G2L["ed"] = Instance.new("UIAspectRatioConstraint", G2L["e6"]);
-G2L["ed"]["AspectRatio"] = 3.51274;
+G2L["101"] = Instance.new("UIAspectRatioConstraint", G2L["fa"]);
+G2L["101"]["AspectRatio"] = 3.51274;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.DeleteScript.UIAspectRatioConstraint
-G2L["ee"] = Instance.new("UIAspectRatioConstraint", G2L["e3"]);
-G2L["ee"]["AspectRatio"] = 3.51274;
+G2L["102"] = Instance.new("UIAspectRatioConstraint", G2L["f7"]);
+G2L["102"]["AspectRatio"] = 3.51274;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.Scrolling.Frame
-G2L["ef"] = Instance.new("Frame", G2L["d4"]);
-G2L["ef"]["BorderSizePixel"] = 0;
-G2L["ef"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["ef"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["ef"]["Size"] = UDim2.new(1, 0, 0.01, 0);
-G2L["ef"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["ef"]["LayoutOrder"] = -1;
-G2L["ef"]["BackgroundTransparency"] = 1;
+G2L["103"] = Instance.new("Frame", G2L["e8"]);
+G2L["103"]["BorderSizePixel"] = 0;
+G2L["103"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["103"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["103"]["Size"] = UDim2.new(1, 0, 0.01, 0);
+G2L["103"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["103"]["LayoutOrder"] = -1;
+G2L["103"]["BackgroundTransparency"] = 1;
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.UICorner
-G2L["f0"] = Instance.new("UICorner", G2L["d3"]);
+G2L["104"] = Instance.new("UICorner", G2L["e7"]);
 
 
 
 -- StarterGui.BizarreLineage.Holder.Under.Section.UIGradient
-G2L["f1"] = Instance.new("UIGradient", G2L["d3"]);
-G2L["f1"]["Rotation"] = -90;
-G2L["f1"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+G2L["105"] = Instance.new("UIGradient", G2L["e7"]);
+G2L["105"]["Rotation"] = -90;
+G2L["105"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
 
 
 -- StarterGui.BizarreLineage.Holder.Under.UICorner
-G2L["f2"] = Instance.new("UICorner", G2L["5"]);
+G2L["106"] = Instance.new("UICorner", G2L["5"]);
 
 
 
 -- StarterGui.BizarreLineage.Holder.UIAspectRatioConstraint
-G2L["f3"] = Instance.new("UIAspectRatioConstraint", G2L["3"]);
-G2L["f3"]["AspectRatio"] = 1.50831;
+G2L["107"] = Instance.new("UIAspectRatioConstraint", G2L["3"]);
+G2L["107"]["AspectRatio"] = 1.50831;
 
 
 -- StarterGui.BizarreLineage.Holder.Top
-G2L["f4"] = Instance.new("Frame", G2L["3"]);
-G2L["f4"]["BorderSizePixel"] = 0;
-G2L["f4"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f4"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["f4"]["Size"] = UDim2.new(0.99, 0, 0.12103, 0);
-G2L["f4"]["Position"] = UDim2.new(0.5, 0, 0.06551, 0);
-G2L["f4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f4"]["Name"] = [[Top]];
+G2L["108"] = Instance.new("Frame", G2L["3"]);
+G2L["108"]["BorderSizePixel"] = 0;
+G2L["108"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["108"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["108"]["Size"] = UDim2.new(0.99, 0, 0.12103, 0);
+G2L["108"]["Position"] = UDim2.new(0.5, 0, 0.06551, 0);
+G2L["108"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["108"]["Name"] = [[Top]];
 
 
 -- StarterGui.BizarreLineage.Holder.Top.UICorner
-G2L["f5"] = Instance.new("UICorner", G2L["f4"]);
+G2L["109"] = Instance.new("UICorner", G2L["108"]);
 
 
 
 -- StarterGui.BizarreLineage.Holder.Top.Title
-G2L["f6"] = Instance.new("TextLabel", G2L["f4"]);
-G2L["f6"]["TextWrapped"] = true;
-G2L["f6"]["ZIndex"] = 20;
-G2L["f6"]["BorderSizePixel"] = 0;
-G2L["f6"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["f6"]["TextScaled"] = true;
-G2L["f6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f6"]["TextSize"] = 30;
-G2L["f6"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["f6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f6"]["BackgroundTransparency"] = 1;
-G2L["f6"]["AnchorPoint"] = Vector2.new(0, 0.5);
-G2L["f6"]["Size"] = UDim2.new(0.37237, 0, 0.6, 0);
-G2L["f6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f6"]["Text"] = [[| Bizarre Lineage]];
-G2L["f6"]["Name"] = [[Title]];
-G2L["f6"]["Position"] = UDim2.new(0.032, 0, 0.5, 0);
+G2L["10a"] = Instance.new("TextLabel", G2L["108"]);
+G2L["10a"]["TextWrapped"] = true;
+G2L["10a"]["ZIndex"] = 20;
+G2L["10a"]["BorderSizePixel"] = 0;
+G2L["10a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["10a"]["TextScaled"] = true;
+G2L["10a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10a"]["TextSize"] = 30;
+G2L["10a"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["10a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10a"]["BackgroundTransparency"] = 1;
+G2L["10a"]["AnchorPoint"] = Vector2.new(0, 0.5);
+G2L["10a"]["Size"] = UDim2.new(0.37237, 0, 0.6, 0);
+G2L["10a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10a"]["Text"] = [[| Bizarre Lineage]];
+G2L["10a"]["Name"] = [[Title]];
+G2L["10a"]["Position"] = UDim2.new(0.032, 0, 0.5, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Top.Title.UITextSizeConstraint
-G2L["f7"] = Instance.new("UITextSizeConstraint", G2L["f6"]);
-G2L["f7"]["MaxTextSize"] = 30;
+G2L["10b"] = Instance.new("UITextSizeConstraint", G2L["10a"]);
+G2L["10b"]["MaxTextSize"] = 30;
 
 
 -- StarterGui.BizarreLineage.Holder.Top.UIAspectRatioConstraint
-G2L["f8"] = Instance.new("UIAspectRatioConstraint", G2L["f4"]);
-G2L["f8"]["AspectRatio"] = 12.33809;
+G2L["10c"] = Instance.new("UIAspectRatioConstraint", G2L["108"]);
+G2L["10c"]["AspectRatio"] = 12.33809;
 
 
 -- StarterGui.BizarreLineage.Holder.Top.Version
-G2L["f9"] = Instance.new("TextLabel", G2L["f4"]);
-G2L["f9"]["TextWrapped"] = true;
-G2L["f9"]["ZIndex"] = 20;
-G2L["f9"]["BorderSizePixel"] = 0;
-G2L["f9"]["TextXAlignment"] = Enum.TextXAlignment.Right;
-G2L["f9"]["TextYAlignment"] = Enum.TextYAlignment.Top;
-G2L["f9"]["TextScaled"] = true;
-G2L["f9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f9"]["TextSize"] = 15;
-G2L["f9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["f9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f9"]["BackgroundTransparency"] = 1;
-G2L["f9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["f9"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
-G2L["f9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f9"]["Text"] = [[v20.1]];
-G2L["f9"]["Name"] = [[Version]];
-G2L["f9"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
+G2L["10d"] = Instance.new("TextLabel", G2L["108"]);
+G2L["10d"]["TextWrapped"] = true;
+G2L["10d"]["ZIndex"] = 20;
+G2L["10d"]["BorderSizePixel"] = 0;
+G2L["10d"]["TextXAlignment"] = Enum.TextXAlignment.Right;
+G2L["10d"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["10d"]["TextScaled"] = true;
+G2L["10d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10d"]["TextSize"] = 15;
+G2L["10d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["10d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["10d"]["BackgroundTransparency"] = 1;
+G2L["10d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["10d"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
+G2L["10d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["10d"]["Text"] = [[v1.1]];
+G2L["10d"]["Name"] = [[Version]];
+G2L["10d"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
 
 -- StarterGui.BizarreLineage.Holder.Top.Version.UITextSizeConstraint
-G2L["fa"] = Instance.new("UITextSizeConstraint", G2L["f9"]);
-G2L["fa"]["MaxTextSize"] = 15;
+G2L["10e"] = Instance.new("UITextSizeConstraint", G2L["10d"]);
+G2L["10e"]["MaxTextSize"] = 15;
 
 
 -- StarterGui.BizarreLineage.Holder.Top.UIGradient
-G2L["fb"] = Instance.new("UIGradient", G2L["f4"]);
-G2L["fb"]["Rotation"] = 90;
-G2L["fb"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
+G2L["10f"] = Instance.new("UIGradient", G2L["108"]);
+G2L["10f"]["Rotation"] = 90;
+G2L["10f"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(23, 23, 23)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(21, 23, 34))};
 
 
 -- StarterGui.BizarreLineage.Holder.Top.Frame
-G2L["fc"] = Instance.new("Frame", G2L["f4"]);
-G2L["fc"]["BorderSizePixel"] = 0;
-G2L["fc"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["fc"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["fc"]["Size"] = UDim2.new(1, 0, 0.1, 0);
-G2L["fc"]["Position"] = UDim2.new(0.5, 0, 1, 0);
-G2L["fc"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["110"] = Instance.new("Frame", G2L["108"]);
+G2L["110"]["BorderSizePixel"] = 0;
+G2L["110"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["110"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["110"]["Size"] = UDim2.new(1, 0, 0.1, 0);
+G2L["110"]["Position"] = UDim2.new(0.5, 0, 1, 0);
+G2L["110"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 
 
 -- StarterGui.BizarreLineage.MobileLogo
-G2L["fd"] = Instance.new("ImageButton", G2L["1"]);
-G2L["fd"]["BorderSizePixel"] = 0;
-G2L["fd"]["ScaleType"] = Enum.ScaleType.Fit;
-G2L["fd"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["fd"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["fd"]["Image"] = [[rbxassetid://107404219783547]];
-G2L["fd"]["Size"] = UDim2.new(0.05, 0, 0.1, 0);
-G2L["fd"]["BackgroundTransparency"] = 1;
-G2L["fd"]["HoverImage"] = [[rbxassetid://128394962976667]];
-G2L["fd"]["Name"] = [[MobileLogo]];
-G2L["fd"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["fd"]["Visible"] = false;
-G2L["fd"]["Position"] = UDim2.new(0.1, 0, 0.2, 0);
+G2L["111"] = Instance.new("ImageButton", G2L["1"]);
+G2L["111"]["BorderSizePixel"] = 0;
+G2L["111"]["ScaleType"] = Enum.ScaleType.Fit;
+G2L["111"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["111"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["111"]["Image"] = [[rbxassetid://107404219783547]];
+G2L["111"]["Size"] = UDim2.new(0.05, 0, 0.1, 0);
+G2L["111"]["BackgroundTransparency"] = 1;
+G2L["111"]["HoverImage"] = [[rbxassetid://128394962976667]];
+G2L["111"]["Name"] = [[MobileLogo]];
+G2L["111"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["111"]["Visible"] = false;
+G2L["111"]["Position"] = UDim2.new(0.1, 0, 0.2, 0);
 
 
 -- StarterGui.BizarreLineage.MobileLogo.UICorner
-G2L["fe"] = Instance.new("UICorner", G2L["fd"]);
-G2L["fe"]["CornerRadius"] = UDim.new(0.2, 0);
+G2L["112"] = Instance.new("UICorner", G2L["111"]);
+G2L["112"]["CornerRadius"] = UDim.new(0.2, 0);
 
 
 -- Require G2L wrapper
@@ -2302,204 +2466,204 @@ local function SelectionList()
 			local UIStroke = Selection:FindFirstChild("UIStroke")
 			
 			UIStroke.MouseEnter:Connect(function()
-				local tween = TweenService:Create(UIStroke, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
-			end)
+						local tween = TweenService:Create(UIStroke, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
+					end)
 
-			UIStroke.MouseLeave:Connect(function()
-				local tween = TweenService:Create(UIStroke, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
-			end)
+					UIStroke.MouseLeave:Connect(function()
+						local tween = TweenService:Create(UIStroke, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
+					end)
+				end
+			end
 		end
-	end
-end
 
-local function ArrowList()
-	for i, arrow in pairs(Arrows:GetChildren()) do
-		if arrow.Name == "Stand Arrow" or arrow.Name == "Lucky Arrow" then
-			local List = Instance.new("TextButton")
-			List.AnchorPoint = Vector2.new(0.5, 0.5)
-			List.BackgroundTransparency = 0
-			List.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-			List.Position = UDim2.new(0.5, 0, 0.5, 0)
-			List.Size = UDim2.new(1, 0, 0.025, 0)
-			List.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
-			List.Name = arrow.Name
-			List.Text = ""
-			List.Parent = List1
+		local function ArrowList()
+			for i, arrow in pairs(Arrows:GetChildren()) do
+				if arrow.Name == "Stand Arrow" or arrow.Name == "Lucky Arrow" then
+					local List = Instance.new("TextButton")
+					List.AnchorPoint = Vector2.new(0.5, 0.5)
+					List.BackgroundTransparency = 0
+					List.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+					List.Position = UDim2.new(0.5, 0, 0.5, 0)
+					List.Size = UDim2.new(1, 0, 0.025, 0)
+					List.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
+					List.Name = arrow.Name
+					List.Text = ""
+					List.Parent = List1
 
-			local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-			UITextSizeConstraint.MaxTextSize = 26
-			UITextSizeConstraint.MinTextSize = 1
-			UITextSizeConstraint.Parent = List
+					local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+					UITextSizeConstraint.MaxTextSize = 26
+					UITextSizeConstraint.MinTextSize = 1
+					UITextSizeConstraint.Parent = List
 
-			local Text = Instance.new("TextLabel")
-			Text.AnchorPoint = Vector2.new(0.5, 0.5)
-			Text.BackgroundTransparency = 1
-			Text.Position = UDim2.new(0.5, 0, 0.5, 0)
-			Text.Size = UDim2.new(0.8, 0, 0.8, 0)
-			Text.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
-			Text.TextScaled = false
-			Text.TextSize = 14
-			Text.Text = arrow.Name
-			Text.Parent = List
-			Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-
-			local UITextSizeConstraint2 = Instance.new("UITextSizeConstraint")
-			UITextSizeConstraint2.MaxTextSize = 18
-			UITextSizeConstraint2.MinTextSize = 1
-			UITextSizeConstraint2.Parent = Text	
-
-			List.MouseEnter:Connect(function()
-				local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
-			end)
-
-			List.MouseLeave:Connect(function()
-				local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
-			end)
-			
-			List.MouseButton1Click:Connect(function()
-				local CurrentArrowName = arrow.Name
-				local Found = table.find(ArrowNames, CurrentArrowName)
-				if Found then
-					table.remove(ArrowNames, Found)
+					local Text = Instance.new("TextLabel")
+					Text.AnchorPoint = Vector2.new(0.5, 0.5)
+					Text.BackgroundTransparency = 1
+					Text.Position = UDim2.new(0.5, 0, 0.5, 0)
+					Text.Size = UDim2.new(0.8, 0, 0.8, 0)
+					Text.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
+					Text.TextScaled = false
+					Text.TextSize = 14
+					Text.Text = arrow.Name
+					Text.Parent = List
 					Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-				else
-					table.insert(ArrowNames, CurrentArrowName)
-					Text.TextColor3 = Color3.fromRGB(130, 255, 46)
-				end
 
-				local ArrowName = table.concat(ArrowNames, ", ")
-				
-				Selection1:WaitForChild("Selected").Text = ArrowName ~= "" and ArrowName or "Arrow?"
-				if #ArrowNames == 0 then
-					Selection1:WaitForChild("Selected").TextColor3 = Color3.fromRGB(84, 84, 84)
-				else
-					Selection1:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
+					local UITextSizeConstraint2 = Instance.new("UITextSizeConstraint")
+					UITextSizeConstraint2.MaxTextSize = 18
+					UITextSizeConstraint2.MinTextSize = 1
+					UITextSizeConstraint2.Parent = Text	
+
+					List.MouseEnter:Connect(function()
+						local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
+					end)
+
+					List.MouseLeave:Connect(function()
+						local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
+					end)
+
+					List.MouseButton1Click:Connect(function()
+						local CurrentArrowName = arrow.Name
+						local Found = table.find(ArrowNames, CurrentArrowName)
+						if Found then
+							table.remove(ArrowNames, Found)
+							Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+						else
+							table.insert(ArrowNames, CurrentArrowName)
+							Text.TextColor3 = Color3.fromRGB(130, 255, 46)
+						end
+
+						local ArrowName = table.concat(ArrowNames, ", ")
+
+						Selection1:WaitForChild("Selected").Text = ArrowName ~= "" and ArrowName or "Arrow?"
+						if #ArrowNames == 0 then
+							Selection1:WaitForChild("Selected").TextColor3 = Color3.fromRGB(84, 84, 84)
+						else
+							Selection1:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
+						end
+						ArrowName = arrow.Name
+						Selection1.List.Visible = false
+					end)
 				end
-				ArrowName = arrow.Name
-				Selection1.List.Visible = false
-			end)
+			end
 		end
-	end
-end
 
-local function StandList()
-	for i, stand in pairs(Stands:GetChildren()) do
-		if (stand:IsA("Model") or stand.Name == "Anubis") and not (stand.Name == "C-Moon" or stand.Name == "Cream" or stand.Name == "D4C" or stand.Name == "Made in Heaven" or stand.Name == "Silver Chariot" or stand.Name == "Star Platinum, The World" or stand.Name == "The World Over Heaven" or stand.Name == "Wonder of U") then
-			local List = Instance.new("TextButton")
-			List.AnchorPoint = Vector2.new(0.5, 0.5)
-			List.BackgroundTransparency = 0
-			List.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-			List.Position = UDim2.new(0.5, 0, 0.5, 0)
-			List.Size = UDim2.new(1, 0, 0.025, 0)
-			List.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
-			List.Name = stand.Name
-			List.Text = ""
-			List.Parent = List2
-			
-			local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
-			UITextSizeConstraint.MaxTextSize = 26
-			UITextSizeConstraint.MinTextSize = 1
-			UITextSizeConstraint.Parent = List
-			
-			local Text = Instance.new("TextLabel")
-			Text.AnchorPoint = Vector2.new(0.5, 0.5)
-			Text.BackgroundTransparency = 1
-			Text.Position = UDim2.new(0.5, 0, 0.5, 0)
-			Text.Size = UDim2.new(0.8, 0, 0.8, 0)
-			Text.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
-			Text.TextScaled = false
-			Text.TextSize = 14
-			Text.Text = stand.Name
-			Text.Parent = List
-			Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-			
-			local UITextSizeConstraint2 = Instance.new("UITextSizeConstraint")
-			UITextSizeConstraint2.MaxTextSize = 18
-			UITextSizeConstraint2.MinTextSize = 1
-			UITextSizeConstraint2.Parent = Text	
-			
-			List.MouseEnter:Connect(function()
-				local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
-			end)
+		local function StandList()
+			for i, stand in pairs(Stands:GetChildren()) do
+				if (stand:IsA("Model") or stand.Name == "Anubis") and not (stand.Name == "C-Moon" or stand.Name == "Cream" or stand.Name == "D4C" or stand.Name == "Made in Heaven" or stand.Name == "Silver Chariot" or stand.Name == "Star Platinum, The World" or stand.Name == "The World Over Heaven" or stand.Name == "Wonder of U") then
+					local List = Instance.new("TextButton")
+					List.AnchorPoint = Vector2.new(0.5, 0.5)
+					List.BackgroundTransparency = 0
+					List.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+					List.Position = UDim2.new(0.5, 0, 0.5, 0)
+					List.Size = UDim2.new(1, 0, 0.025, 0)
+					List.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
+					List.Name = stand.Name
+					List.Text = ""
+					List.Parent = List2
 
-			List.MouseLeave:Connect(function()
-				local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
-			end)
-			
-			List.MouseButton1Click:Connect(function()
-				local CurrentStandName = stand.Name
-				local Found = table.find(StandNames, CurrentStandName)
-				if Found then
-					table.remove(StandNames, Found)
+					local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+					UITextSizeConstraint.MaxTextSize = 26
+					UITextSizeConstraint.MinTextSize = 1
+					UITextSizeConstraint.Parent = List
+
+					local Text = Instance.new("TextLabel")
+					Text.AnchorPoint = Vector2.new(0.5, 0.5)
+					Text.BackgroundTransparency = 1
+					Text.Position = UDim2.new(0.5, 0, 0.5, 0)
+					Text.Size = UDim2.new(0.8, 0, 0.8, 0)
+					Text.FontFace = Font.fromName("SourceSansPro", Enum.FontWeight.Bold)
+					Text.TextScaled = false
+					Text.TextSize = 14
+					Text.Text = stand.Name
+					Text.Parent = List
 					Text.TextColor3 = Color3.fromRGB(255, 255, 255)
-				else
-					table.insert(StandNames, CurrentStandName)
-					Text.TextColor3 = Color3.fromRGB(130, 255, 46)
+
+					local UITextSizeConstraint2 = Instance.new("UITextSizeConstraint")
+					UITextSizeConstraint2.MaxTextSize = 18
+					UITextSizeConstraint2.MinTextSize = 1
+					UITextSizeConstraint2.Parent = Text	
+
+					List.MouseEnter:Connect(function()
+						local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(20,20,20)}) tween:Play()
+					end)
+
+					List.MouseLeave:Connect(function()
+						local tween = TweenService:Create(List, TweenInfo.new(0.15), {BackgroundColor3 = Color3.fromRGB(25, 25, 25)}) tween:Play()
+					end)
+
+					List.MouseButton1Click:Connect(function()
+						local CurrentStandName = stand.Name
+						local Found = table.find(StandNames, CurrentStandName)
+						if Found then
+							table.remove(StandNames, Found)
+							Text.TextColor3 = Color3.fromRGB(255, 255, 255)
+						else
+							table.insert(StandNames, CurrentStandName)
+							Text.TextColor3 = Color3.fromRGB(130, 255, 46)
+						end
+
+						local StandName = table.concat(StandNames, ", ")
+						Selection2:WaitForChild("Selected").Text = StandName ~= "" and StandName or "Target?"
+						if #StandNames == 0 then
+							Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(84, 84, 84)
+						else
+							Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
+						end
+						StandName = stand.Name
+						Selection2.List.Visible = false
+					end)
 				end
-				
-				local StandName = table.concat(StandNames, ", ")
-				Selection2:WaitForChild("Selected").Text = StandName ~= "" and StandName or "Target?"
-				if #StandNames == 0 then
-					Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(84, 84, 84)
+			end
+		end
+
+		Selection2.MouseButton1Click:Connect(function()
+			Selection2.List.Visible = not Selection2.List.Visible
+		end)
+
+		Selection1.MouseButton1Click:Connect(function()
+			Selection1.List.Visible = not Selection1.List.Visible
+		end)
+
+		Button.MouseButton1Click:Connect(function()
+			if Debounce then return end
+			Debounce = true
+			Activate = not Activate
+
+			local LatestConfig = DataStore:Load()
+			LatestConfig.StandSpinner = LatestConfig.StandSpinner or {}
+
+			LatestConfig.StandSpinner.Activate = Activate
+
+			if #ArrowNames > 0 and #StandNames > 0 then
+				if Activate then
+					local pos = UDim2.new(0.8, 0, 0.5, 0)
+
+					Config.StandSpinner.ButtonPosition = {0.8,0,0.5,0}
+					local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
 				else
-					Selection2:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
+					local pos = UDim2.new(0.2, 0, 0.5, 0)
+
+					Config.StandSpinner.ButtonPosition = {0.2,0,0.5,0}
+					local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
 				end
-				StandName = stand.Name
-				Selection2.List.Visible = false
+
+			else
+				local DefaultColor = StandSpinner.Button.Frame.BackgroundColor3
+
+				StandSpinner.Button.Frame.BackgroundColor3 = Color3.fromRGB(188, 24, 26)
+				task.wait(0.5)
+
+				StandSpinner.Button.Frame.BackgroundColor3 = DefaultColor
+			end
+
+			DataStore:Save(LatestConfig)
+			Config = LatestConfig
+
+			task.delay(0.5, function()
+				Debounce = false
 			end)
-		end
-	end
-end
+		end)
 
-Selection2.MouseButton1Click:Connect(function()
-	Selection2.List.Visible = not Selection2.List.Visible
-end)
-
-Selection1.MouseButton1Click:Connect(function()
-	Selection1.List.Visible = not Selection1.List.Visible
-end)
-
-Button.MouseButton1Click:Connect(function()
-	if Debounce then return end
-	Debounce = true
-	Activate = not Activate
-	
-	local LatestConfig = DataStore:Load()
-	LatestConfig.StandSpinner = LatestConfig.StandSpinner or {}
-
-	LatestConfig.StandSpinner.Activate = Activate
-	
-	if #ArrowNames > 0 and #StandNames > 0 then
-		if Activate then
-			local pos = UDim2.new(0.8, 0, 0.5, 0)
-
-			Config.StandSpinner.ButtonPosition = {0.8,0,0.5,0}
-			local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
-		else
-			local pos = UDim2.new(0.2, 0, 0.5, 0)
-
-			Config.StandSpinner.ButtonPosition = {0.2,0,0.5,0}
-			local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos}) tween:Play()
-		end
-
-	else
-		local DefaultColor = StandSpinner.Button.Frame.BackgroundColor3
-		
-		StandSpinner.Button.Frame.BackgroundColor3 = Color3.fromRGB(188, 24, 26)
-		task.wait(0.5)
-		
-		StandSpinner.Button.Frame.BackgroundColor3 = DefaultColor
-	end
-	
-	DataStore:Save(LatestConfig)
-	Config = LatestConfig
-	
-	task.delay(0.5, function()
-		Debounce = false
-	end)
-end)
-
-local function GetArrowAmounts()
+		local function GetArrowAmounts()
 			local InventoryData = HttpService:JSONDecode(Inventory.Value)
 
 			local StandArrowAmount = 0
@@ -3184,6 +3348,7 @@ G2L_MODULES[G2L["d"]] = {
 		local RaidPosition = Vector3.new(1070, 884, 213)
 
 		local AutoRaid = require(script.Parent.AutoRaid)
+		local AutoMeditation = require(script.Parent.AutoMeditation)
 
 		local Activate = Config.KillNearest.Activate or false
 		local Debounce = false
@@ -3344,7 +3509,10 @@ G2L_MODULES[G2L["d"]] = {
 			end
 
 			if CurrentTarget then
-				if not CurrentTarget.Parent or not CurrentTarget:IsDescendantOf(Live) or not CurrentTarget.PrimaryPart then
+				if not CurrentTarget.Parent
+					or not CurrentTarget:IsDescendantOf(Live)
+					or not CurrentTarget.PrimaryPart
+					or (AutoMeditation.Activate and not CurrentTarget.Name:find("%." .. Player.Name .. "entity clone")) then
 					CurrentTarget = nil
 				end
 			end
@@ -3358,11 +3526,15 @@ G2L_MODULES[G2L["d"]] = {
 						local IsPlayer = Players:GetPlayerFromCharacter(Target)
 
 						if not IsPlayer and Target.PrimaryPart then
-							local Distance = (Target.PrimaryPart.Position - HumanoidRootPart.Position).Magnitude
+							local IsClone = Target.Name:find("%." .. Player.Name .. "entity clone")
 
-							if Distance < TargetShortestDistance then
-								TargetShortestDistance = Distance
-								NearestTarget = Target
+							if (not AutoMeditation.Activate) or (AutoMeditation.Activate and IsClone) then
+								local Distance = (Target.PrimaryPart.Position - HumanoidRootPart.Position).Magnitude
+
+								if Distance < TargetShortestDistance then
+									TargetShortestDistance = Distance
+									NearestTarget = Target
+								end
 							end
 						end
 					end
@@ -3380,11 +3552,9 @@ G2L_MODULES[G2L["d"]] = {
 			if Method == "Below" then
 				local Pos = TargetPosition + Vector3.new(0, -7.5, 0)
 				HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
-
 			elseif Method == "Above" then
 				local Pos = TargetPosition + Vector3.new(0, 7.5, 0)
 				HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
-
 			elseif Method == "Behind" then
 				local Pos = TargetPosition + Vector3.new(0, 0, 7.5)
 				HumanoidRootPart.CFrame = CFrame.lookAt(Pos, TargetPosition)
@@ -3434,6 +3604,82 @@ G2L_MODULES[G2L["d"]] = {
 		end)
 
 		return KillNearest
+	end;
+};
+G2L_MODULES[G2L["e"]] = {
+	Closure = function()
+		local script = G2L["e"];--// SERVICES \\--
+		local Players = game:GetService("Players")
+		local TweenService = game:GetService("TweenService")
+		local RunService = game:GetService("RunService")
+		local Workspace = game:GetService("Workspace")
+
+		--// VARIABLES \\--
+		local Player = Players.LocalPlayer
+		local PlayerGui = Player.PlayerGui
+
+		local DataStore = require(script.Parent.DataStore)
+
+		local Config = DataStore:Load()
+		Config.ArrowESP = Config.ArrowESP or {}
+
+		--// INTERFACE \\--
+		local BizarreLineage = CoreGui.BizarreLineage
+
+		local AutoMeditation = BizarreLineage.Holder.Under.Content.AutoMeditation
+		local Button = AutoMeditation.Button
+
+		local Arrows = {}
+		local Activate = Config.AutoMeditation.Activate or false
+		local Debounce = false
+		local Live = workspace.Live
+		local Time = 0
+
+		if Config.AutoMeditation.ButtonPosition then
+			Button.Frame.Position = UDim2.new(
+				Config.AutoMeditation.ButtonPosition[1],
+				Config.AutoMeditation.ButtonPosition[2],
+				Config.AutoMeditation.ButtonPosition[3],
+				Config.AutoMeditation.ButtonPosition[4]
+			)
+		end
+
+		local AutoMeditation = {}
+
+		AutoMeditation.Activate = false
+
+		Button.MouseButton1Click:Connect(function()
+			if Debounce then return end
+			Debounce = true
+			Activate = not Activate
+
+			AutoMeditation.Activate = Activate
+			local LatestConfig = DataStore:Load()
+			LatestConfig.AutoMeditation = LatestConfig.AutoMeditation or {}
+
+			LatestConfig.AutoMeditation.Activate = Activate
+
+			if Activate then
+				local pos = UDim2.new(0.8, 0, 0.5, 0)
+				LatestConfig.AutoMeditation.ButtonPosition = {0.8, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
+			else
+				local pos = UDim2.new(0.2, 0, 0.5, 0)
+				LatestConfig.AutoMeditation.ButtonPosition = {0.2, 0, 0.5, 0}
+				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
+				tween:Play()
+			end
+
+			DataStore:Save(LatestConfig)
+			Config = LatestConfig
+
+			task.delay(0.5, function()
+				Debounce = false
+			end)
+		end)
+
+		return AutoMeditation
 	end;
 };
 -- StarterGui.BizarreLineage.Requirer
