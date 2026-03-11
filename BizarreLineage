@@ -2222,7 +2222,7 @@ G2L["10d"]["BackgroundTransparency"] = 1;
 G2L["10d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["10d"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["10d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10d"]["Text"] = [[v1.3]];
+G2L["10d"]["Text"] = [[v1.1]];
 G2L["10d"]["Name"] = [[Version]];
 G2L["10d"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -3474,11 +3474,8 @@ G2L_MODULES[G2L["d"]] = {
 			end
 		end
 
-		SkillsSelection()
-		MethodFunction()
-		RestoreUI()
-
 		RunService.Heartbeat:Connect(function(DT)
+			if not Activate then return end
 			local CanRun
 
 			if game.PlaceId == 14890802310 then
@@ -3487,52 +3484,34 @@ G2L_MODULES[G2L["d"]] = {
 				CanRun = Activate
 			end
 
-			if not CanRun then
-				return
-			end
+			if not CanRun then return end
+			if Method == "" then return end
+			if CurrentTarget then if (AutoMeditation.Activate and not CurrentTarget.Name:find("%." .. Player.Name .. " entity clone")) then CurrentTarget = nil return end end
 
-			if Method == "" then
-				return
-			end
+			local NearestTarget = nil
+			local TargetShortestDistance = math.huge
 
-			if CurrentTarget then
-				if not CurrentTarget.Parent
-					or not CurrentTarget:IsDescendantOf(Live)
-					or not CurrentTarget.PrimaryPart
-					or (AutoMeditation.Activate and not CurrentTarget.Name:find("%." .. Player.Name .. " entity clone")) then
-					CurrentTarget = nil
-				end
-			end
+			for _, Target in pairs(Live:GetChildren()) do
+				if Target:IsA("Model") and Target ~= Player.Character and Target.Name ~= "Server" then
+					local IsPlayer = Players:GetPlayerFromCharacter(Target)
 
-			if not CurrentTarget then
-				local NearestTarget = nil
-				local TargetShortestDistance = math.huge
+					if not IsPlayer and Target.PrimaryPart then
+						local IsClone = Target.Name:find("%." .. Player.Name .. " entity clone")
 
-				for _, Target in pairs(Live:GetChildren()) do
-					if Target:IsA("Model") and Target ~= Player.Character and Target.Name ~= "Server" then
-						local IsPlayer = Players:GetPlayerFromCharacter(Target)
+						if (not AutoMeditation.Activate) or (AutoMeditation.Activate and IsClone) then
+							local Distance = (Target.PrimaryPart.Position - HumanoidRootPart.Position).Magnitude
 
-						if not IsPlayer and Target.PrimaryPart then
-							local IsClone = Target.Name:find("%." .. Player.Name .. " entity clone")
-
-							if (not AutoMeditation.Activate) or (AutoMeditation.Activate and IsClone) then
-								local Distance = (Target.PrimaryPart.Position - HumanoidRootPart.Position).Magnitude
-
-								if Distance < TargetShortestDistance then
-									TargetShortestDistance = Distance
-									NearestTarget = Target
-								end
+							if Distance < TargetShortestDistance then
+								TargetShortestDistance = Distance
+								NearestTarget = Target
 							end
 						end
 					end
 				end
-
-				CurrentTarget = NearestTarget
 			end
 
-			if not CurrentTarget or not CurrentTarget.PrimaryPart then
-				return
-			end
+			CurrentTarget = NearestTarget
+			if not CurrentTarget or not CurrentTarget.PrimaryPart then return end
 
 			local TargetPosition = CurrentTarget.PrimaryPart.Position
 
@@ -3548,19 +3527,12 @@ G2L_MODULES[G2L["d"]] = {
 			end
 
 			for _, Skill in ipairs(Skills) do
-				if Skill == "E" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("E", true)
-				elseif Skill == "R" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("R", true)
-				elseif Skill == "Z" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("Z", true)
-				elseif Skill == "X" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("X", true)
-				elseif Skill == "B" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("B", true)
-				elseif Skill == "V" then
-					game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("V", true)
-				end
+				if Skill == "E" then game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("E", true) end
+				if Skill == "R" then game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("R", true) end
+				if Skill == "Z" then game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("Z", true) end
+				if Skill == "X" then game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("X", true) end
+				if Skill == "B" then game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("C", true) end
+				if Skill == "V" then game.Players.LocalPlayer.Character.client_character_controller.Skill:FireServer("V", true) end
 			end
 
 			game.Players.LocalPlayer.Character:WaitForChild("client_character_controller"):WaitForChild("M1"):FireServer(true, false)
@@ -3573,6 +3545,10 @@ G2L_MODULES[G2L["d"]] = {
 		Selection2.MouseButton1Click:Connect(function()
 			Section2List.Visible = not Section2List.Visible
 		end)
+
+		SkillsSelection()
+		MethodFunction()
+		RestoreUI()
 
 		local KillNearest = {}
 
