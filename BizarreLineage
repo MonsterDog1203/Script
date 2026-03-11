@@ -1086,6 +1086,7 @@ G2L["86"]["MaxTextSize"] = 18;
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest
 G2L["87"] = Instance.new("Frame", G2L["11"]);
+G2L["87"]["ZIndex"] = 98;
 G2L["87"]["BorderSizePixel"] = 0;
 G2L["87"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["87"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
@@ -2221,7 +2222,7 @@ G2L["10d"]["BackgroundTransparency"] = 1;
 G2L["10d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["10d"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["10d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10d"]["Text"] = [[v1.2]];
+G2L["10d"]["Text"] = [[v1.3]];
 G2L["10d"]["Name"] = [[Version]];
 G2L["10d"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
