@@ -1,4 +1,5 @@
-local CoreGui = game.GetService("CoreGui")
+local CoreGui = game:GetService("CoreGui")
+
 local G2L = {};
 
 -- StarterGui.BizarreLineage
@@ -102,7 +103,6 @@ G2L["10"]["AspectRatio"] = 1.50831;
 G2L["11"] = Instance.new("ScrollingFrame", G2L["5"]);
 G2L["11"]["Active"] = true;
 G2L["11"]["BorderSizePixel"] = 0;
-G2L["11"]["CanvasPosition"] = Vector2.new(0, 100);
 G2L["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["11"]["Name"] = [[Content]];
 G2L["11"]["VerticalScrollBarPosition"] = Enum.VerticalScrollBarPosition.Left;
