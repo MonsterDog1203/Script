@@ -2221,7 +2221,7 @@ G2L["10d"]["BackgroundTransparency"] = 1;
 G2L["10d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["10d"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["10d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["10d"]["Text"] = [[v1.1]];
+G2L["10d"]["Text"] = [[v1.2]];
 G2L["10d"]["Name"] = [[Version]];
 G2L["10d"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -3684,11 +3684,7 @@ G2L_MODULES[G2L["e"]] = {
 				local SelfFound = false
 
 				for _, Self in pairs(Npcs:GetChildren()) do
-					if Self.Name == "The Self" then
-						if SelfFound  then
-							return
-						end
-
+					if Self.Name == "The Self" and not SelfFound then			
 						SelfFound = true
 						HumanoidRootPart.CFrame = CFrame.new(Self.PrimaryPart.Position) + Vector3.new(0, 0, 0)
 						local args = {workspace:WaitForChild("Npcs"):WaitForChild("The Self"), "Yes."} game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("dialogue"):FireServer(unpack(args))
