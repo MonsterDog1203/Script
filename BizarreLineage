@@ -3634,7 +3634,10 @@ G2L_MODULES[G2L["e"]] = {
 
 		local Activate = Config.AutoMeditation.Activate or false
 		local Debounce = false
+		local IsClaiming = false
 		local Live = workspace.Live
+		local Npcs = workspace.Npcs
+		local Meditation = workspace.Map.Meditation
 		local Time = 0
 
 		if Config.AutoMeditation.ButtonPosition then
@@ -3648,6 +3651,72 @@ G2L_MODULES[G2L["e"]] = {
 
 		local AutoMeditation = {}
 		AutoMeditation.Activate = Activate
+
+		local function ProximityPromptFunction(NearestYoga)
+			if IsClaiming then return end
+			IsClaiming = true
+			local ProximityPrompt = NearestYoga:FindFirstChild("ProximityPrompt") :: ProximityPrompt
+			if ProximityPrompt then
+				ProximityPrompt.HoldDuration = 0
+				ProximityPrompt.MaxActivationDistance = 100
+				ProximityPrompt:InputHoldBegin(Enum.UserInputType.MouseButton1)
+				task.wait(ProximityPrompt.HoldDuration)
+				ProximityPrompt:InputHoldEnd(Enum.UserInputType.MouseButton1)
+				task.delay(5, function()
+					IsClaiming = false
+				end)
+			end
+		end
+
+		RunService.Heartbeat:Connect(function(DT)
+			Time += DT
+			if Time < 1 then return end
+			Time = 0
+			if Activate then
+				local npc = Npcs:FindFirstChild("." .. Player.Name .. " entity clone")
+				if npc then return end
+
+				local Character = Player.Character
+				local HumanoidRootPart = Character and Character:FindFirstChild("HumanoidRootPart")
+
+				local NearestYoga = nil
+				local NearestYogaDistance = math.huge
+				local SelfFound = false
+
+				for _, Self in pairs(Npcs:GetChildren()) do
+					if Self.Name == "The Self" then
+						if SelfFound  then
+							return
+						end
+
+						SelfFound = true
+						HumanoidRootPart.CFrame = CFrame.new(Self.PrimaryPart.Position) + Vector3.new(0, 0, 0)
+						local args = {workspace:WaitForChild("Npcs"):WaitForChild("The Self"), "Yes."} game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("dialogue"):FireServer(unpack(args))
+						break
+					end
+				end
+
+				if not SelfFound then
+					for _, Yoga in pairs(Meditation:GetChildren()) do
+						if Yoga.Name == "Yoga Mat" then
+							local Distance = (Yoga.Position - HumanoidRootPart.Position).Magnitude
+
+							if Distance < NearestYogaDistance then
+								NearestYogaDistance = Distance
+								NearestYoga = Yoga
+							end
+						end
+					end
+				end
+
+				if NearestYoga and not IsClaiming then
+					HumanoidRootPart.CFrame = CFrame.new(NearestYoga.Position) + Vector3.new(0, 0, 0)
+					if NearestYogaDistance < 5 then
+						ProximityPromptFunction(NearestYoga)
+					end
+				end
+			end
+		end)
 
 		Button.MouseButton1Click:Connect(function()
 			if Debounce then return end
