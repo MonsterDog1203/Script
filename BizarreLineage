@@ -3962,6 +3962,8 @@ G2L_MODULES[G2L["c"]] = {
 					end
 				end
 
+				print("FoundNPC:", FoundNPC)
+				print("HasSeenNPC:", HasSeenNPC)
 				if HasSeenNPC and not FoundNPC then
 					game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("retryraid"):FireServer()
 
@@ -4207,6 +4209,7 @@ G2L_MODULES[G2L["d"]] = {
 
 			CurrentTarget = NearestTarget
 			if not CurrentTarget or not CurrentTarget.PrimaryPart then return end
+			print("CurrentTarget: ", CurrentTarget.Name)
 
 			local TargetPosition = CurrentTarget.PrimaryPart.Position
 
