@@ -2542,7 +2542,7 @@ G2L["133"]["BackgroundTransparency"] = 1;
 G2L["133"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["133"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["133"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["133"]["Text"] = [[v1.2]];
+G2L["133"]["Text"] = [[v1.1]];
 G2L["133"]["Name"] = [[Version]];
 G2L["133"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -4064,6 +4064,7 @@ G2L_MODULES[G2L["f"]] = {
 
 		--// VARIABLES \\--
 		local Player = Players.LocalPlayer
+		local Camera = workspace.CurrentCamera
 		local PlayerGui = Player.PlayerGui
 
 		local DataStore = require(script.Parent.DataStore)
@@ -4252,7 +4253,9 @@ G2L_MODULES[G2L["f"]] = {
 
 				if NearestPvPBoard then
 					if ShortestDistance < 15 then
-						HumanoidRootPart.CFrame = CFrame.lookAt(HumanoidRootPart.Position,NearestPvPBoard.PrimaryPart.Position)
+						Camera.CameraType = Enum.CameraType.Scriptable
+						Camera.CFrame = CFrame.lookAt(Camera.CFrame.Position,NearestPvPBoard.PrimaryPart.Position)
+
 						Prompt(NearestPvPBoard)
 					else
 						HumanoidRootPart.CFrame = CFrame.new(NearestPvPBoard.PrimaryPart.Position) + Vector3.new(0, 0, -10)
