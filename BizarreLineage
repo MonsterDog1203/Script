@@ -5,6 +5,7 @@ local G2L = {};
 -- StarterGui.BizarreLineage
 G2L["1"] = Instance.new("ScreenGui", CoreGui);
 G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["Enabled"] = false;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
 G2L["1"]["Name"] = [[BizarreLineage]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -107,7 +108,6 @@ G2L["11"]["AspectRatio"] = 1.50831;
 G2L["12"] = Instance.new("ScrollingFrame", G2L["5"]);
 G2L["12"]["Active"] = true;
 G2L["12"]["BorderSizePixel"] = 0;
-G2L["12"]["CanvasPosition"] = Vector2.new(0, 200);
 G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["12"]["Name"] = [[Content]];
 G2L["12"]["VerticalScrollBarPosition"] = Enum.VerticalScrollBarPosition.Left;
