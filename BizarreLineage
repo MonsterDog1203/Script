@@ -3322,7 +3322,7 @@ G2L_MODULES[G2L["8"]] = {
 				ProximityPrompt.HoldDuration = 0
 				ProximityPrompt.MaxActivationDistance = 100
 				ProximityPrompt:InputHoldBegin(Enum.UserInputType.MouseButton1)
-				task.wait(ProximityPrompt.HoldDuration)
+				task.wait(ProximityPrompt.HoldDuration + 0.5)
 				ProximityPrompt:InputHoldEnd(Enum.UserInputType.MouseButton1)
 				IsClaiming = false
 			end
