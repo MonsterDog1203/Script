@@ -4444,6 +4444,7 @@ G2L_MODULES[G2L["f"]] = {
 
 		local DataStore = require(script.Parent.DataStore)
 		local AutoRaid = require(script.Parent.AutoRaid)
+		local AutoPrestige = require(script.Parent.AutoPrestige)
 
 		local Config = DataStore:Load()
 		Config.AutoLvlUp = Config.AutoLvlUp or {}
@@ -4563,7 +4564,7 @@ G2L_MODULES[G2L["f"]] = {
 			if Time < 1 then return end
 			Time = 0
 			if Activate then
-				if Account == "" then return end
+				if Account == "" or AutoPrestige.Activate then return end
 
 				local Character = Player.Character or Player.CharacterAdded:Wait()
 				local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
@@ -4657,7 +4658,7 @@ G2L_MODULES[G2L["f"]] = {
 			LatestConfig.AutoLvlUp.Activate = Activate
 
 			if Activate then
-				if AutoRaid.Activate or Account == "" then
+				if AutoRaid.Activate or Account == "" or AutoPrestige.Activate then
 					Button.Frame.BackgroundColor3 = Color3.fromRGB(188, 24, 26)
 					task.wait(0.5)
 
@@ -4738,19 +4739,24 @@ G2L_MODULES[G2L["10"]] = {
 			Time += DT
 			if Time < 1 then return end
 			Time = 0
+
 			if Activate then
 				local Character = Player.Character or Player.CharacterAdded:Wait()
-				local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart") :: Part
+				local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
 				if not HumanoidRootPart then return end
+
 				if PlayerLevel.Value == 50 then
-					if HumanoidRootPart ~= PrestigePosition then
-						HumanoidRootPart.CFrame = CFrame.new(PrestigePosition)
+					local distance = (HumanoidRootPart.Position - PrestigePosition.Position).Magnitude
+
+					if distance > 5 then
+						HumanoidRootPart.CFrame = PrestigePosition
 					else
 						local args = {workspace:WaitForChild("Npcs"):WaitForChild("Arch Mage"),"Prestige."} game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("dialogue"):FireServer(unpack(args))
 					end
 				end
 			end
 		end)
+
 
 		Button.MouseButton1Click:Connect(function()
 			if Debounce then return end
