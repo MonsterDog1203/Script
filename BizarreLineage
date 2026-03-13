@@ -4712,8 +4712,6 @@ G2L_MODULES[G2L["10"]] = {
 		--// INTERFACE \\--
 		local BizarreLineage = CoreGui.BizarreLineage
 		local AutoPrestigeFrame = BizarreLineage.Holder.Under.Content.AutoPrestige
-		local Selection = AutoPrestigeFrame.Selection1 :: TextButton
-		local ScrollingList = Selection.List.ScrollingFrame
 		local Button = AutoPrestigeFrame.Button
 
 		local PlayerLevel = Player.PlayerData.SlotData.Level :: NumberValue
@@ -4751,10 +4749,6 @@ G2L_MODULES[G2L["10"]] = {
 					end
 				end
 			end
-		end)
-
-		Selection.MouseButton1Click:Connect(function()
-			Selection.List.Visible = not Selection.List.Visible
 		end)
 
 		Button.MouseButton1Click:Connect(function()
