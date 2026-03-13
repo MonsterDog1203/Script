@@ -112,7 +112,6 @@ G2L["12"]["AspectRatio"] = 1.50831;
 G2L["13"] = Instance.new("ScrollingFrame", G2L["5"]);
 G2L["13"]["Active"] = true;
 G2L["13"]["BorderSizePixel"] = 0;
-G2L["13"]["CanvasPosition"] = Vector2.new(0, 100);
 G2L["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["13"]["Name"] = [[Content]];
 G2L["13"]["VerticalScrollBarPosition"] = Enum.VerticalScrollBarPosition.Left;
@@ -4748,7 +4747,7 @@ G2L_MODULES[G2L["10"]] = {
 					if HumanoidRootPart ~= PrestigePosition then
 						HumanoidRootPart.CFrame = CFrame.new(PrestigePosition)
 					else
-						--event--
+						local args = {workspace:WaitForChild("Npcs"):WaitForChild("Arch Mage"),"Prestige."} game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("dialogue"):FireServer(unpack(args))
 					end
 				end
 			end
