@@ -4209,7 +4209,6 @@ G2L_MODULES[G2L["d"]] = {
 
 			CurrentTarget = NearestTarget
 			if not CurrentTarget or not CurrentTarget.PrimaryPart then return end
-			print("CurrentTarget: ", CurrentTarget.Name)
 
 			local TargetPosition = CurrentTarget.PrimaryPart.Position
 
@@ -4542,6 +4541,7 @@ G2L_MODULES[G2L["f"]] = {
 				local DefaultProximityPromptDist = ProximityPrompt.MaxActivationDistance
 				ProximityPrompt.Triggered:Connect(function()
 					Triggered = true
+					ProximityPrompt.Enabled = true
 					ProximityPrompt.RequiresLineOfSight = true
 					ProximityPrompt.MaxActivationDistance = DefaultProximityPromptDist
 					for _, PvPBoard in pairs(PvPBoardFolder:GetChildren()) do
@@ -4552,7 +4552,6 @@ G2L_MODULES[G2L["f"]] = {
 							end
 						end
 					end
-					print(Triggered)
 				end)
 				ProximityPrompt.MaxActivationDistance = 100
 				ProximityPrompt.RequiresLineOfSight = false
@@ -4624,7 +4623,8 @@ G2L_MODULES[G2L["f"]] = {
 				for _, PvPBoard in pairs(PvPBoardFolder:GetChildren()) do
 					if PvPBoard:IsA("Model") and PvPBoard.Name == "PvP Mission Board" then
 						local Distance = (PvPBoard.PrimaryPart.Position - HumanoidRootPart.Position).Magnitude
-
+						local ProximityPrompt = PvPBoard:FindFirstChild("ProximityPrompt") :: ProximityPrompt
+						ProximityPrompt.Enabled = false
 						if Distance < ShortestDistance then					
 							ShortestDistance = Distance
 							NearestPvPBoard = PvPBoard
