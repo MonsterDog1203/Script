@@ -4539,9 +4539,9 @@ G2L_MODULES[G2L["f"]] = {
 			local ProximityPrompt = NearestPvPBoard:FindFirstChild("ProximityPrompt") :: ProximityPrompt
 			if ProximityPrompt then
 				local DefaultProximityPromptDist = ProximityPrompt.MaxActivationDistance
+				ProximityPrompt.Enabled = true
 				ProximityPrompt.Triggered:Connect(function()
 					Triggered = true
-					ProximityPrompt.Enabled = true
 					ProximityPrompt.RequiresLineOfSight = true
 					ProximityPrompt.MaxActivationDistance = DefaultProximityPromptDist
 					for _, PvPBoard in pairs(PvPBoardFolder:GetChildren()) do
@@ -4588,27 +4588,11 @@ G2L_MODULES[G2L["f"]] = {
 									if Humanoid then
 										Humanoid.Health = 0
 										Triggered = false
-										for _, PvPBoard in pairs(PvPBoardFolder:GetChildren()) do
-											if PvPBoard:IsA("Model") and PvPBoard.Name == "PvP Mission Board" then
-												local AllProximityPrompt = PvPBoard:FindFirstChild("ProximityPrompt") :: ProximityPrompt
-												if AllProximityPrompt then
-													AllProximityPrompt.Enabled = true
-												end
-											end
-										end
 									end
 								elseif Account == "Main" then
 									local TargetHumanoid = Enemy:FindFirstChild("Humanoid") :: Humanoid
 									if TargetHumanoid and TargetHumanoid.Health <= 0 then
 										Triggered = false
-										for _, PvPBoard in pairs(PvPBoardFolder:GetChildren()) do
-											if PvPBoard:IsA("Model") and PvPBoard.Name == "PvP Mission Board" then
-												local AllProximityPrompt = PvPBoard:FindFirstChild("ProximityPrompt") :: ProximityPrompt
-												if AllProximityPrompt then
-													AllProximityPrompt.Enabled = true
-												end
-											end
-										end
 									end
 								end
 							end
@@ -4623,8 +4607,6 @@ G2L_MODULES[G2L["f"]] = {
 				for _, PvPBoard in pairs(PvPBoardFolder:GetChildren()) do
 					if PvPBoard:IsA("Model") and PvPBoard.Name == "PvP Mission Board" then
 						local Distance = (PvPBoard.PrimaryPart.Position - HumanoidRootPart.Position).Magnitude
-						local ProximityPrompt = PvPBoard:FindFirstChild("ProximityPrompt") :: ProximityPrompt
-						ProximityPrompt.Enabled = false
 						if Distance < ShortestDistance then					
 							ShortestDistance = Distance
 							NearestPvPBoard = PvPBoard
