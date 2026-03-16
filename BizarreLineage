@@ -3329,7 +3329,7 @@ G2L_MODULES[G2L["7"]] = {
 
 			LatestConfig.StandSpinner.Activate = Activate
 
-			if #ArrowNames > 0 and #StandNames > 0 then
+			if #ArrowNames > 0 then
 				if Activate then
 					local pos = UDim2.new(0.8, 0, 0.5, 0)
 
@@ -3387,8 +3387,6 @@ G2L_MODULES[G2L["7"]] = {
 				if table.find(StandNames, StandData.Name) then
 					return
 				end
-
-				if #StandNames <= 0 then return end
 
 				local LuckySelected = table.find(ArrowNames, "Lucky Arrow")
 				local StandSelected = table.find(ArrowNames, "Stand Arrow")
