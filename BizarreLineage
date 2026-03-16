@@ -1166,7 +1166,7 @@ G2L["96"]["AspectRatio"] = 12.73413;
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.KillNearest
 G2L["97"] = Instance.new("Frame", G2L["13"]);
-G2L["97"]["ZIndex"] = 98;
+G2L["97"]["ZIndex"] = 100;
 G2L["97"]["BorderSizePixel"] = 0;
 G2L["97"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["97"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
@@ -2129,7 +2129,7 @@ G2L["112"]["AspectRatio"] = 12.73413;
 
 -- StarterGui.BizarreLineage.Holder.Under.Content.AutoLvlUp
 G2L["113"] = Instance.new("Frame", G2L["13"]);
-G2L["113"]["ZIndex"] = 997;
+G2L["113"]["ZIndex"] = 98;
 G2L["113"]["BorderSizePixel"] = 0;
 G2L["113"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["113"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
@@ -2917,7 +2917,7 @@ G2L["174"]["BackgroundTransparency"] = 1;
 G2L["174"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["174"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["174"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["174"]["Text"] = [[v1.0]];
+G2L["174"]["Text"] = [[v1.1]];
 G2L["174"]["Name"] = [[Version]];
 G2L["174"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -3130,6 +3130,7 @@ G2L_MODULES[G2L["7"]] = {
 		local List2 = Selection2.List.ScrollingFrame
 
 		local DataStore = require(script.Parent.DataStore)
+		local KillNearest = require(script.Parent.KillNearest)
 
 		local Config = DataStore:Load()
 		Config.StandSpinner = Config.StandSpinner or {}
@@ -3380,7 +3381,7 @@ G2L_MODULES[G2L["7"]] = {
 			Time += DT
 			if Time < 1 then return end
 			Time = 0
-			if Activate then
+			if Activate and not KillNearest.Activate then
 				local StandData = HttpService:JSONDecode(Stand.Value)
 				local StandArrowAmount, LuckyArrowAmount = GetArrowAmounts()
 
@@ -3428,6 +3429,8 @@ G2L_MODULES[G2L["8"]] = {
 		local PlayerGui = Player.PlayerGui
 
 		local DataStore = require(script.Parent.DataStore)
+		local AutoRaid = require(script.Parent.AutoRaid)
+		local KillNearest = require(script.Parent.KillNearest)
 
 		local Config = DataStore:Load()
 		Config.ArrowCollect = Config.ArrowCollect or {}
@@ -3482,6 +3485,10 @@ G2L_MODULES[G2L["8"]] = {
 			Time = Time + DT
 			if Time < 1 then return end
 			Time = 0
+
+			if AutoRaid.Activate or KillNearest.Activate then
+				return
+			end
 
 			local NearestArrow = nil
 			local ArrowShortestDistance = math.huge
@@ -4346,7 +4353,7 @@ G2L_MODULES[G2L["e"]] = {
 			Time += DT
 			if Time < 1 then return end
 			Time = 0
-			if Activate then
+			if Activate and not AutoRaid.Activate then
 				local npc = Npcs:FindFirstChild("." .. Player.Name .. " entity clone")
 				if npc then return end
 
@@ -4400,14 +4407,6 @@ G2L_MODULES[G2L["e"]] = {
 			LatestConfig.AutoMeditation.Activate = Activate
 
 			if Activate then
-				if AutoRaid.Activate then
-					AutoMeditationFrame.Button.Frame.BackgroundColor3 = Color3.fromRGB(188, 24, 26)
-					task.wait(0.5)
-
-					AutoMeditationFrame.Button.Frame.BackgroundColor3 = DefaultColor
-					return
-				end
-
 				local pos = UDim2.new(0.8, 0, 0.5, 0)
 				LatestConfig.AutoMeditation.ButtonPosition = {0.8, 0, 0.5, 0}
 				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
@@ -4544,16 +4543,8 @@ G2L_MODULES[G2L["f"]] = {
 					Triggered = true
 					ProximityPrompt.RequiresLineOfSight = true
 					ProximityPrompt.MaxActivationDistance = DefaultProximityPromptDist
-					for _, PvPBoard in pairs(PvPBoardFolder:GetChildren()) do
-						if PvPBoard:IsA("Model") and PvPBoard.Name == "PvP Mission Board" then
-							local AllProximityPrompt = PvPBoard:FindFirstChild("ProximityPrompt") :: ProximityPrompt
-							if AllProximityPrompt then
-								AllProximityPrompt.Enabled = false
-							end
-						end
-					end
 				end)
-				ProximityPrompt.MaxActivationDistance = 100
+				ProximityPrompt.MaxActivationDistance = 15
 				ProximityPrompt.RequiresLineOfSight = false
 				ProximityPrompt:InputHoldBegin(Enum.UserInputType.MouseButton1)
 				task.wait(ProximityPrompt.HoldDuration + 0.5)
@@ -4566,7 +4557,7 @@ G2L_MODULES[G2L["f"]] = {
 			if Time < 1 then return end
 			Time = 0
 			if Activate then
-				if Account == "" or AutoPrestige.Activate then return end
+				if Account == "" or (AutoPrestige.Activate and AutoPrestige.CanPrestige) or AutoRaid.Activate then return end
 
 				local Character = Player.Character or Player.CharacterAdded:Wait()
 				local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
@@ -4643,14 +4634,6 @@ G2L_MODULES[G2L["f"]] = {
 			LatestConfig.AutoLvlUp.Activate = Activate
 
 			if Activate then
-				if AutoRaid.Activate or Account == "" or AutoPrestige.Activate then
-					Button.Frame.BackgroundColor3 = Color3.fromRGB(188, 24, 26)
-					task.wait(0.5)
-
-					Button.Frame.BackgroundColor3 = DefaultColor
-					return
-				end
-
 				local pos = UDim2.new(0.8, 0, 0.5, 0)
 				LatestConfig.AutoLvlUp.ButtonPosition = {0.8, 0, 0.5, 0}
 				local tween = TweenService:Create(Button.Frame, TweenInfo.new(0.15), {Position = pos})
@@ -4719,6 +4702,7 @@ G2L_MODULES[G2L["10"]] = {
 
 		local AutoPrestige = {}
 		AutoPrestige.Activate = Activate
+		AutoPrestige.CanPrestige = false
 
 		RunService.Heartbeat:Connect(function(DT)
 			Time += DT
@@ -4731,6 +4715,9 @@ G2L_MODULES[G2L["10"]] = {
 				if not HumanoidRootPart then return end
 
 				if PlayerLevel.Value == 50 then
+					if not AutoPrestige.CanPrestige then
+						AutoPrestige.CanPrestige = true
+					end
 					local distance = (HumanoidRootPart.Position - PrestigePosition.Position).Magnitude
 
 					if distance > 5 then
