@@ -2917,7 +2917,7 @@ G2L["174"]["BackgroundTransparency"] = 1;
 G2L["174"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["174"]["Size"] = UDim2.new(0.3, 0, 0.44797, 0);
 G2L["174"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["174"]["Text"] = [[v1.1]];
+G2L["174"]["Text"] = [[v1.0]];
 G2L["174"]["Name"] = [[Version]];
 G2L["174"]["Position"] = UDim2.new(0.8, 0, 0.775, 0);
 
@@ -4724,6 +4724,10 @@ G2L_MODULES[G2L["10"]] = {
 						HumanoidRootPart.CFrame = PrestigePosition
 					else
 						local args = {workspace:WaitForChild("Npcs"):WaitForChild("Arch Mage"),"Prestige."} game:GetService("ReplicatedStorage"):WaitForChild("requests"):WaitForChild("character"):WaitForChild("dialogue"):FireServer(unpack(args))
+					end
+				else
+					if AutoPrestige.CanPrestige then
+						AutoPrestige.CanPrestige = false
 					end
 				end
 			end
