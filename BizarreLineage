@@ -3237,7 +3237,6 @@ G2L_MODULES[G2L["7"]] = {
 							Selection1:WaitForChild("Selected").TextColor3 = Color3.fromRGB(255, 255, 255)
 						end
 						ArrowName = arrow.Name
-						Selection1.List.Visible = false
 					end)
 				end
 			end
