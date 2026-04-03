@@ -1,1 +1,363 @@
-z
+local CoreGui = game:GetService("CoreGui")
+
+local G2L = {};
+
+-- StarterGui.JurassicBlocky
+G2L["1"] = Instance.new("ScreenGui", CoreGui);
+G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["Enabled"] = false;
+G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
+G2L["1"]["Name"] = [[JurassicBlocky]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.JurassicBlocky.Holder
+G2L["2"] = Instance.new("Frame", G2L["1"]);
+G2L["2"]["BorderSizePixel"] = 0;
+G2L["2"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
+G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2"]["Name"] = [[Holder]];
+
+
+-- StarterGui.JurassicBlocky.Holder.Background
+G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(19, 19, 19);
+G2L["3"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3"]["Size"] = UDim2.new(0.4, 0, 0.6, 0);
+G2L["3"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3"]["Name"] = [[Background]];
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.UICorner
+G2L["4"] = Instance.new("UICorner", G2L["3"]);
+G2L["4"]["CornerRadius"] = UDim.new(0.025, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.UIListLayout
+G2L["5"] = Instance.new("UIListLayout", G2L["3"]);
+G2L["5"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["5"]["Padding"] = UDim.new(0.025, 0);
+G2L["5"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Earned
+G2L["6"] = Instance.new("Frame", G2L["3"]);
+G2L["6"]["BorderSizePixel"] = 0;
+G2L["6"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["6"]["Size"] = UDim2.new(1, 0, 0.075, 0);
+G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["6"]["Name"] = [[Earned]];
+G2L["6"]["LayoutOrder"] = 1;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Earned.Text
+G2L["7"] = Instance.new("TextLabel", G2L["6"]);
+G2L["7"]["TextWrapped"] = true;
+G2L["7"]["BorderSizePixel"] = 0;
+G2L["7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["7"]["TextScaled"] = true;
+G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["TextSize"] = 18;
+G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["7"]["BackgroundTransparency"] = 1;
+G2L["7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["7"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["7"]["Text"] = [[DinoCoins Earned:]];
+G2L["7"]["LayoutOrder"] = 1;
+G2L["7"]["Name"] = [[Text]];
+G2L["7"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Earned.UIStroke
+G2L["8"] = Instance.new("UIStroke", G2L["6"]);
+G2L["8"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.UIStroke
+G2L["9"] = Instance.new("UIStroke", G2L["3"]);
+G2L["9"]["Thickness"] = 2;
+G2L["9"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.
+G2L["a"] = Instance.new("Frame", G2L["3"]);
+G2L["a"]["BorderSizePixel"] = 0;
+G2L["a"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["a"]["Size"] = UDim2.new(1, 0, 0.05, 0);
+G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["a"]["Name"] = [[]];
+G2L["a"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Target
+G2L["b"] = Instance.new("Frame", G2L["3"]);
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["b"]["Size"] = UDim2.new(1, 0, 0.075, 0);
+G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["b"]["Name"] = [[Target]];
+G2L["b"]["LayoutOrder"] = 1;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Target.Text
+G2L["c"] = Instance.new("TextLabel", G2L["b"]);
+G2L["c"]["TextWrapped"] = true;
+G2L["c"]["BorderSizePixel"] = 0;
+G2L["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["c"]["TextScaled"] = true;
+G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["TextSize"] = 18;
+G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["c"]["BackgroundTransparency"] = 1;
+G2L["c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["c"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["c"]["Text"] = [[Next Target:]];
+G2L["c"]["LayoutOrder"] = 1;
+G2L["c"]["Name"] = [[Text]];
+G2L["c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Target.UIStroke
+G2L["d"] = Instance.new("UIStroke", G2L["b"]);
+G2L["d"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.TargetDistance
+G2L["e"] = Instance.new("Frame", G2L["3"]);
+G2L["e"]["BorderSizePixel"] = 0;
+G2L["e"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["e"]["Size"] = UDim2.new(1, 0, 0.075, 0);
+G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["e"]["Name"] = [[TargetDistance]];
+G2L["e"]["LayoutOrder"] = 1;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.TargetDistance.Text
+G2L["f"] = Instance.new("TextLabel", G2L["e"]);
+G2L["f"]["TextWrapped"] = true;
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["f"]["TextScaled"] = true;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["TextSize"] = 18;
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["BackgroundTransparency"] = 1;
+G2L["f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["f"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Text"] = [[TargetDistance: ]];
+G2L["f"]["LayoutOrder"] = 1;
+G2L["f"]["Name"] = [[Text]];
+G2L["f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.TargetDistance.UIStroke
+G2L["10"] = Instance.new("UIStroke", G2L["e"]);
+G2L["10"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.AutoFarm
+G2L["11"] = Instance.new("ModuleScript", G2L["2"]);
+G2L["11"]["Name"] = [[AutoFarm]];
+
+
+-- StarterGui.JurassicBlocky.Requirer
+G2L["12"] = Instance.new("LocalScript", G2L["1"]);
+G2L["12"]["Name"] = [[Requirer]];
+
+
+-- Require G2L wrapper
+local G2L_REQUIRE = require;
+local G2L_MODULES = {};
+local function require(Module:ModuleScript)
+    local ModuleState = G2L_MODULES[Module];
+    if ModuleState then
+        if not ModuleState.Required then
+            ModuleState.Required = true;
+            ModuleState.Value = ModuleState.Closure();
+        end
+        return ModuleState.Value;
+    end;
+    return G2L_REQUIRE(Module);
+end
+
+G2L_MODULES[G2L["11"]] = {
+Closure = function()
+    local script = G2L["11"];--// SERVICES \\--
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local HttpService = game:GetService("HttpService")
+local TeleportService = game:GetService("TeleportService")
+
+--// VARIABLES \\--
+local Humanoids = workspace.Humanoids
+local AmberFolder = workspace.ItemSpawn.Amber
+local MAP = workspace["Map Assets"]
+
+local Player = Players.LocalPlayer
+
+local Target = script.Parent.Background.Target.Text
+local TargetDistance = script.Parent.Background.TargetDistance.Text
+
+local IsClaiming = false
+local WaitingDelay = false
+local PlaceId = game.PlaceId
+local JobId = game.JobId
+local LastSwitch = 0
+local SwitchDelay = 1
+local Blacklist = {}
+
+--// INTERFACE \\--
+local ScreenGui = CoreGui.JurassicBlocky
+
+if workspace.Terrain:CountCells() > 0 then
+	workspace.Terrain:Clear()
+end
+
+MAP:Destroy()
+
+RunService.Heartbeat:Connect(function(dt)
+	--[[if not Player.PlayerGui.JurassicBlocky.Enabled then Player.PlayerGui.JurassicBlocky.Enabled = true end
+	if not Player.PlayerGui.JurassicBlocky.Holder.Visible then Player.PlayerGui.JurassicBlocky.Holder.Visible = true end
+	if not Player.PlayerGui.JurassicBlocky.Holder.Background.Visible then Player.PlayerGui.JurassicBlocky.Holder.Background.Visible = true end
+	if not Player.PlayerGui.JurassicBlocky.Holder then Player:Kick("Not Respecting my rules: From MonsterDog1203") print("l") end
+	if not Player.PlayerGui.JurassicBlocky.Holder.Background then Player:Kick("Not Respecting my rules: From MonsterDog1203") print("l") end-]]
+	
+	local BodyVelocity = Player.Character.HumanoidRootPart:FindFirstChild("BodyVelocity")
+	for _, Hum in pairs(Humanoids:GetChildren()) do
+		if Hum == Player.Character then
+			local NearestTarget = nil
+			local NearestDistance = math.huge
+
+			for _, Target in pairs(AmberFolder:GetChildren()) do
+				if Target:IsA("Part") and not Blacklist[Target] then
+					for _, Amber in pairs(Target:GetChildren()) do
+						if Amber:IsA("Model") then
+							local TargetPart = Amber.PrimaryPart
+							if TargetPart then
+								local Distance = (Player.Character.HumanoidRootPart.Position - TargetPart.Position).Magnitude
+								if Distance < NearestDistance then
+									NearestTarget = Target
+									NearestDistance = Distance
+								end
+							end
+						end
+					end
+				end
+			end
+			
+
+			if NearestTarget then
+				local TargetPosition
+				
+				Target.Text = "Next Target: Amber"
+				TargetDistance.Text = "TargetDistance: ".. math.floor(NearestDistance).. "Studs"
+				
+				for _, Model in pairs(NearestTarget:GetChildren()) do
+					if Model:IsA("Model") then
+						local Prompt = Model:FindFirstChild("ProximityPrompt")
+						if Prompt then
+							Prompt.RequiresLineOfSight = false
+							Prompt.MaxActivationDistance = 50
+							Prompt.HoldDuration = 0
+						end
+					end
+				end
+
+				if not BodyVelocity then
+					BodyVelocity = Instance.new("BodyVelocity")
+					BodyVelocity.Parent = Player.Character.HumanoidRootPart
+					BodyVelocity.Velocity = Vector3.new(0, 0, 0)
+				end
+
+				TargetPosition = NearestTarget.Position + Vector3.new(0, 5, 0)
+
+				Player.Character.HumanoidRootPart.CFrame = CFrame.new(TargetPosition)
+				for _, Model in pairs(NearestTarget:GetChildren()) do
+					if Model:IsA("Model") then
+						local Prompt = Model:FindFirstChildWhichIsA("ProximityPrompt", true)
+						if Prompt and not IsClaiming then
+							IsClaiming = true
+							Prompt:InputHoldBegin(Enum.UserInputType.MouseButton1)
+							print(Prompt, "Triggered")
+							task.wait(0.25)
+							Prompt:InputHoldEnd(Enum.UserInputType.MouseButton1)
+							IsClaiming = false
+						end
+					end
+				end
+				task.wait(1)
+				
+				if not WaitingDelay then
+					WaitingDelay = true
+					Blacklist[NearestTarget] = true
+					task.wait(1)
+					WaitingDelay = false
+				end
+				
+			else
+				Target.Text = "Next Target: Nil"
+			end
+		end
+	end
+end)
+
+task.wait(20)
+print("hopping")
+
+local servers = {}
+local req = game:HttpGet("https://games.roblox.com/v1/games/" .. PlaceId .. "/servers/Public?sortOrder=Desc&limit=100&excludeFullGames=true")
+local body = HttpService:JSONDecode(req)
+
+if body and body.data then
+	for i, v in next, body.data do
+		if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing < v.maxPlayers and v.id ~= JobId then
+			table.insert(servers, 1, v.id)
+		end
+	end
+end
+
+if #servers > 0 then
+	TeleportService:TeleportToPlaceInstance(PlaceId, servers[math.random(1, #servers)], Players.LocalPlayer)
+end
+
+local AutoFarm = {}
+
+return AutoFarm
+end;
+};
+-- StarterGui.JurassicBlocky.Requirer
+local function C_12()
+local script = G2L["12"];
+	local Players = game:GetService("Players")
+	local ReplicatedStorage = game:GetService("ReplicatedStorage")
+	local player = Players.LocalPlayer
+	
+	local queueteleport = queue_on_teleport or syn and syn.queue_on_teleport
+	
+	local TeleportCheck = false
+	local KeepScript = true
+	
+	Players.LocalPlayer.OnTeleport:Connect(function()
+		if KeepScript and not TeleportCheck and queueteleport then
+			TeleportCheck = true
+			queueteleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/MonsterDog1203/Script/refs/heads/main/JurassicBlocky"))()')
+		end
+	end)
+	
+	
+	local AutoFarm = require(script.Parent.Holder.AutoFarm)
+end;
+task.spawn(C_12);
+
+return G2L["1"], require;
