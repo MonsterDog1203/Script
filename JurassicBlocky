@@ -446,11 +446,11 @@ UserText.Text = "User: "..Player.Name
 
 
 RunService.Heartbeat:Connect(function(dt)
-	if not Player.PlayerGui.JurassicBlocky.Enabled then Player.PlayerGui.JurassicBlocky.Enabled = true end
-	if not Player.PlayerGui.JurassicBlocky.Holder.Visible then Player.PlayerGui.JurassicBlocky.Holder.Visible = true end
-	if not Player.PlayerGui.JurassicBlocky.Holder.Background.Visible then Player.PlayerGui.JurassicBlocky.Holder.Background.Visible = true end
-	if not Player.PlayerGui.JurassicBlocky.Holder then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
-	if not Player.PlayerGui.JurassicBlocky.Holder.Background then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
+	if not CoreGui.JurassicBlocky.Enabled then CoreGui.JurassicBlocky.Enabled = true end
+	if not CoreGui.JurassicBlocky.Holder.Visible then CoreGui.JurassicBlocky.Holder.Visible = true end
+	if not CoreGui.JurassicBlocky.Holder.Background.Visible then CoreGui.JurassicBlocky.Holder.Background.Visible = true end
+	if not CoreGui.JurassicBlocky.Holder then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
+	if not CoreGui.JurassicBlocky.Holder.Background then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
 	
 	for _, Hum in pairs(Humanoids:GetChildren()) do
 		if Hum == Player.Character then
