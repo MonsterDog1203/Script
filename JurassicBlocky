@@ -11,169 +11,379 @@ G2L["1"]["Name"] = [[JurassicBlocky]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
 
+-- StarterGui.JurassicBlocky.Requirer
+G2L["2"] = Instance.new("LocalScript", G2L["1"]);
+G2L["2"]["Name"] = [[Requirer]];
+
+
 -- StarterGui.JurassicBlocky.Holder
-G2L["2"] = Instance.new("Frame", G2L["1"]);
-G2L["2"]["BorderSizePixel"] = 0;
-G2L["2"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
-G2L["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["2"]["Size"] = UDim2.new(1, 0, 1, 0);
-G2L["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["2"]["Name"] = [[Holder]];
-
-
--- StarterGui.JurassicBlocky.Holder.Background
-G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"] = Instance.new("Frame", G2L["1"]);
 G2L["3"]["BorderSizePixel"] = 0;
-G2L["3"]["BackgroundColor3"] = Color3.fromRGB(19, 19, 19);
+G2L["3"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
 G2L["3"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["3"]["Size"] = UDim2.new(0.4, 0, 0.6, 0);
+G2L["3"]["Size"] = UDim2.new(1, 0, 1, 0);
 G2L["3"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
 G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3"]["Name"] = [[Background]];
-
-
--- StarterGui.JurassicBlocky.Holder.Background.UICorner
-G2L["4"] = Instance.new("UICorner", G2L["3"]);
-G2L["4"]["CornerRadius"] = UDim.new(0.025, 0);
-
-
--- StarterGui.JurassicBlocky.Holder.Background.UIListLayout
-G2L["5"] = Instance.new("UIListLayout", G2L["3"]);
-G2L["5"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["5"]["Padding"] = UDim.new(0.025, 0);
-G2L["5"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- StarterGui.JurassicBlocky.Holder.Background.Earned
-G2L["6"] = Instance.new("Frame", G2L["3"]);
-G2L["6"]["BorderSizePixel"] = 0;
-G2L["6"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
-G2L["6"]["Size"] = UDim2.new(1, 0, 0.075, 0);
-G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["6"]["Name"] = [[Earned]];
-G2L["6"]["LayoutOrder"] = 1;
-
-
--- StarterGui.JurassicBlocky.Holder.Background.Earned.Text
-G2L["7"] = Instance.new("TextLabel", G2L["6"]);
-G2L["7"]["TextWrapped"] = true;
-G2L["7"]["BorderSizePixel"] = 0;
-G2L["7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["7"]["TextScaled"] = true;
-G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["TextSize"] = 18;
-G2L["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["7"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["7"]["BackgroundTransparency"] = 1;
-G2L["7"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["7"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["7"]["Text"] = [[DinoCoins Earned:]];
-G2L["7"]["LayoutOrder"] = 1;
-G2L["7"]["Name"] = [[Text]];
-G2L["7"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- StarterGui.JurassicBlocky.Holder.Background.Earned.UIStroke
-G2L["8"] = Instance.new("UIStroke", G2L["6"]);
-G2L["8"]["Color"] = Color3.fromRGB(85, 85, 85);
-
-
--- StarterGui.JurassicBlocky.Holder.Background.UIStroke
-G2L["9"] = Instance.new("UIStroke", G2L["3"]);
-G2L["9"]["Thickness"] = 2;
-G2L["9"]["Color"] = Color3.fromRGB(85, 85, 85);
-
-
--- StarterGui.JurassicBlocky.Holder.Background.
-G2L["a"] = Instance.new("Frame", G2L["3"]);
-G2L["a"]["BorderSizePixel"] = 0;
-G2L["a"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
-G2L["a"]["Size"] = UDim2.new(1, 0, 0.05, 0);
-G2L["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["a"]["Name"] = [[]];
-G2L["a"]["BackgroundTransparency"] = 1;
-
-
--- StarterGui.JurassicBlocky.Holder.Background.Target
-G2L["b"] = Instance.new("Frame", G2L["3"]);
-G2L["b"]["BorderSizePixel"] = 0;
-G2L["b"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
-G2L["b"]["Size"] = UDim2.new(1, 0, 0.075, 0);
-G2L["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["b"]["Name"] = [[Target]];
-G2L["b"]["LayoutOrder"] = 1;
-
-
--- StarterGui.JurassicBlocky.Holder.Background.Target.Text
-G2L["c"] = Instance.new("TextLabel", G2L["b"]);
-G2L["c"]["TextWrapped"] = true;
-G2L["c"]["BorderSizePixel"] = 0;
-G2L["c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["c"]["TextScaled"] = true;
-G2L["c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c"]["TextSize"] = 18;
-G2L["c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["c"]["BackgroundTransparency"] = 1;
-G2L["c"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["c"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["c"]["Text"] = [[Next Target:]];
-G2L["c"]["LayoutOrder"] = 1;
-G2L["c"]["Name"] = [[Text]];
-G2L["c"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- StarterGui.JurassicBlocky.Holder.Background.Target.UIStroke
-G2L["d"] = Instance.new("UIStroke", G2L["b"]);
-G2L["d"]["Color"] = Color3.fromRGB(85, 85, 85);
-
-
--- StarterGui.JurassicBlocky.Holder.Background.TargetDistance
-G2L["e"] = Instance.new("Frame", G2L["3"]);
-G2L["e"]["BorderSizePixel"] = 0;
-G2L["e"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
-G2L["e"]["Size"] = UDim2.new(1, 0, 0.075, 0);
-G2L["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["e"]["Name"] = [[TargetDistance]];
-G2L["e"]["LayoutOrder"] = 1;
-
-
--- StarterGui.JurassicBlocky.Holder.Background.TargetDistance.Text
-G2L["f"] = Instance.new("TextLabel", G2L["e"]);
-G2L["f"]["TextWrapped"] = true;
-G2L["f"]["BorderSizePixel"] = 0;
-G2L["f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
-G2L["f"]["TextScaled"] = true;
-G2L["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["TextSize"] = 18;
-G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["f"]["BackgroundTransparency"] = 1;
-G2L["f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["f"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
-G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["f"]["Text"] = [[TargetDistance: ]];
-G2L["f"]["LayoutOrder"] = 1;
-G2L["f"]["Name"] = [[Text]];
-G2L["f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
-
-
--- StarterGui.JurassicBlocky.Holder.Background.TargetDistance.UIStroke
-G2L["10"] = Instance.new("UIStroke", G2L["e"]);
-G2L["10"]["Color"] = Color3.fromRGB(85, 85, 85);
+G2L["3"]["Name"] = [[Holder]];
 
 
 -- StarterGui.JurassicBlocky.Holder.AutoFarm
-G2L["11"] = Instance.new("ModuleScript", G2L["2"]);
-G2L["11"]["Name"] = [[AutoFarm]];
+G2L["4"] = Instance.new("ModuleScript", G2L["3"]);
+G2L["4"]["Name"] = [[AutoFarm]];
 
 
--- StarterGui.JurassicBlocky.Requirer
-G2L["12"] = Instance.new("LocalScript", G2L["1"]);
-G2L["12"]["Name"] = [[Requirer]];
+-- StarterGui.JurassicBlocky.Holder.Background
+G2L["5"] = Instance.new("Frame", G2L["3"]);
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(19, 19, 19);
+G2L["5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["5"]["Size"] = UDim2.new(0.4, 0, 0.6, 0);
+G2L["5"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+G2L["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Name"] = [[Background]];
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.UICorner
+G2L["6"] = Instance.new("UICorner", G2L["5"]);
+G2L["6"]["CornerRadius"] = UDim.new(0.025, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.UIListLayout
+G2L["7"] = Instance.new("UIListLayout", G2L["5"]);
+G2L["7"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["7"]["Padding"] = UDim.new(0.025, 0);
+G2L["7"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Earned
+G2L["8"] = Instance.new("Frame", G2L["5"]);
+G2L["8"]["BorderSizePixel"] = 0;
+G2L["8"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["8"]["Size"] = UDim2.new(1, 0, 0.075, 0);
+G2L["8"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["8"]["Name"] = [[Earned]];
+G2L["8"]["LayoutOrder"] = 1;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Earned.Text
+G2L["9"] = Instance.new("TextLabel", G2L["8"]);
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9"]["TextScaled"] = true;
+G2L["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["TextSize"] = 18;
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(255, 214, 45);
+G2L["9"]["BackgroundTransparency"] = 1;
+G2L["9"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["9"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["9"]["Text"] = [[DinoCoins Earned:]];
+G2L["9"]["LayoutOrder"] = 1;
+G2L["9"]["Name"] = [[Text]];
+G2L["9"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Earned.Text.UITextSizeConstraint
+G2L["a"] = Instance.new("UITextSizeConstraint", G2L["9"]);
+G2L["a"]["MaxTextSize"] = 23;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Earned.Text.UIAspectRatioConstraint
+G2L["b"] = Instance.new("UIAspectRatioConstraint", G2L["9"]);
+G2L["b"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Earned.UIStroke
+G2L["c"] = Instance.new("UIStroke", G2L["8"]);
+G2L["c"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Earned.UIAspectRatioConstraint
+G2L["d"] = Instance.new("UIAspectRatioConstraint", G2L["8"]);
+G2L["d"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.UIStroke
+G2L["e"] = Instance.new("UIStroke", G2L["5"]);
+G2L["e"]["Thickness"] = 2;
+G2L["e"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.
+G2L["f"] = Instance.new("Frame", G2L["5"]);
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["f"]["Size"] = UDim2.new(1, 0, 0.05, 0);
+G2L["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["f"]["Name"] = [[]];
+G2L["f"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background..UIAspectRatioConstraint
+G2L["10"] = Instance.new("UIAspectRatioConstraint", G2L["f"]);
+G2L["10"]["AspectRatio"] = 25.87398;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Target
+G2L["11"] = Instance.new("Frame", G2L["5"]);
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["11"]["Size"] = UDim2.new(1, 0, 0.075, 0);
+G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["11"]["Name"] = [[Target]];
+G2L["11"]["LayoutOrder"] = 2;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Target.Text
+G2L["12"] = Instance.new("TextLabel", G2L["11"]);
+G2L["12"]["TextWrapped"] = true;
+G2L["12"]["BorderSizePixel"] = 0;
+G2L["12"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["12"]["TextScaled"] = true;
+G2L["12"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["12"]["TextSize"] = 18;
+G2L["12"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["12"]["TextColor3"] = Color3.fromRGB(255, 15, 19);
+G2L["12"]["BackgroundTransparency"] = 1;
+G2L["12"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["12"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["12"]["Text"] = [[Next Target:]];
+G2L["12"]["LayoutOrder"] = 1;
+G2L["12"]["Name"] = [[Text]];
+G2L["12"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Target.Text.UITextSizeConstraint
+G2L["13"] = Instance.new("UITextSizeConstraint", G2L["12"]);
+G2L["13"]["MaxTextSize"] = 23;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Target.Text.UIAspectRatioConstraint
+G2L["14"] = Instance.new("UIAspectRatioConstraint", G2L["12"]);
+G2L["14"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Target.UIStroke
+G2L["15"] = Instance.new("UIStroke", G2L["11"]);
+G2L["15"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Target.UIAspectRatioConstraint
+G2L["16"] = Instance.new("UIAspectRatioConstraint", G2L["11"]);
+G2L["16"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.TargetDistance
+G2L["17"] = Instance.new("Frame", G2L["5"]);
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["17"]["Size"] = UDim2.new(1, 0, 0.075, 0);
+G2L["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["17"]["Name"] = [[TargetDistance]];
+G2L["17"]["LayoutOrder"] = 3;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.TargetDistance.Text
+G2L["18"] = Instance.new("TextLabel", G2L["17"]);
+G2L["18"]["TextWrapped"] = true;
+G2L["18"]["BorderSizePixel"] = 0;
+G2L["18"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["18"]["TextScaled"] = true;
+G2L["18"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["TextSize"] = 18;
+G2L["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["18"]["BackgroundTransparency"] = 1;
+G2L["18"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["18"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["18"]["Text"] = [[TargetDistance: ]];
+G2L["18"]["LayoutOrder"] = 1;
+G2L["18"]["Name"] = [[Text]];
+G2L["18"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.TargetDistance.Text.UITextSizeConstraint
+G2L["19"] = Instance.new("UITextSizeConstraint", G2L["18"]);
+G2L["19"]["MaxTextSize"] = 23;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.TargetDistance.Text.UIAspectRatioConstraint
+G2L["1a"] = Instance.new("UIAspectRatioConstraint", G2L["18"]);
+G2L["1a"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.TargetDistance.UIStroke
+G2L["1b"] = Instance.new("UIStroke", G2L["17"]);
+G2L["1b"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.TargetDistance.UIAspectRatioConstraint
+G2L["1c"] = Instance.new("UIAspectRatioConstraint", G2L["17"]);
+G2L["1c"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.UIAspectRatioConstraint
+G2L["1d"] = Instance.new("UIAspectRatioConstraint", G2L["5"]);
+G2L["1d"]["AspectRatio"] = 1.2937;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Status
+G2L["1e"] = Instance.new("Frame", G2L["5"]);
+G2L["1e"]["BorderSizePixel"] = 0;
+G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["1e"]["Size"] = UDim2.new(1, 0, 0.075, 0);
+G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1e"]["Name"] = [[Status]];
+G2L["1e"]["LayoutOrder"] = 4;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Status.Text
+G2L["1f"] = Instance.new("TextLabel", G2L["1e"]);
+G2L["1f"]["TextWrapped"] = true;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["1f"]["TextScaled"] = true;
+G2L["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["1f"]["TextSize"] = 18;
+G2L["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["1f"]["TextColor3"] = Color3.fromRGB(171, 255, 0);
+G2L["1f"]["BackgroundTransparency"] = 1;
+G2L["1f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["1f"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["1f"]["Text"] = [[Status:]];
+G2L["1f"]["LayoutOrder"] = 1;
+G2L["1f"]["Name"] = [[Text]];
+G2L["1f"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Status.Text.UITextSizeConstraint
+G2L["20"] = Instance.new("UITextSizeConstraint", G2L["1f"]);
+G2L["20"]["MaxTextSize"] = 23;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Status.Text.UIAspectRatioConstraint
+G2L["21"] = Instance.new("UIAspectRatioConstraint", G2L["1f"]);
+G2L["21"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Status.UIStroke
+G2L["22"] = Instance.new("UIStroke", G2L["1e"]);
+G2L["22"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Status.UIAspectRatioConstraint
+G2L["23"] = Instance.new("UIAspectRatioConstraint", G2L["1e"]);
+G2L["23"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.User
+G2L["24"] = Instance.new("Frame", G2L["5"]);
+G2L["24"]["BorderSizePixel"] = 0;
+G2L["24"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["24"]["Size"] = UDim2.new(1, 0, 0.075, 0);
+G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["24"]["Name"] = [[User]];
+G2L["24"]["LayoutOrder"] = 5;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.User.Text
+G2L["25"] = Instance.new("TextLabel", G2L["24"]);
+G2L["25"]["TextWrapped"] = true;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25"]["TextScaled"] = true;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["TextSize"] = 18;
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["25"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["25"]["Text"] = [[User: MonsterDog1203]];
+G2L["25"]["LayoutOrder"] = 1;
+G2L["25"]["Name"] = [[Text]];
+G2L["25"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.User.Text.UITextSizeConstraint
+G2L["26"] = Instance.new("UITextSizeConstraint", G2L["25"]);
+G2L["26"]["MaxTextSize"] = 23;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.User.Text.UIAspectRatioConstraint
+G2L["27"] = Instance.new("UIAspectRatioConstraint", G2L["25"]);
+G2L["27"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.User.UIStroke
+G2L["28"] = Instance.new("UIStroke", G2L["24"]);
+G2L["28"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.User.UIAspectRatioConstraint
+G2L["29"] = Instance.new("UIAspectRatioConstraint", G2L["24"]);
+G2L["29"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Dino
+G2L["2a"] = Instance.new("Frame", G2L["5"]);
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["2a"]["Size"] = UDim2.new(1, 0, 0.075, 0);
+G2L["2a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2a"]["Name"] = [[Dino]];
+G2L["2a"]["LayoutOrder"] = 5;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Dino.Text
+G2L["2b"] = Instance.new("TextLabel", G2L["2a"]);
+G2L["2b"]["TextWrapped"] = true;
+G2L["2b"]["BorderSizePixel"] = 0;
+G2L["2b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2b"]["TextScaled"] = true;
+G2L["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["TextSize"] = 18;
+G2L["2b"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["2b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2b"]["BackgroundTransparency"] = 1;
+G2L["2b"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["2b"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2b"]["Text"] = [[Dino: Gali]];
+G2L["2b"]["LayoutOrder"] = 1;
+G2L["2b"]["Name"] = [[Text]];
+G2L["2b"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Dino.Text.UITextSizeConstraint
+G2L["2c"] = Instance.new("UITextSizeConstraint", G2L["2b"]);
+G2L["2c"]["MaxTextSize"] = 23;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Dino.Text.UIAspectRatioConstraint
+G2L["2d"] = Instance.new("UIAspectRatioConstraint", G2L["2b"]);
+G2L["2d"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Dino.UIStroke
+G2L["2e"] = Instance.new("UIStroke", G2L["2a"]);
+G2L["2e"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Dino.UIAspectRatioConstraint
+G2L["2f"] = Instance.new("UIAspectRatioConstraint", G2L["2a"]);
+G2L["2f"]["AspectRatio"] = 17.24932;
+
+
+-- StarterGui.JurassicBlocky.Holder.UIAspectRatioConstraint
+G2L["30"] = Instance.new("UIAspectRatioConstraint", G2L["3"]);
+G2L["30"]["AspectRatio"] = 1.94055;
 
 
 -- Require G2L wrapper
@@ -191,9 +401,9 @@ local function require(Module:ModuleScript)
     return G2L_REQUIRE(Module);
 end
 
-G2L_MODULES[G2L["11"]] = {
+G2L_MODULES[G2L["4"]] = {
 Closure = function()
-    local script = G2L["11"];--// SERVICES \\--
+    local script = G2L["4"];--// SERVICES \\--
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
@@ -208,14 +418,19 @@ local Player = Players.LocalPlayer
 
 local Target = script.Parent.Background.Target.Text
 local TargetDistance = script.Parent.Background.TargetDistance.Text
+local StatusText = script.Parent.Background.Status.Text
+local UserText = script.Parent.Background.User.Text
+local Dino = script.Parent.Background.Dino.Text
 
 local IsClaiming = false
-local WaitingDelay = false
+local IsHopping = false
 local PlaceId = game.PlaceId
 local JobId = game.JobId
-local LastSwitch = 0
-local SwitchDelay = 1
-local Blacklist = {}
+local Status = "Unknown"
+
+
+local NearestTarget = nil
+local NearestDistance = math.huge
 
 --// INTERFACE \\--
 local ScreenGui = CoreGui.JurassicBlocky
@@ -226,29 +441,33 @@ end
 
 MAP:Destroy()
 
+local args = {"Gallimimus"}game:GetService("ReplicatedStorage"):WaitForChild("shared/network/init@GlobalEvents"):WaitForChild("spawn"):FireServer(unpack(args))
+UserText.Text = "User: "..Player.Name
+
+
 RunService.Heartbeat:Connect(function(dt)
-	--[[if not Player.PlayerGui.JurassicBlocky.Enabled then Player.PlayerGui.JurassicBlocky.Enabled = true end
+	if not Player.PlayerGui.JurassicBlocky.Enabled then Player.PlayerGui.JurassicBlocky.Enabled = true end
 	if not Player.PlayerGui.JurassicBlocky.Holder.Visible then Player.PlayerGui.JurassicBlocky.Holder.Visible = true end
 	if not Player.PlayerGui.JurassicBlocky.Holder.Background.Visible then Player.PlayerGui.JurassicBlocky.Holder.Background.Visible = true end
-	if not Player.PlayerGui.JurassicBlocky.Holder then Player:Kick("Not Respecting my rules: From MonsterDog1203") print("l") end
-	if not Player.PlayerGui.JurassicBlocky.Holder.Background then Player:Kick("Not Respecting my rules: From MonsterDog1203") print("l") end-]]
+	if not Player.PlayerGui.JurassicBlocky.Holder then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
+	if not Player.PlayerGui.JurassicBlocky.Holder.Background then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
 	
-	local BodyVelocity = Player.Character.HumanoidRootPart:FindFirstChild("BodyVelocity")
 	for _, Hum in pairs(Humanoids:GetChildren()) do
 		if Hum == Player.Character then
-			local NearestTarget = nil
-			local NearestDistance = math.huge
 
 			for _, Target in pairs(AmberFolder:GetChildren()) do
-				if Target:IsA("Part") and not Blacklist[Target] then
+				if Target:IsA("Part") then
 					for _, Amber in pairs(Target:GetChildren()) do
 						if Amber:IsA("Model") then
 							local TargetPart = Amber.PrimaryPart
 							if TargetPart then
 								local Distance = (Player.Character.HumanoidRootPart.Position - TargetPart.Position).Magnitude
-								if Distance < NearestDistance then
+								if Distance < 150 then
 									NearestTarget = Target
 									NearestDistance = Distance
+								else
+									NearestTarget = nil
+									NearestDistance = math.huge
 								end
 							end
 						end
@@ -258,8 +477,9 @@ RunService.Heartbeat:Connect(function(dt)
 			
 
 			if NearestTarget then
+				Status = "Targetting"
 				local TargetPosition
-				
+				print("Found Target:", NearestTarget, "Distance:", NearestDistance)
 				Target.Text = "Next Target: Amber"
 				TargetDistance.Text = "TargetDistance: ".. math.floor(NearestDistance).. "Studs"
 				
@@ -274,61 +494,76 @@ RunService.Heartbeat:Connect(function(dt)
 					end
 				end
 
-				if not BodyVelocity then
-					BodyVelocity = Instance.new("BodyVelocity")
-					BodyVelocity.Parent = Player.Character.HumanoidRootPart
-					BodyVelocity.Velocity = Vector3.new(0, 0, 0)
-				end
-
 				TargetPosition = NearestTarget.Position + Vector3.new(0, 5, 0)
 
 				Player.Character.HumanoidRootPart.CFrame = CFrame.new(TargetPosition)
+				
 				for _, Model in pairs(NearestTarget:GetChildren()) do
 					if Model:IsA("Model") then
 						local Prompt = Model:FindFirstChildWhichIsA("ProximityPrompt", true)
 						if Prompt and not IsClaiming then
 							IsClaiming = true
 							Prompt:InputHoldBegin(Enum.UserInputType.MouseButton1)
-							print(Prompt, "Triggered")
 							task.wait(0.25)
 							Prompt:InputHoldEnd(Enum.UserInputType.MouseButton1)
 							IsClaiming = false
 						end
 					end
 				end
-				task.wait(1)
-				
-				if not WaitingDelay then
-					WaitingDelay = true
-					Blacklist[NearestTarget] = true
-					task.wait(1)
-					WaitingDelay = false
-				end
-				
 			else
 				Target.Text = "Next Target: Nil"
+				if not IsHopping then
+					IsHopping = true
+					Status = "Hopping Server"
+					print("No Targets Found, Hopping Server")
+					task.wait(2)
+
+					local servers = {}
+					local req = game:HttpGet("https://games.roblox.com/v1/games/" .. PlaceId .. "/servers/Public?sortOrder=Desc&limit=100&excludeFullGames=true")
+					local body = HttpService:JSONDecode(req)
+
+					if body and body.data then
+						for i, v in next, body.data do
+							if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing < v.maxPlayers and v.id ~= JobId then
+								table.insert(servers, 1, v.id)
+							end
+						end
+					end
+
+					if #servers > 0 then
+						TeleportService:TeleportToPlaceInstance(PlaceId, servers[math.random(1, #servers)], Players.LocalPlayer)
+					else
+						print("Could not find a server to hop to")
+					end
+					task.wait(3)
+					IsHopping = false
+				end
 			end
 		end
 	end
+	StatusText.Text = "Status: ".. Status
+	
 end)
 
-task.wait(20)
-print("hopping")
+while true do
+	task.wait(20)
+	print("Hopping Server: delay 20 seconds")
 
-local servers = {}
-local req = game:HttpGet("https://games.roblox.com/v1/games/" .. PlaceId .. "/servers/Public?sortOrder=Desc&limit=100&excludeFullGames=true")
-local body = HttpService:JSONDecode(req)
+	local servers = {}
+	local req = game:HttpGet("https://games.roblox.com/v1/games/" .. PlaceId .. "/servers/Public?sortOrder=Desc&limit=100&excludeFullGames=true")
+	local body = HttpService:JSONDecode(req)
 
-if body and body.data then
-	for i, v in next, body.data do
-		if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing < v.maxPlayers and v.id ~= JobId then
-			table.insert(servers, 1, v.id)
+	if body and body.data then
+		for i, v in next, body.data do
+			if type(v) == "table" and tonumber(v.playing) and tonumber(v.maxPlayers) and v.playing < v.maxPlayers and v.id ~= JobId then
+				table.insert(servers, 1, v.id)
+			end
 		end
 	end
-end
 
-if #servers > 0 then
-	TeleportService:TeleportToPlaceInstance(PlaceId, servers[math.random(1, #servers)], Players.LocalPlayer)
+	if #servers > 0 then
+		TeleportService:TeleportToPlaceInstance(PlaceId, servers[math.random(1, #servers)], Players.LocalPlayer)
+	end
 end
 
 local AutoFarm = {}
@@ -337,8 +572,8 @@ return AutoFarm
 end;
 };
 -- StarterGui.JurassicBlocky.Requirer
-local function C_12()
-local script = G2L["12"];
+local function C_2()
+local script = G2L["2"];
 	local Players = game:GetService("Players")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	local player = Players.LocalPlayer
@@ -358,6 +593,6 @@ local script = G2L["12"];
 	
 	local AutoFarm = require(script.Parent.Holder.AutoFarm)
 end;
-task.spawn(C_12);
+task.spawn(C_2);
 
 return G2L["1"], require;
