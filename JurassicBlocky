@@ -4,7 +4,6 @@ local G2L = {};
 
 -- StarterGui.JurassicBlocky
 G2L["1"] = Instance.new("ScreenGui", CoreGui);
-G2L["1"]["IgnoreGuiInset"] = true;
 G2L["1"]["Enabled"] = false;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
 G2L["1"]["Name"] = [[JurassicBlocky]];
