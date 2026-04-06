@@ -635,8 +635,8 @@ RunService.Heartbeat:Connect(function(dt)
 				Status = "Targetting"
 				StatusText.Text = "Status: ".. Status
 				local TargetPosition = NearestTarget.PrimaryPart.Position + Vector3.new(0, 0, 3)
-				print("Found Target:", NearestTarget.Parent, "Distance:", NearestDistance)
-				Target.Text = "Next Target: ".. NearestTarget.Parent.Name
+				print("Found Target:", NearestTarget, "Distance:", NearestDistance)
+				Target.Text = "Next Target: ".. NearestTarget.Name
 				TargetDistance.Text = "TargetDistance: ".. math.floor(NearestDistance).. "Studs"
 
 				Player.Character.HumanoidRootPart.CFrame = CFrame.new(TargetPosition)
