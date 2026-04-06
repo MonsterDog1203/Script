@@ -601,6 +601,8 @@ for _, v in pairs(Player.PlayerGui.App:GetChildren()) do
 	end
 end
 
+local HumanoidRootPart = Player.Character:WaitForChild("HumanoidRootPart")
+
 RunService.Heartbeat:Connect(function(dt)
 	if not CoreGui.JurassicBlocky.Enabled then CoreGui.JurassicBlocky.Enabled = true end
 	if not CoreGui.JurassicBlocky.Holder.Visible then CoreGui.JurassicBlocky.Holder.Visible = true end
@@ -608,20 +610,16 @@ RunService.Heartbeat:Connect(function(dt)
 	if not CoreGui.JurassicBlocky.Holder then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
 	if not CoreGui.JurassicBlocky.Holder.Background then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
 	CurrencyText.Text = CoinsText.Text
-	local Character = Player:FindFirstChild("Character")
-	if not Character then return end
-	local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
-	if not HumanoidRootPart then return end
 	
 	for _, Hum in pairs(Humanoids:GetChildren()) do
-		if Hum == Character then
+		if Hum == Player.Character then
 			PotentialTarget = 0
 			NearestTarget = nil
 			NearestDistance = math.huge
 
 			for _, Goat in pairs(Humanoids:GetChildren()) do
 				local IsPlayer = Players:GetPlayerFromCharacter(Goat)
-				if Goat:IsA("Model") and Goat ~= Character and not IsPlayer and Goat.Name == "Goat" then
+				if Goat:IsA("Model") and Goat ~= Hum and not IsPlayer and Goat.Name == "Goat" then
 					PotentialTarget += 1
 					local TargetPart = Goat.PrimaryPart
 					if TargetPart then
