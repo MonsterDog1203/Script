@@ -5,7 +5,6 @@ local G2L = {};
 -- StarterGui.JurassicBlocky
 G2L["1"] = Instance.new("ScreenGui", CoreGui);
 G2L["1"]["IgnoreGuiInset"] = true;
-G2L["1"]["Enabled"] = false;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
 G2L["1"]["Name"] = [[JurassicBlocky]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -52,6 +51,7 @@ G2L["6"]["CornerRadius"] = UDim.new(0.025, 0);
 G2L["7"] = Instance.new("UIListLayout", G2L["5"]);
 G2L["7"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
 G2L["7"]["Padding"] = UDim.new(0.025, 0);
+G2L["7"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
 G2L["7"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
 
 
@@ -381,6 +381,46 @@ G2L["2f"] = Instance.new("UIAspectRatioConstraint", G2L["2a"]);
 G2L["2f"]["AspectRatio"] = 17.24932;
 
 
+-- StarterGui.JurassicBlocky.Holder.Background.
+G2L["30"] = Instance.new("Frame", G2L["5"]);
+G2L["30"]["BorderSizePixel"] = 0;
+G2L["30"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["30"]["Size"] = UDim2.new(1, 0, 0.05, 0);
+G2L["30"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["30"]["Name"] = [[]];
+G2L["30"]["LayoutOrder"] = 9999;
+G2L["30"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background..UIAspectRatioConstraint
+G2L["31"] = Instance.new("UIAspectRatioConstraint", G2L["30"]);
+G2L["31"]["AspectRatio"] = 25.87398;
+
+
+-- StarterGui.JurassicBlocky.Holder.Version
+G2L["32"] = Instance.new("TextLabel", G2L["3"]);
+G2L["32"]["TextWrapped"] = true;
+G2L["32"]["BorderSizePixel"] = 0;
+G2L["32"]["TextScaled"] = true;
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["TextSize"] = 18;
+G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["32"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["32"]["BackgroundTransparency"] = 1;
+G2L["32"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["32"]["Size"] = UDim2.new(1, 0, 0.1, 0);
+G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["32"]["Text"] = [[V1.0]];
+G2L["32"]["LayoutOrder"] = 1;
+G2L["32"]["Name"] = [[Version]];
+G2L["32"]["Position"] = UDim2.new(0.5, 0, 0.15, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Version.UITextSizeConstraint
+G2L["33"] = Instance.new("UITextSizeConstraint", G2L["32"]);
+G2L["33"]["MaxTextSize"] = 23;
+
+
 -- Require G2L wrapper
 local G2L_REQUIRE = require;
 local G2L_MODULES = {};
@@ -437,8 +477,17 @@ end
 
 MAP:Destroy()
 
+Status = "Destroying Map"
+StatusText.Text = Status
+Coins.Text = DinoCoins.Text
+
+task.wait(3)
+Status = "Spawning Character"
+StatusText.Text = Status
+
 local args = {"Gallimimus"}game:GetService("ReplicatedStorage"):WaitForChild("shared/network/init@GlobalEvents"):WaitForChild("spawn"):FireServer(unpack(args))
 UserText.Text = "User: "..Player.Name
+task.wait(2)
 
 
 RunService.Heartbeat:Connect(function(dt)
@@ -447,7 +496,6 @@ RunService.Heartbeat:Connect(function(dt)
 	if not CoreGui.JurassicBlocky.Holder.Background.Visible then CoreGui.JurassicBlocky.Holder.Background.Visible = true end
 	if not CoreGui.JurassicBlocky.Holder then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
 	if not CoreGui.JurassicBlocky.Holder.Background then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
-	
 	Coins.Text = DinoCoins.Text
 	
 	for _, Hum in pairs(Humanoids:GetChildren()) do
@@ -473,7 +521,7 @@ RunService.Heartbeat:Connect(function(dt)
 				end
 			end
 			
-
+			Coins.Text = DinoCoins.Text
 			if NearestTarget then
 				Status = "Targetting"
 				StatusText.Text = "Status: ".. Status
