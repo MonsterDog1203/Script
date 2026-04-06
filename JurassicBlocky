@@ -601,8 +601,6 @@ for _, v in pairs(Player.PlayerGui.App:GetChildren()) do
 	end
 end
 
-local HumanoidRootPart = Player.Character:WaitForChild("HumanoidRootPart")
-
 RunService.Heartbeat:Connect(function(dt)
 	if not CoreGui.JurassicBlocky.Enabled then CoreGui.JurassicBlocky.Enabled = true end
 	if not CoreGui.JurassicBlocky.Holder.Visible then CoreGui.JurassicBlocky.Holder.Visible = true end
@@ -639,7 +637,7 @@ RunService.Heartbeat:Connect(function(dt)
 						end
 						
 						if not Ignore then
-							local Distance = (HumanoidRootPart.Position - TargetPart.Position).Magnitude
+							local Distance = (Hum.HumanoidRootPart.Position - TargetPart.Position).Magnitude
 							if Distance < NearestDistance then
 								NearestTarget = Goat
 								NearestDistance = Distance
@@ -659,7 +657,7 @@ RunService.Heartbeat:Connect(function(dt)
 				Target.Text = "Next Target: ".. NearestTarget.Name
 				TargetDistance.Text = "TargetDistance: ".. math.floor(NearestDistance).. "Studs"
 
-				HumanoidRootPart.CFrame = CFrame.new(TargetPosition)
+				Hum.HumanoidRootPart.CFrame = CFrame.new(TargetPosition)
 				local args = {{buffer = buffer.fromstring("\b\000\000\000M1Attack\001\003\000\000\000\001\001\001"), blobs = {0.5600000023841858,1775417594.549833,false}}}
 				game:GetService("ReplicatedStorage"):WaitForChild("@rbxts/wcs:source/networking@GlobalEvents"):WaitForChild("requestSkill"):FireServer(unpack(args))
 			elseif not NearestTarget and PotentialTarget == 0 then
