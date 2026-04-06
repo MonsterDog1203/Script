@@ -1,4 +1,5 @@
 local CoreGui = game:GetService("CoreGui")
+
 local G2L = {};
 
 -- StarterGui.JurassicBlocky
@@ -237,7 +238,7 @@ G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
 G2L["1e"]["Size"] = UDim2.new(1, 0, 0.075, 0);
 G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1e"]["Name"] = [[User]];
-G2L["1e"]["LayoutOrder"] = 6;
+G2L["1e"]["LayoutOrder"] = 7;
 
 
 -- StarterGui.JurassicBlocky.Holder.Background.User.Text
@@ -287,7 +288,7 @@ G2L["24"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
 G2L["24"]["Size"] = UDim2.new(1, 0, 0.075, 0);
 G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["24"]["Name"] = [[Dino]];
-G2L["24"]["LayoutOrder"] = 7;
+G2L["24"]["LayoutOrder"] = 8;
 
 
 -- StarterGui.JurassicBlocky.Holder.Background.Dino.Text
@@ -446,28 +447,78 @@ G2L["37"] = Instance.new("UIAspectRatioConstraint", G2L["32"]);
 G2L["37"]["AspectRatio"] = 32.34248;
 
 
--- StarterGui.JurassicBlocky.Holder.Version
-G2L["38"] = Instance.new("TextLabel", G2L["3"]);
-G2L["38"]["TextWrapped"] = true;
+-- StarterGui.JurassicBlocky.Holder.Background.Currency
+G2L["38"] = Instance.new("Frame", G2L["5"]);
 G2L["38"]["BorderSizePixel"] = 0;
-G2L["38"]["TextScaled"] = true;
-G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["38"]["TextSize"] = 18;
-G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["38"]["BackgroundTransparency"] = 1;
-G2L["38"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["38"]["Size"] = UDim2.new(1, 0, 0.1, 0);
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["38"]["Size"] = UDim2.new(1, 0, 0.04, 0);
 G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["38"]["Text"] = [[V1.1]];
-G2L["38"]["LayoutOrder"] = 1;
-G2L["38"]["Name"] = [[Version]];
-G2L["38"]["Position"] = UDim2.new(0.5, 0, 0.15, 0);
+G2L["38"]["Name"] = [[Currency]];
+G2L["38"]["LayoutOrder"] = 6;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Currency.Text
+G2L["39"] = Instance.new("TextLabel", G2L["38"]);
+G2L["39"]["TextWrapped"] = true;
+G2L["39"]["BorderSizePixel"] = 0;
+G2L["39"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["39"]["TextScaled"] = true;
+G2L["39"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["39"]["TextSize"] = 18;
+G2L["39"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["39"]["TextColor3"] = Color3.fromRGB(255, 222, 53);
+G2L["39"]["BackgroundTransparency"] = 1;
+G2L["39"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["39"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["39"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["39"]["Text"] = [[DinoCoins : 0]];
+G2L["39"]["LayoutOrder"] = 1;
+G2L["39"]["Name"] = [[Text]];
+G2L["39"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Currency.Text.UITextSizeConstraint
+G2L["3a"] = Instance.new("UITextSizeConstraint", G2L["39"]);
+G2L["3a"]["MaxTextSize"] = 12;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Currency.Text.UIAspectRatioConstraint
+G2L["3b"] = Instance.new("UIAspectRatioConstraint", G2L["39"]);
+G2L["3b"]["AspectRatio"] = 32.34248;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Currency.UIStroke
+G2L["3c"] = Instance.new("UIStroke", G2L["38"]);
+G2L["3c"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.Currency.UIAspectRatioConstraint
+G2L["3d"] = Instance.new("UIAspectRatioConstraint", G2L["38"]);
+G2L["3d"]["AspectRatio"] = 32.34248;
+
+
+-- StarterGui.JurassicBlocky.Holder.Version
+G2L["3e"] = Instance.new("TextLabel", G2L["3"]);
+G2L["3e"]["TextWrapped"] = true;
+G2L["3e"]["BorderSizePixel"] = 0;
+G2L["3e"]["TextScaled"] = true;
+G2L["3e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["TextSize"] = 18;
+G2L["3e"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["3e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3e"]["BackgroundTransparency"] = 1;
+G2L["3e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["3e"]["Size"] = UDim2.new(1, 0, 0.1, 0);
+G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["3e"]["Text"] = [[V1.1]];
+G2L["3e"]["LayoutOrder"] = 1;
+G2L["3e"]["Name"] = [[Version]];
+G2L["3e"]["Position"] = UDim2.new(0.5, 0, 0.15, 0);
 
 
 -- StarterGui.JurassicBlocky.Holder.Version.UITextSizeConstraint
-G2L["39"] = Instance.new("UITextSizeConstraint", G2L["38"]);
-G2L["39"]["MaxTextSize"] = 23;
+G2L["3f"] = Instance.new("UITextSizeConstraint", G2L["3e"]);
+G2L["3f"]["MaxTextSize"] = 23;
 
 
 -- Require G2L wrapper
@@ -506,6 +557,7 @@ local StatusText = script.Parent.Background.Status.Text
 local UnderStatusText = script.Parent.Background.UnderStatus.Text
 local UserText = script.Parent.Background.User.Text
 local PotentialTargetText = script.Parent.Background.PotentialTarget.Text
+local CurrencyText = script.Parent.Background.Currency.Text
 
 local IsClaiming = false
 local IsHopping = false
@@ -538,12 +590,24 @@ local args = {"Gallimimus"}game:GetService("ReplicatedStorage"):WaitForChild("sh
 UserText.Text = "User: "..Player.Name
 task.wait(2)
 
+local CoinsText = nil
+for _, v in pairs(Player.PlayerGui.App:GetChildren()) do
+	if v:IsA("Frame") and v.Name == "4" and v:FindFirstChild("1") then
+		for _, i in pairs(v:GetChildren()) do
+			if i.Name == "1" and i:IsA("TextLabel") then
+				CoinsText = i
+			end
+		end
+	end
+end
+
 RunService.Heartbeat:Connect(function(dt)
 	if not CoreGui.JurassicBlocky.Enabled then CoreGui.JurassicBlocky.Enabled = true end
 	if not CoreGui.JurassicBlocky.Holder.Visible then CoreGui.JurassicBlocky.Holder.Visible = true end
 	if not CoreGui.JurassicBlocky.Holder.Background.Visible then CoreGui.JurassicBlocky.Holder.Background.Visible = true end
 	if not CoreGui.JurassicBlocky.Holder then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
 	if not CoreGui.JurassicBlocky.Holder.Background then Player:Kick("Not Respecting my rules: From MonsterDog1203") end
+	CurrencyText.Text = CoinsText.Text
 	
 	for _, Hum in pairs(Humanoids:GetChildren()) do
 		if Hum == Player.Character then
