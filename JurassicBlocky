@@ -510,7 +510,7 @@ G2L["3e"]["BackgroundTransparency"] = 1;
 G2L["3e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["3e"]["Size"] = UDim2.new(1, 0, 0.1, 0);
 G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Text"] = [[V1.1]];
+G2L["3e"]["Text"] = [[V1.2]];
 G2L["3e"]["LayoutOrder"] = 1;
 G2L["3e"]["Name"] = [[Version]];
 G2L["3e"]["Position"] = UDim2.new(0.5, 0, 0.15, 0);
@@ -623,10 +623,26 @@ RunService.Heartbeat:Connect(function(dt)
 					PotentialTarget += 1
 					local TargetPart = Goat.PrimaryPart
 					if TargetPart then
-						local Distance = (HumanoidRootPart.Position - TargetPart.Position).Magnitude
-						if Distance < NearestDistance then
-							NearestTarget = Goat
-							NearestDistance = Distance
+						local Ignore = false
+						
+						for _, OtherHRP in pairs(Humanoids:GetChildren()) do
+							if OtherHRP ~= Player and OtherHRP and OtherHRP:FindFirstChild("HumanoidRootPart") and IsPlayer then
+								local OtherHRP = OtherHRP.HumanoidRootPart
+								local DistToGoat = (OtherHRP.Position - TargetPart.Position).Magnitude
+
+								if DistToGoat < 75 then
+									Ignore = true
+									break
+								end
+							end
+						end
+						
+						if not Ignore then
+							local Distance = (HumanoidRootPart.Position - TargetPart.Position).Magnitude
+							if Distance < NearestDistance then
+								NearestTarget = Goat
+								NearestDistance = Distance
+							end
 						end
 					end
 				end
