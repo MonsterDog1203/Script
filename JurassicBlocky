@@ -1,5 +1,4 @@
 local CoreGui = game:GetService("CoreGui")
-
 local G2L = {};
 
 -- StarterGui.JurassicBlocky
@@ -133,7 +132,7 @@ G2L["11"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
 G2L["11"]["Size"] = UDim2.new(1, 0, 0.075, 0);
 G2L["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["11"]["Name"] = [[TargetDistance]];
-G2L["11"]["LayoutOrder"] = 2;
+G2L["11"]["LayoutOrder"] = 3;
 
 
 -- StarterGui.JurassicBlocky.Holder.Background.TargetDistance.Text
@@ -188,7 +187,7 @@ G2L["18"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
 G2L["18"]["Size"] = UDim2.new(1, 0, 0.075, 0);
 G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["18"]["Name"] = [[Status]];
-G2L["18"]["LayoutOrder"] = 3;
+G2L["18"]["LayoutOrder"] = 4;
 
 
 -- StarterGui.JurassicBlocky.Holder.Background.Status.Text
@@ -238,7 +237,7 @@ G2L["1e"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
 G2L["1e"]["Size"] = UDim2.new(1, 0, 0.075, 0);
 G2L["1e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["1e"]["Name"] = [[User]];
-G2L["1e"]["LayoutOrder"] = 4;
+G2L["1e"]["LayoutOrder"] = 6;
 
 
 -- StarterGui.JurassicBlocky.Holder.Background.User.Text
@@ -288,7 +287,7 @@ G2L["24"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
 G2L["24"]["Size"] = UDim2.new(1, 0, 0.075, 0);
 G2L["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["24"]["Name"] = [[Dino]];
-G2L["24"]["LayoutOrder"] = 5;
+G2L["24"]["LayoutOrder"] = 7;
 
 
 -- StarterGui.JurassicBlocky.Holder.Background.Dino.Text
@@ -354,7 +353,7 @@ G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
 G2L["2c"]["Size"] = UDim2.new(1, 0, 0.04, 0);
 G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 G2L["2c"]["Name"] = [[UnderStatus]];
-G2L["2c"]["LayoutOrder"] = 3;
+G2L["2c"]["LayoutOrder"] = 5;
 
 
 -- StarterGui.JurassicBlocky.Holder.Background.UnderStatus.Text
@@ -366,7 +365,7 @@ G2L["2d"]["TextScaled"] = true;
 G2L["2d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2d"]["TextSize"] = 18;
 G2L["2d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 56, 133);
+G2L["2d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
 G2L["2d"]["BackgroundTransparency"] = 1;
 G2L["2d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["2d"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
@@ -397,28 +396,78 @@ G2L["31"] = Instance.new("UIAspectRatioConstraint", G2L["2c"]);
 G2L["31"]["AspectRatio"] = 32.34248;
 
 
--- StarterGui.JurassicBlocky.Holder.Version
-G2L["32"] = Instance.new("TextLabel", G2L["3"]);
-G2L["32"]["TextWrapped"] = true;
+-- StarterGui.JurassicBlocky.Holder.Background.PotentialTarget
+G2L["32"] = Instance.new("Frame", G2L["5"]);
 G2L["32"]["BorderSizePixel"] = 0;
-G2L["32"]["TextScaled"] = true;
-G2L["32"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["32"]["TextSize"] = 18;
-G2L["32"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-G2L["32"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-G2L["32"]["BackgroundTransparency"] = 1;
-G2L["32"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["32"]["Size"] = UDim2.new(1, 0, 0.1, 0);
+G2L["32"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["32"]["Size"] = UDim2.new(1, 0, 0.04, 0);
 G2L["32"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["32"]["Text"] = [[V1.1]];
+G2L["32"]["Name"] = [[PotentialTarget]];
 G2L["32"]["LayoutOrder"] = 1;
-G2L["32"]["Name"] = [[Version]];
-G2L["32"]["Position"] = UDim2.new(0.5, 0, 0.15, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.PotentialTarget.Text
+G2L["33"] = Instance.new("TextLabel", G2L["32"]);
+G2L["33"]["TextWrapped"] = true;
+G2L["33"]["BorderSizePixel"] = 0;
+G2L["33"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["33"]["TextScaled"] = true;
+G2L["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["TextSize"] = 18;
+G2L["33"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["33"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["33"]["BackgroundTransparency"] = 1;
+G2L["33"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["33"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
+G2L["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["33"]["Text"] = [[Potentiel Target: 0]];
+G2L["33"]["LayoutOrder"] = 1;
+G2L["33"]["Name"] = [[Text]];
+G2L["33"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.PotentialTarget.Text.UITextSizeConstraint
+G2L["34"] = Instance.new("UITextSizeConstraint", G2L["33"]);
+G2L["34"]["MaxTextSize"] = 12;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.PotentialTarget.Text.UIAspectRatioConstraint
+G2L["35"] = Instance.new("UIAspectRatioConstraint", G2L["33"]);
+G2L["35"]["AspectRatio"] = 32.34248;
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.PotentialTarget.UIStroke
+G2L["36"] = Instance.new("UIStroke", G2L["32"]);
+G2L["36"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Background.PotentialTarget.UIAspectRatioConstraint
+G2L["37"] = Instance.new("UIAspectRatioConstraint", G2L["32"]);
+G2L["37"]["AspectRatio"] = 32.34248;
+
+
+-- StarterGui.JurassicBlocky.Holder.Version
+G2L["38"] = Instance.new("TextLabel", G2L["3"]);
+G2L["38"]["TextWrapped"] = true;
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["TextScaled"] = true;
+G2L["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["TextSize"] = 18;
+G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["BackgroundTransparency"] = 1;
+G2L["38"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["38"]["Size"] = UDim2.new(1, 0, 0.1, 0);
+G2L["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["38"]["Text"] = [[V1.1]];
+G2L["38"]["LayoutOrder"] = 1;
+G2L["38"]["Name"] = [[Version]];
+G2L["38"]["Position"] = UDim2.new(0.5, 0, 0.15, 0);
 
 
 -- StarterGui.JurassicBlocky.Holder.Version.UITextSizeConstraint
-G2L["33"] = Instance.new("UITextSizeConstraint", G2L["32"]);
-G2L["33"]["MaxTextSize"] = 23;
+G2L["39"] = Instance.new("UITextSizeConstraint", G2L["38"]);
+G2L["39"]["MaxTextSize"] = 23;
 
 
 -- Require G2L wrapper
@@ -456,12 +505,14 @@ local TargetDistance = script.Parent.Background.TargetDistance.Text
 local StatusText = script.Parent.Background.Status.Text
 local UnderStatusText = script.Parent.Background.UnderStatus.Text
 local UserText = script.Parent.Background.User.Text
+local PotentialTargetText = script.Parent.Background.PotentialTarget.Text
 
 local IsClaiming = false
 local IsHopping = false
 local PlaceId = game.PlaceId
 local JobId = game.JobId
 local Status = "Unknown"
+local PotentialTarget = 0
 
 
 local NearestTarget = nil
@@ -497,61 +548,34 @@ RunService.Heartbeat:Connect(function(dt)
 	for _, Hum in pairs(Humanoids:GetChildren()) do
 		if Hum == Player.Character then
 
-			for _, Target in pairs(AmberFolder:GetChildren()) do
-				if Target:IsA("Part") then
-					for _, Amber in pairs(Target:GetChildren()) do
-						if Amber:IsA("Model") then
-							local TargetPart = Amber.PrimaryPart
-							if TargetPart then
-								local Distance = (Player.Character.HumanoidRootPart.Position - TargetPart.Position).Magnitude
-								if Distance < 150 then
-									NearestTarget = Target
-									NearestDistance = Distance
-								else
-									NearestTarget = nil
-									NearestDistance = math.huge
-								end
-							end
+			for _, Goat in pairs(Humanoids:GetChildren()) do
+				local IsPlayer = Players:GetPlayerFromCharacter(Goat)
+				if Goat:IsA("Model") and Goat ~= Player.Character and not IsPlayer and Goat.Parent then
+					PotentialTarget += 1
+					local TargetPart = Goat.PrimaryPart
+					if TargetPart then
+						local Distance = (Player.Character.HumanoidRootPart.Position - TargetPart.Position).Magnitude
+						if Distance < NearestDistance then
+							NearestTarget = TargetPart
+							NearestDistance = Distance
 						end
 					end
 				end
 			end
 			
+			PotentialTargetText.Text = "Potential Target: ".. PotentialTarget
+			
 			if NearestTarget then
 				Status = "Targetting"
 				StatusText.Text = "Status: ".. Status
-				local TargetPosition
-				print("Found Target:", NearestTarget, "Distance:", NearestDistance)
-				Target.Text = "Next Target: Amber"
+				local TargetPosition = NearestTarget.Position + Vector3.new(0, 0, 3)
+				print("Found Target:", NearestTarget.Parent, "Distance:", NearestDistance)
+				Target.Text = "Next Target: Goat"
 				TargetDistance.Text = "TargetDistance: ".. math.floor(NearestDistance).. "Studs"
-				
-				for _, Model in pairs(NearestTarget:GetChildren()) do
-					if Model:IsA("Model") then
-						local Prompt = Model:FindFirstChild("ProximityPrompt")
-						if Prompt then
-							Prompt.RequiresLineOfSight = false
-							Prompt.MaxActivationDistance = 50
-							Prompt.HoldDuration = 0
-						end
-					end
-				end
-
-				TargetPosition = NearestTarget.Position + Vector3.new(0, 5, 0)
 
 				Player.Character.HumanoidRootPart.CFrame = CFrame.new(TargetPosition)
-				
-				for _, Model in pairs(NearestTarget:GetChildren()) do
-					if Model:IsA("Model") then
-						local Prompt = Model:FindFirstChildWhichIsA("ProximityPrompt", true)
-						if Prompt and not IsClaiming then
-							IsClaiming = true
-							Prompt:InputHoldBegin(Enum.UserInputType.MouseButton1)
-							task.wait(0.25)
-							Prompt:InputHoldEnd(Enum.UserInputType.MouseButton1)
-							IsClaiming = false
-						end
-					end
-				end
+				local args = {{buffer = buffer.fromstring("\b\000\000\000M1Attack\001\003\000\000\000\001\001\001"), blobs = {0.5600000023841858,1775417594.549833,false}}}
+				game:GetService("ReplicatedStorage"):WaitForChild("@rbxts/wcs:source/networking@GlobalEvents"):WaitForChild("requestSkill"):FireServer(unpack(args))
 			else
 				Target.Text = "Next Target: Not Found"
 				TargetDistance.Text = "Target Distance: Not Found"
