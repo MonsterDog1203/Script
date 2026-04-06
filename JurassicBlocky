@@ -5,6 +5,7 @@ local G2L = {};
 -- StarterGui.JurassicBlocky
 G2L["1"] = Instance.new("ScreenGui", CoreGui);
 G2L["1"]["IgnoreGuiInset"] = true;
+G2L["1"]["Enabled"] = false;
 G2L["1"]["ScreenInsets"] = Enum.ScreenInsets.None;
 G2L["1"]["Name"] = [[JurassicBlocky]];
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
@@ -199,7 +200,7 @@ G2L["18"]["BackgroundTransparency"] = 1;
 G2L["18"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["18"]["Size"] = UDim2.new(0.8, 0, 0.8, 0);
 G2L["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["18"]["Text"] = [[TargetDistance: ]];
+G2L["18"]["Text"] = [[Target Distance: ]];
 G2L["18"]["LayoutOrder"] = 1;
 G2L["18"]["Name"] = [[Text]];
 G2L["18"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
@@ -507,11 +508,12 @@ RunService.Heartbeat:Connect(function(dt)
 				end
 			else
 				Target.Text = "Next Target: Nil"
+				TargetDistance.Text = "Target Distance: Nil"
 				if not IsHopping then
 					IsHopping = true
 					Status = "Hopping Server"
 					print("No Targets Found, Hopping Server")
-					task.wait(2)
+					task.wait(5)
 
 					local servers = {}
 					local req = game:HttpGet("https://games.roblox.com/v1/games/" .. PlaceId .. "/servers/Public?sortOrder=Desc&limit=100&excludeFullGames=true")
@@ -536,7 +538,7 @@ RunService.Heartbeat:Connect(function(dt)
 			end
 		end
 	end
-	Coins.Text = DinoCoins
+	Coins.Text = DinoCoins.Text
 	StatusText.Text = "Status: ".. Status
 	
 end)
