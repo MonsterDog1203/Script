@@ -565,6 +565,8 @@ local PlaceId = game.PlaceId
 local JobId = game.JobId
 local Status = "Unknown"
 local PotentialTarget = 0
+local acc = 0
+local updaterate = 1/30
 
 
 local NearestTarget = nil
@@ -602,6 +604,20 @@ for _, v in pairs(Player.PlayerGui.App:GetChildren()) do
 end
 
 RunService.Heartbeat:Connect(function(dt)
+	local Character = Player.Character
+	print(Character)
+	if not Character then return end
+	local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
+	print(HumanoidRootPart)
+	if not HumanoidRootPart then return end
+	
+	acc = acc + dt
+	if acc < updaterate then
+		return
+	end
+	acc = 0
+
+
 	if not CoreGui.JurassicBlocky.Enabled then CoreGui.JurassicBlocky.Enabled = true end
 	if not CoreGui.JurassicBlocky.Holder.Visible then CoreGui.JurassicBlocky.Holder.Visible = true end
 	if not CoreGui.JurassicBlocky.Holder.Background.Visible then CoreGui.JurassicBlocky.Holder.Background.Visible = true end
@@ -610,7 +626,7 @@ RunService.Heartbeat:Connect(function(dt)
 	CurrencyText.Text = CoinsText.Text
 	
 	for _, Hum in pairs(Humanoids:GetChildren()) do
-		if Hum == Player.Character then
+		if Hum == Character then
 			PotentialTarget = 0
 			NearestTarget = nil
 			NearestDistance = math.huge
@@ -637,7 +653,7 @@ RunService.Heartbeat:Connect(function(dt)
 						end
 						
 						if not Ignore then
-							local Distance = (Hum.HumanoidRootPart.Position - TargetPart.Position).Magnitude
+							local Distance = (HumanoidRootPart.Position - TargetPart.Position).Magnitude
 							if Distance < NearestDistance then
 								NearestTarget = Goat
 								NearestDistance = Distance
@@ -657,7 +673,7 @@ RunService.Heartbeat:Connect(function(dt)
 				Target.Text = "Next Target: ".. NearestTarget.Name
 				TargetDistance.Text = "TargetDistance: ".. math.floor(NearestDistance).. "Studs"
 
-				Hum.HumanoidRootPart.CFrame = CFrame.new(TargetPosition)
+				HumanoidRootPart.CFrame = CFrame.new(TargetPosition)
 				local args = {{buffer = buffer.fromstring("\b\000\000\000M1Attack\001\003\000\000\000\001\001\001"), blobs = {0.5600000023841858,1775417594.549833,false}}}
 				game:GetService("ReplicatedStorage"):WaitForChild("@rbxts/wcs:source/networking@GlobalEvents"):WaitForChild("requestSkill"):FireServer(unpack(args))
 			elseif not NearestTarget and PotentialTarget == 0 then
