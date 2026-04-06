@@ -1,5 +1,4 @@
 local CoreGui = game:GetService("CoreGui")
-
 local G2L = {};
 
 -- StarterGui.JurassicBlocky
@@ -643,7 +642,7 @@ RunService.Heartbeat:Connect(function(dt)
 				Player.Character.HumanoidRootPart.CFrame = CFrame.new(TargetPosition)
 				local args = {{buffer = buffer.fromstring("\b\000\000\000M1Attack\001\003\000\000\000\001\001\001"), blobs = {0.5600000023841858,1775417594.549833,false}}}
 				game:GetService("ReplicatedStorage"):WaitForChild("@rbxts/wcs:source/networking@GlobalEvents"):WaitForChild("requestSkill"):FireServer(unpack(args))
-			else
+			elseif not NearestTarget and PotentialTarget == 0 then
 				Target.Text = "Next Target: Not Found"
 				TargetDistance.Text = "Target Distance: Not Found"
 				StatusText.Text = "Status: ".. Status
