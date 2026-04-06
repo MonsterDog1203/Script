@@ -631,6 +631,7 @@ RunService.Heartbeat:Connect(function(dt)
 								local DistToGoat = (OtherHRP.Position - TargetPart.Position).Magnitude
 
 								if DistToGoat < 75 then
+									print("Player is too close to the target, ignoring")
 									Ignore = true
 									break
 								end
