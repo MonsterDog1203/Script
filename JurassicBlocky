@@ -586,7 +586,7 @@ task.wait(1)
 Status = "Status: Spawning Character"
 StatusText.Text = Status
 
-local args = {"Gallimimus"}game:GetService("ReplicatedStorage"):WaitForChild("shared/network/init@GlobalEvents"):WaitForChild("spawn"):FireServer(unpack(args))
+local args = {"Dimetrodon"}game:GetService("ReplicatedStorage"):WaitForChild("shared/network/init@GlobalEvents"):WaitForChild("spawn"):FireServer(unpack(args))
 UserText.Text = "User: "..Player.Name
 task.wait(2)
 
