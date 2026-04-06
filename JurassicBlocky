@@ -1,5 +1,4 @@
 local CoreGui = game:GetService("CoreGui")
-
 local G2L = {};
 
 -- StarterGui.JurassicBlocky
@@ -612,16 +611,18 @@ RunService.Heartbeat:Connect(function(dt)
 	for _, Hum in pairs(Humanoids:GetChildren()) do
 		if Hum == Player.Character then
 			PotentialTarget = 0
+			NearestTarget = nil
+			NearestDistance = math.huge
 
 			for _, Goat in pairs(Humanoids:GetChildren()) do
 				local IsPlayer = Players:GetPlayerFromCharacter(Goat)
-				if Goat:IsA("Model") and Goat ~= Player.Character and not IsPlayer and Goat.Parent and Goat.Name == "Goat" then
+				if Goat:IsA("Model") and Goat ~= Player.Character and not IsPlayer and Goat.Name == "Goat" then
 					PotentialTarget += 1
 					local TargetPart = Goat.PrimaryPart
 					if TargetPart then
 						local Distance = (Player.Character.HumanoidRootPart.Position - TargetPart.Position).Magnitude
 						if Distance < NearestDistance then
-							NearestTarget = TargetPart
+							NearestTarget = Goat
 							NearestDistance = Distance
 						end
 					end
@@ -633,7 +634,7 @@ RunService.Heartbeat:Connect(function(dt)
 			if NearestTarget then
 				Status = "Targetting"
 				StatusText.Text = "Status: ".. Status
-				local TargetPosition = NearestTarget.Position + Vector3.new(0, 0, 3)
+				local TargetPosition = NearestTarget.PrimaryPart.Position + Vector3.new(0, 0, 3)
 				print("Found Target:", NearestTarget.Parent, "Distance:", NearestDistance)
 				Target.Text = "Next Target: ".. NearestTarget.Parent.Name
 				TargetDistance.Text = "TargetDistance: ".. math.floor(NearestDistance).. "Studs"
