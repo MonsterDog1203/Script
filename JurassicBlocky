@@ -516,44 +516,76 @@ G2L["3e"] = Instance.new("UITextSizeConstraint", G2L["3d"]);
 G2L["3e"]["MaxTextSize"] = 23;
 
 
+-- StarterGui.JurassicBlocky.Holder.AutoFarm
+G2L["3f"] = Instance.new("ModuleScript", G2L["3"]);
+G2L["3f"]["Name"] = [[AutoFarm]];
+
+
 -- StarterGui.JurassicBlocky.Holder.Output
-G2L["3f"] = Instance.new("Frame", G2L["3"]);
-G2L["3f"]["BorderSizePixel"] = 0;
-G2L["3f"]["BackgroundColor3"] = Color3.fromRGB(19, 19, 19);
-G2L["3f"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
-G2L["3f"]["Size"] = UDim2.new(0.4, 0, 0.6, 0);
-G2L["3f"]["Position"] = UDim2.new(0.75, 0, 0.5, 0);
-G2L["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3f"]["Name"] = [[Output]];
-
-
--- StarterGui.JurassicBlocky.Holder.Output.UICorner
-G2L["40"] = Instance.new("UICorner", G2L["3f"]);
-G2L["40"]["CornerRadius"] = UDim.new(0.025, 0);
-
-
--- StarterGui.JurassicBlocky.Holder.Output.UIListLayout
-G2L["41"] = Instance.new("UIListLayout", G2L["3f"]);
-G2L["41"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
-G2L["41"]["Padding"] = UDim.new(0.025, 0);
-G2L["41"]["VerticalAlignment"] = Enum.VerticalAlignment.Center;
-G2L["41"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- StarterGui.JurassicBlocky.Holder.Output.UIStroke
-G2L["42"] = Instance.new("UIStroke", G2L["3f"]);
-G2L["42"]["Thickness"] = 2;
-G2L["42"]["Color"] = Color3.fromRGB(85, 85, 85);
+G2L["40"] = Instance.new("ScrollingFrame", G2L["3"]);
+G2L["40"]["Active"] = true;
+G2L["40"]["BorderSizePixel"] = 0;
+G2L["40"]["BackgroundColor3"] = Color3.fromRGB(19, 19, 19);
+G2L["40"]["Name"] = [[Output]];
+G2L["40"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+G2L["40"]["Size"] = UDim2.new(0.4, 0, 0.6, 0);
+G2L["40"]["Position"] = UDim2.new(0.75, 0, 0.5, 0);
+G2L["40"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["40"]["ScrollBarThickness"] = 3;
 
 
 -- StarterGui.JurassicBlocky.Holder.Output.UIAspectRatioConstraint
-G2L["43"] = Instance.new("UIAspectRatioConstraint", G2L["3f"]);
-G2L["43"]["AspectRatio"] = 1.2937;
+G2L["41"] = Instance.new("UIAspectRatioConstraint", G2L["40"]);
+G2L["41"]["AspectRatio"] = 1.2937;
 
 
--- StarterGui.JurassicBlocky.Holder.AutoFarm
-G2L["44"] = Instance.new("ModuleScript", G2L["3"]);
-G2L["44"]["Name"] = [[AutoFarm]];
+-- StarterGui.JurassicBlocky.Holder.Output.UICorner
+G2L["42"] = Instance.new("UICorner", G2L["40"]);
+G2L["42"]["CornerRadius"] = UDim.new(0.025, 0);
+
+
+-- StarterGui.JurassicBlocky.Holder.Output.UIListLayout
+G2L["43"] = Instance.new("UIListLayout", G2L["40"]);
+G2L["43"]["HorizontalAlignment"] = Enum.HorizontalAlignment.Center;
+G2L["43"]["Padding"] = UDim.new(0.01, 0);
+G2L["43"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.JurassicBlocky.Holder.Output.UIStroke
+G2L["44"] = Instance.new("UIStroke", G2L["40"]);
+G2L["44"]["Thickness"] = 2;
+G2L["44"]["Color"] = Color3.fromRGB(85, 85, 85);
+
+
+-- StarterGui.JurassicBlocky.Holder.Output.
+G2L["45"] = Instance.new("Frame", G2L["40"]);
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["45"]["Size"] = UDim2.new(1, 0, 0.05, 0);
+G2L["45"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["45"]["Name"] = [[]];
+G2L["45"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.JurassicBlocky.Holder.Output..UIAspectRatioConstraint
+G2L["46"] = Instance.new("UIAspectRatioConstraint", G2L["45"]);
+G2L["46"]["AspectRatio"] = 25.87398;
+
+
+-- StarterGui.JurassicBlocky.Holder.Output.
+G2L["47"] = Instance.new("Frame", G2L["40"]);
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["BackgroundColor3"] = Color3.fromRGB(21, 21, 21);
+G2L["47"]["Size"] = UDim2.new(1, 0, 0.05, 0);
+G2L["47"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["47"]["Name"] = [[]];
+G2L["47"]["LayoutOrder"] = 9999;
+G2L["47"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.JurassicBlocky.Holder.Output..UIAspectRatioConstraint
+G2L["48"] = Instance.new("UIAspectRatioConstraint", G2L["47"]);
+G2L["48"]["AspectRatio"] = 25.87398;
 
 
 -- Require G2L wrapper
@@ -571,9 +603,9 @@ local function require(Module:ModuleScript)
     return G2L_REQUIRE(Module);
 end
 
-G2L_MODULES[G2L["44"]] = {
+G2L_MODULES[G2L["3f"]] = {
 Closure = function()
-    local script = G2L["44"];--// SERVICES \\--
+    local script = G2L["3f"];--// SERVICES \\--
 local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 local HttpService = game:GetService("HttpService")
@@ -591,6 +623,7 @@ local UnderStatusText = script.Parent.Background.UnderStatus.Text
 local UserText = script.Parent.Background.User.Text
 local PotentialTargetText = script.Parent.Background.PotentialTarget.Text
 local CurrencyText = script.Parent.Background.Currency.Text
+local Output = script.Parent.Output
 
 local IsHopping = false
 local PotentielTarget = 0
@@ -599,6 +632,26 @@ local NearestDistance = math.huge
 local PlaceId = game.PlaceId
 local JobId = game.JobId
 
+local function AddMessage(Message)
+	local OutputText = Instance.new("TextLabel")
+	OutputText.Text = Message
+	OutputText.Parent = Output
+	OutputText.Size = UDim2.new(0.9, 0, 0.8, 0)
+	OutputText.AnchorPoint = Vector2.new(0.5, 0.5)
+	OutputText.Position = UDim2.new(0.5, 0, 0.5, 0)
+	OutputText.BackgroundTransparency = 1
+	OutputText.TextColor3 = Color3.fromRGB(255, 255, 255)
+	OutputText.TextScaled = true
+	OutputText.TextXAlignment = Enum.TextXAlignment.Left
+	OutputText.FontFace = Font.new("rbxasset://fonts/families/SourceSansPro.json", Enum.FontWeight.Bold, Enum.FontStyle.Normal)
+	
+	local UIAspectRatio = Instance.new("UIAspectRatioConstraint")
+	UIAspectRatio.Parent = OutputText
+	UIAspectRatio.AspectRatio = 32.342
+	UIAspectRatio.AspectType = Enum.AspectType.FitWithinMaxSize
+	UIAspectRatio.DominantAxis = Enum.DominantAxis.Width
+end
+
 if workspace.Terrain:CountCells() > 0 then
 	workspace.Terrain:Clear()
 end
@@ -606,12 +659,15 @@ end
 workspace["Map Assets"]:Destroy()
 
 StatusText.Text = "Status: Initializing"
+AddMessage(StatusText.Text)
 
 task.wait(1)
 StatusText.Text = "Status: Spawning Character"
+AddMessage(StatusText.Text)
 
 local args = {"Dimetrodon"}game:GetService("ReplicatedStorage"):WaitForChild("shared/network/init@GlobalEvents"):WaitForChild("spawn"):FireServer(unpack(args))
 UserText.Text = "User: "..Player.Name
+AddMessage(UserText.Text)
 task.wait(4)
 
 local CoinsText = nil
@@ -649,6 +705,7 @@ RunService.Heartbeat:Connect(function()
 
 						if DistanceToGoat < 75 then
 							print("Player is too close, ignoring target")
+							AddMessage("Player is too close, ignoring target")
 							Ignore = true
 							break
 						end
@@ -682,7 +739,9 @@ RunService.Heartbeat:Connect(function()
 		if not IsHopping then
 			IsHopping = true
 			StatusText.Text = "Status: Hopping Server"
+			AddMessage(StatusText.Text)
 			UnderStatusText.Text = "Understatus: Waiting for Status Answer"
+			AddMessage(UnderStatusText.Text)
 			task.wait(5)
 			
 			local servers = {}
@@ -701,6 +760,7 @@ RunService.Heartbeat:Connect(function()
 				TeleportService:TeleportToPlaceInstance(PlaceId, servers[math.random(1, #servers)], Players.LocalPlayer)
 			else
 				UnderStatusText.Text = "Understats: Could not find a server to hop to, Trying again.."
+				AddMessage(UnderStatusText.Text)
 				print("Could not find a server to hop to")
 			end
 			task.wait(3)
