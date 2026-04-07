@@ -602,10 +602,10 @@ end
 
 workspace["Map Assets"]:Destroy()
 
-StatusText.Text = Status
+StatusText.Text = "Status: Initializing"
 
 task.wait(1)
-StatusText.Text = Status
+StatusText.Text = "Status: Spawning Character"
 
 local args = {"Dimetrodon"}game:GetService("ReplicatedStorage"):WaitForChild("shared/network/init@GlobalEvents"):WaitForChild("spawn"):FireServer(unpack(args))
 UserText.Text = "User: "..Player.Name
