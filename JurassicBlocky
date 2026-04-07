@@ -612,7 +612,7 @@ StatusText.Text = "Status: Spawning Character"
 
 local args = {"Dimetrodon"}game:GetService("ReplicatedStorage"):WaitForChild("shared/network/init@GlobalEvents"):WaitForChild("spawn"):FireServer(unpack(args))
 UserText.Text = "User: "..Player.Name
-task.wait(2)
+task.wait(4)
 
 local CoinsText = nil
 for _, v in pairs(Player.PlayerGui.App:GetChildren()) do
@@ -637,27 +637,30 @@ RunService.Heartbeat:Connect(function()
 	
 	for _, Goat in pairs(Humanoids:GetChildren()) do
 		local IsPlayer = Players:GetPlayerFromCharacter(Goat)
-		if Goat:IsA("Model") and Goat ~= Character and not IsPlayer and Goat:FindFirstChild("HumanoidRootPart") and Goat.Name == "Goat" then
+		if Goat:IsA("Model") and Goat ~= Character and not IsPlayer and Goat.Name == "Goat" then
 			PotentielTarget += 1
-			local Ignore = false
-			
-			for _, OtherHRP in pairs(Humanoids:GetChildren()) do
-				if OtherHRP ~= Character and OtherHRP and OtherHRP:FindFirstChild("HumanoidRootPart") then
-					local DistanceToGoat = (OtherHRP.HumanoidRootPart.Position - Goat.HumanoidRootPart.Position)
-					
-					if DistanceToGoat < 75 then
-						print("Player is too close, ignoring target")
-						Ignore = true
-						break
+			local TargetPart = Goat.PrimaryPart
+			if TargetPart then
+				local Ignore = false
+
+				for _, OtherHRP in pairs(Humanoids:GetChildren()) do
+					if OtherHRP ~= Character and OtherHRP and OtherHRP:FindFirstChild("HumanoidRootPart")  and IsPlayer then
+						local DistanceToGoat = (OtherHRP.HumanoidRootPart.Position - TargetPart.Position)
+
+						if DistanceToGoat < 75 then
+							print("Player is too close, ignoring target")
+							Ignore = true
+							break
+						end
 					end
 				end
-			end
-			
-			if not Ignore then
-				local Distance = (HumanoidRootPart.Position - Goat.HumanoidRootPart.Position).Magnitude
-				if Distance < NearestDistance then
-					NearestTarget = Goat
-					NearestDistance = Distance
+
+				if not Ignore then
+					local Distance = (HumanoidRootPart.Position - TargetPart.Position).Magnitude
+					if Distance < NearestDistance then
+						NearestTarget = Goat
+						NearestDistance = Distance
+					end
 				end
 			end
 		end
@@ -666,7 +669,7 @@ RunService.Heartbeat:Connect(function()
 	CurrencyText.Text = CoinsText.Text
 	PotentialTargetText.Text = "Potential Target: ".. PotentielTarget
 	
-	if NearestTarget and PotentielTarget > 0 then
+	if NearestTarget then
 		StatusText.Text = "Status: Targetting"
 		Target.Text = "Next Target: ".. NearestTarget.Name
 		TargetDistance.Text = "TargetDistance: ".. math.floor(NearestDistance).. "Studs"
