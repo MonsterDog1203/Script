@@ -623,14 +623,14 @@ for _, v in pairs(Player.PlayerGui.App:GetChildren()) do
 end
 
 RunService.Heartbeat:Connect(function()
-	local Character = Player:FindFirstChild("Character")
+	local Character = Player.Character or Player.CharacterAdded:Wait()
 	if not Character then print("No Character Found") return end
 	local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
 	if not HumanoidRootPart then print("No HumanoidRootPart Found") return end
 	
 	local PotentielTarget = 0
-	local NearestTarget = 0
-	local NearestDistance = 0
+	local NearestTarget = nil
+	local NearestDistance = math.huge
 	
 	for _, Goat in pairs(Humanoids:GetChildren()) do
 		local IsPlayer = Players:GetPlayerFromCharacter(Goat)
@@ -671,7 +671,6 @@ RunService.Heartbeat:Connect(function()
 		local args = {{buffer = buffer.fromstring("\b\000\000\000M1Attack\001\003\000\000\000\001\001\001"), blobs = {0.5600000023841858,1775417594.549833,false}}}
 		game:GetService("ReplicatedStorage"):WaitForChild("@rbxts/wcs:source/networking@GlobalEvents"):WaitForChild("requestSkill"):FireServer(unpack(args))
 	elseif not NearestTarget and PotentielTarget == 0 then
-		StatusText.Text = "Status: Idle"
 		Target.Text = "Next Target: Not Found"
 		TargetDistance.Text = "Target Distance: Not Found"
 		if not IsHopping then
