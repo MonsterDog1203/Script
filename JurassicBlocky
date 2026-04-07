@@ -623,6 +623,7 @@ local UnderStatusText = script.Parent.Background.UnderStatus.Text
 local UserText = script.Parent.Background.User.Text
 local PotentialTargetText = script.Parent.Background.PotentialTarget.Text
 local CurrencyText = script.Parent.Background.Currency.Text
+local DinoText = script.Parent.Background.Dino.Text
 local Output = script.Parent.Output
 
 local IsHopping = false
@@ -667,7 +668,9 @@ AddMessage(StatusText.Text)
 
 local args = {"Dimetrodon"}game:GetService("ReplicatedStorage"):WaitForChild("shared/network/init@GlobalEvents"):WaitForChild("spawn"):FireServer(unpack(args))
 UserText.Text = "User: "..Player.Name
+DinoText.Text = "Dino: "..args[1]
 AddMessage(UserText.Text)
+AddMessage("Spawning as: ".. DinoText.Text)
 task.wait(4)
 
 local CoinsText = nil
