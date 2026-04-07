@@ -670,7 +670,7 @@ local args = {"Dimetrodon"}game:GetService("ReplicatedStorage"):WaitForChild("sh
 UserText.Text = "User: "..Player.Name
 DinoText.Text = "Dino: "..args[1]
 AddMessage(UserText.Text)
-AddMessage("Spawning as: ".. DinoText.Text)
+AddMessage("Spawning as: ".. args[1])
 task.wait(4)
 
 local CoinsText = nil
