@@ -505,7 +505,7 @@ G2L["3d"]["BackgroundTransparency"] = 1;
 G2L["3d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["3d"]["Size"] = UDim2.new(1, 0, 0.1, 0);
 G2L["3d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3d"]["Text"] = [[V1.2]];
+G2L["3d"]["Text"] = [[V1.1]];
 G2L["3d"]["LayoutOrder"] = 1;
 G2L["3d"]["Name"] = [[Version]];
 G2L["3d"]["Position"] = UDim2.new(0.5, 0, 0.15, 0);
@@ -593,6 +593,9 @@ local PotentialTargetText = script.Parent.Background.PotentialTarget.Text
 local CurrencyText = script.Parent.Background.Currency.Text
 
 local IsHopping = false
+local PotentielTarget = 0
+local NearestTarget = nil
+local NearestDistance = math.huge
 local PlaceId = game.PlaceId
 local JobId = game.JobId
 
@@ -623,14 +626,14 @@ for _, v in pairs(Player.PlayerGui.App:GetChildren()) do
 end
 
 RunService.Heartbeat:Connect(function()
-	local Character = Player.Character or Player.CharacterAdded:Wait()
+	local Character = Player.Character
 	if not Character then print("No Character Found") return end
 	local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
 	if not HumanoidRootPart then print("No HumanoidRootPart Found") return end
 	
-	local PotentielTarget = 0
-	local NearestTarget = nil
-	local NearestDistance = math.huge
+	PotentielTarget = 0
+	NearestTarget = nil
+	NearestDistance = math.huge
 	
 	for _, Goat in pairs(Humanoids:GetChildren()) do
 		local IsPlayer = Players:GetPlayerFromCharacter(Goat)
