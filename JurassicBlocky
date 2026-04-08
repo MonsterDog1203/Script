@@ -688,14 +688,14 @@ end
 
 task.wait(1)
 
-StatusText.Text = "Status: Targetting"
+StatusText.Text = "Status: Waiting for Target"
 AddMessage(StatusText.Text)
 
 RunService.Heartbeat:Connect(function()
 	local Character = Player.Character
 	if not Character then print("No Character Found") AddMessage("No Character Found") return end
 	local HumanoidRootPart = Character:FindFirstChild("HumanoidRootPart")
-	if not HumanoidRootPart then print("No HumanoidRootPart Found") return end
+	if not HumanoidRootPart then print("No HumanoidRootPart Found") AddMessage("No HumanoidRootPart Found") return end
 	
 	local BodyVelocity = HumanoidRootPart:FindFirstChild("BodyVelocity")
 	if not BodyVelocity then
