@@ -510,7 +510,7 @@ G2L["3e"]["BackgroundTransparency"] = 1;
 G2L["3e"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
 G2L["3e"]["Size"] = UDim2.new(1, 0, 0.1, 0);
 G2L["3e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-G2L["3e"]["Text"] = [[V1.1]];
+G2L["3e"]["Text"] = [[V1.0]];
 G2L["3e"]["LayoutOrder"] = 1;
 G2L["3e"]["Name"] = [[Version]];
 G2L["3e"]["Position"] = UDim2.new(0.5, 0, 0.15, 0);
@@ -669,9 +669,9 @@ AddMessage(StatusText.Text)
 local args = {"Dimetrodon"} game:GetService("ReplicatedStorage"):WaitForChild("shared/network/init@GlobalEvents"):WaitForChild("spawn"):FireServer(unpack(args))
 
 UserText.Text = "User: "..Player.Name
-DinoText.Text = "Dino ".. args[1]
+DinoText.Text = "Dino: ".. args[1]
 AddMessage(UserText.Text)
-AddMessage(DinoText.Text)
+AddMessage(args[1])
 
 task.wait(3)
 
