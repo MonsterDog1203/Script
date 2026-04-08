@@ -710,7 +710,7 @@ RunService.Heartbeat:Connect(function()
 	
 	for _, Goat in pairs(Humanoids:GetChildren()) do
 		local IsPlayer = Players:GetPlayerFromCharacter(Goat)
-		if Goat:IsA("Model") and Goat ~= Character and not IsPlayer and Goat.Name == "Goat" then
+		if Goat:IsA("Model") and Goat ~= Character and not IsPlayer and Goat.Name == "Goat" and Goat:FindFirstChild("HumanoidRootPart") then
 			PotentielTarget += 1
 			local TargetPart = Goat.PrimaryPart
 			if TargetPart then
