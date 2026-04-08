@@ -688,7 +688,7 @@ end
 
 task.wait(1)
 
-StatusText.Text = "Status: Waiting for Target"
+StatusText.Text = "Status: Targetting"
 AddMessage(StatusText.Text)
 
 RunService.Heartbeat:Connect(function()
